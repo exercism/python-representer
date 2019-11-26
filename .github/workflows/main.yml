@@ -3,13 +3,20 @@ name: Test
 on: [push]
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build Docker image
+        run: docker build -f Dockerfile -t python-representer .
   test:
     runs-on: ubuntu-latest
     
     steps:
       - uses: actions/checkout@v1
       - name: Build Docker image
-        run: docker build -t python-representer .
+        run: docker build -f Dockerfile.test -t python-representer-test .
       - name: Run Docker image
-        run: docker run python-representer
+        run: docker run python-representer-test
   
