@@ -7,6 +7,6 @@ COPY . /opt/representer
 WORKDIR /opt/representer
 
 RUN pip install -r requirements.txt
-RUN pip install pytest
+RUN pip install -r dev-requirements.txt
 
 ENTRYPOINT ["pytest"]
