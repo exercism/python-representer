@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Build Docker image
-        run: docker build -t python-representer
+        run: docker build -t python-representer .
       - name: Run Docker image
         run: docker run python-representer
   
