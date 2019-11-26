@@ -8,4 +8,4 @@ WORKDIR /opt/representer
 
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["bash", "/opt/representer/bin/generate.sh"]
+ENTRYPOINT ["sh", "/opt/representer/bin/generate.sh"]
