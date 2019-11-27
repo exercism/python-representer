@@ -1,0 +1,51 @@
+---
+name: CI
+
+on:
+  push:
+    paths-ignore:
+      - '.gitignore'
+      - 'LICENSE'
+      - '**.md'
+
+jobs:
+  test:
+    name: Test Representer
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+#      - name: Cache Docker Layers
+#        id: cache-docker-layers
+#        uses: actions/cache@v1
+#        with:
+#          path: /root/var/lib/docker
+#          key: ${{ runner.os }}-docker-layers
+
+#      - name: Cache Pip Dependencies
+#        id: cache-pip-dependencies
+#        uses: actions/cache@v1
+#        with:
+#          path: /root/.cache/pip
+#          key: ${{ runner.os }}-pip-dependencies
+
+      - name: Build Docker Image
+        run: |
+          docker build -f Dockerfile -t python-representer .
+          find .
+          
+      - name: Run Tests
+        run: docker run --entrypoint "pytest" python-representer
+
+#  test:
+#    name: Test Representer
+#    needs: build
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Download Docker Image
+#        uses: actions/download-artifact@v1
+#        with:
+#          name: image
+#
+#      - name: Run Tests
+#        run: docker run --entrypoint "pytest" image/python-representer

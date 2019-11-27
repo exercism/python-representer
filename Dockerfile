@@ -1,11 +1,12 @@
-FROM python:3.7-alpine
+FROM python:3.8-alpine
 
 RUN apk add --no-cache gcc libc-dev unixodbc-dev
 
-RUN mkdir /opt/representer
-COPY . /opt/representer
+COPY *requirements.txt /opt/representer/
 WORKDIR /opt/representer
 
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt -r dev-requirements.txt
+
+COPY . /opt/representer
 
 ENTRYPOINT ["sh", "/opt/representer/bin/generate.sh"]

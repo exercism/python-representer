@@ -1,5 +1,4 @@
 #! /bin/sh
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-SRC="$( dirname "$DIR" )/src"
-export PYTHONPATH="$SRC:$PYTHONPATH"
+root="$( dirname "$( cd "$( dirname "$0" )" >/dev/null 2>&1 && pwd )" )"
+export PYTHONPATH="$root:$PYTHONPATH"
 python bin/generate.py "$@"

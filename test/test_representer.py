@@ -10,11 +10,7 @@ class RepresenterNormalizationTest(unittest.TestCase):
         Normalize source to generated code.
         """
         representer = Representer(source)
-        print("\n\n")
-        print(representer.dump_tree())
         representer.normalize()
-        print(representer.dump_tree())
-
         return representer.dump_code()
 
     def assertCodeEqual(self, first, second, msg=None):
@@ -329,7 +325,6 @@ class RepresenterNormalizationTest(unittest.TestCase):
                 """
         self.assertCodeEqual(before, expect)
 
-
     def test_class_def_no_inheritance(self):
         before = """\
                 class Foo:
@@ -355,7 +350,6 @@ class RepresenterNormalizationTest(unittest.TestCase):
                          self.PLACEHOLDER_7 = self.PLACEHOLDER_1 + 2
                 """
         self.assertCodeEqual(before, expect)
-
 
     def test_class_def_no_inheritance(self):
         before = """\
@@ -400,6 +394,19 @@ class RepresenterNormalizationTest(unittest.TestCase):
 
                 class PLACEHOLDER_0(metaclass=ABCMeta):
                     pass
+                """
+        self.assertCodeEqual(before, expect)
+
+    def test_lambda_def(self):
+        before = """\
+                lambda : None
+                lambda a : a + 10
+                lambda x,y : x + y
+                """
+        expect = """\
+                lambda : None
+                lambda PLACEHOLDER_0 : PLACEHOLDER_0 + 10
+                lambda PLACEHOLDER_1,PLACEHOLDER_2 : PLACEHOLDER_1 + PLACEHOLDER_2
                 """
         self.assertCodeEqual(before, expect)
 
