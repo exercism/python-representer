@@ -15,18 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Cache Python Dependencies
-        id: cache-pip
-        uses: actions/cache@v1
-        with:
-          path: pip-cache
-          key: ${{ runner.os }}-cache-pip
-
       - name: Build Docker Image
-        run: |
-          docker --version
-          docker build -f Dockerfile -t python-representer .
-          find .
+        run: docker build -f Dockerfile -t python-representer .
           
       - name: Run Tests
         run: docker run --entrypoint "pytest" python-representer
