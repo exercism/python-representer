@@ -9,7 +9,7 @@ WORKDIR /install
 COPY requirements.txt /requirements.txt
 COPY dev-requirements.txt /dev-requirements.txt
 
-RUN pip install --install-option="--prefix=/install" -r /requirements.txt -r /dev-requirements.txt
+RUN pip install --prefix=/install -r /requirements.txt -r /dev-requirements.txt
 
 FROM base
 
