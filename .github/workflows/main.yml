@@ -18,9 +18,6 @@ jobs:
       - name: Build Docker Image
         run: docker build -f Dockerfile -t python-representer .
       
-      - name: (TEMP) Verify PATH
-        run: docker run --rm --entrypoint "/bin/sh" python-representer echo $PATH
-      
       - name: (TEMP) Verify tooling-webserver
         run: docker run --rm --entrypoint "tooling-webserver" python-representer --version
           
