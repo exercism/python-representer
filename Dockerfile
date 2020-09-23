@@ -22,7 +22,7 @@ ENV TOOLING_WEBSERVER_URL="https://github.com/exercism/tooling-webserver/release
 RUN apk add curl \
  && curl -L -o /usr/local/bin/tooling_webserver "$TOOLING_WEBSERVER_URL" \
  && chmod +x /usr/local/bin/tooling_webserver \
- && apk remove curl
+ && apk del curl
 
 WORKDIR /opt/representer
 
