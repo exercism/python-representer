@@ -2,7 +2,7 @@ FROM python:3.8-alpine as base
 
 FROM base as builder
 
-RUN apk add --no-cache gcc libc-dev unixodbc-dev curl
+RUN apk add --no-cache gcc libc-dev unixodbc-dev curl which
 RUN mkdir /install
 WORKDIR /install
 
