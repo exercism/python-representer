@@ -17,6 +17,9 @@ jobs:
 
       - name: Build Docker Image
         run: docker build -f Dockerfile -t python-representer .
+      
+      - name: (TEMP) Verify tooling-webserver
+        run: docker run --rm --entrypoint "/bin/bash" python-representer which tooling-webserver && ls -l `which tooling-webserver`
           
       - name: Run Tests
         run: docker run --entrypoint "pytest" python-representer
