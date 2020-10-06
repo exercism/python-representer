@@ -3,7 +3,7 @@
 CLI for the representer for the Python track on Exercism.io.
 ./bin/run.sh two_fer ~/solution-238382y7sds7fsadfasj23j/ ~/solution-238382y7sds7fsadfasj23j/output/
 """
-from argparse import ArgumentParser, ArgumentTypeError, REMAINDER
+from argparse import ArgumentParser, ArgumentTypeError
 
 import representer
 
