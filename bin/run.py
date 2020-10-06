@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 """
 CLI for the representer for the Python track on Exercism.io.
+./bin/run.sh two_fer ~/solution-238382y7sds7fsadfasj23j/ ~/solution-238382y7sds7fsadfasj23j/output/
 """
 from argparse import ArgumentParser, ArgumentTypeError
 
@@ -34,14 +35,21 @@ def main():
     )
 
     parser.add_argument(
-        "directory",
-        metavar="DIR",
+        "input",
+        metavar="IN",
         type=_directory,
         help="directory where the [EXERCISE.py] file is located",
     )
 
+    parser.add_argument(
+        "output",
+        metavar="OUT",
+        type=_directory,
+        help="directory where the results.json files will be written",
+    )
+
     args = parser.parse_args()
-    representer.represent(args.slug, args.directory)
+    representer.represent(args.slug, args.input, args.output)
 
 
 if __name__ == "__main__":
