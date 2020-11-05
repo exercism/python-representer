@@ -51,14 +51,14 @@ class Representer:
         return utils.to_json(self.mapping)
 
 
-def represent(slug: utils.Slug, directory: utils.Directory) -> None:
+def represent(slug: utils.Slug, input: utils.Directory, output: utils.Directory) -> None:
     """
     Normalize the `directory/slug.py` file representation.
     """
-    src = directory.joinpath(slug.replace("-", "_") + ".py")
-    out_dst = directory.joinpath("representation.out")
-    txt_dst = directory.joinpath("representation.txt")
-    map_dst = directory.joinpath("mapping.json")
+    src = input.joinpath(slug.replace("-", "_") + ".py")
+    out_dst = output.joinpath("representation.out")
+    txt_dst = output.joinpath("representation.txt")
+    map_dst = output.joinpath("mapping.json")
 
     # parse the tree from the file contents
     representation = Representer(src.read_text())
