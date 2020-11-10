@@ -17,7 +17,7 @@ import black
 
 Slug = NewType("Slug", str)
 
-SLUG_RE = re.compile(r"^[a-z]+(-[a-z]+)*$")
+SLUG_RE = re.compile(r"^[a-z]+([-_][a-z]+)*$")
 
 
 def slug(string: str) -> Slug:
