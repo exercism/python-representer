@@ -75,9 +75,7 @@ def represent(slug: utils.Slug, input: utils.Directory, output: utils.Directory)
     else:
         src = f'{input.joinpath(slug.replace("-", "_"))}.py'
 
-        try:
-            src.read_text()
-        except AttributeError as err:
+        if not src.is_file():
             print('No exercise file was found in the input directory.', err)
             return
 
