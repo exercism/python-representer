@@ -1,7 +1,9 @@
 """
 Representer for Python.
 """
+import json
 from typing import Dict
+
 
 from . import utils
 from .normalizer import Normalizer
@@ -55,10 +57,32 @@ def represent(slug: utils.Slug, input: utils.Directory, output: utils.Directory)
     """
     Normalize the `directory/slug.py` file representation.
     """
-    src = input.joinpath(slug.replace("-", "_") + ".py")
+
+    # get exercise name from config file or compose it from the passed-in slug
+    config_file = input.joinpath(".meta").joinpath("config.json")
+    src = None
+
+    if config_file.is_file():
+        editor_config = json.loads(config_file.read_text())\
+            .get("editor", {})\
+            .get("solution_files", [])
+
+        if editor_config:
+            src = input.joinpath(editor_config[0])
+        else:
+            raise FileNotFoundError("No exercise file was found in config.json.")
+
+    else:
+        src = f'{input.joinpath(slug.replace("-", "_"))}.py'
+
+        if not src.is_file():
+            print('No exercise file was found in the input directory.', err)
+            return
+
     out_dst = output.joinpath("representation.out")
     txt_dst = output.joinpath("representation.txt")
     map_dst = output.joinpath("mapping.json")
+
 
     # parse the tree from the file contents
     representation = Representer(src.read_text())
