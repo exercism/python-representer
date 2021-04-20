@@ -66,7 +66,7 @@ def represent(slug: utils.Slug, input: utils.Directory, output: utils.Directory)
         config_data = json.loads(config_file.read_text()).get("files", {}).get("solution", [])
 
         if config_data:
-            src = input.joinpath(*config_data)
+            src = input.joinpath(config_data[0])
         else:
             raise FileNotFoundError("No exercise file was found in config.json.")
 
