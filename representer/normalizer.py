@@ -43,7 +43,7 @@ class Normalizer(NodeTransformer):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._no_shadow = set(dir(builtins)).union(["self"])
-        self._placeholders = (f"PLACEHOLDER_{i}" for i in count())
+        self._placeholders = (f"placeholder_{i}" for i in count())
         self._placeholder_cache = {}
         self._docstring_cache = set()
 
@@ -67,7 +67,7 @@ class Normalizer(NodeTransformer):
         """
         Get the placeholder assignments after walking the tree.
         """
-        return {v: k for k, v in self._placeholder_cache.items()}
+        return {value: key for key, value in self._placeholder_cache.items()}
 
     def register_docstring(self, node: AST) -> None:
         """
