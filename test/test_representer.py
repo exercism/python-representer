@@ -59,9 +59,9 @@ class RepresenterNormalizationTest(unittest.TestCase):
                 name + namea / nameb
                 """
         expect = """\
-                import mod as PLACEHOLDER_0
-                import moda as PLACEHOLDER_1, modb as PLACEHOLDER_2
-                PLACEHOLDER_0 + PLACEHOLDER_1 / PLACEHOLDER_2
+                import mod as placeholder_0
+                import moda as placeholder_1, modb as placeholder_2
+                placeholder_0 + placeholder_1 / placeholder_2
                 """
         self.assertCodeEqual(before, expect)
 
@@ -90,9 +90,9 @@ class RepresenterNormalizationTest(unittest.TestCase):
                 aname + anamea / anameb
                 """
         expect = """\
-                from mod import name as PLACEHOLDER_0
-                from modb import namea as PLACEHOLDER_1, nameb as PLACEHOLDER_2
-                PLACEHOLDER_0 + PLACEHOLDER_1 / PLACEHOLDER_2
+                from mod import name as placeholder_0
+                from modb import namea as placeholder_1, nameb as placeholder_2
+                placeholder_0 + placeholder_1 / placeholder_2
                 """
         self.assertCodeEqual(before, expect)
 
@@ -110,8 +110,8 @@ class RepresenterNormalizationTest(unittest.TestCase):
                     dst.write(src.read())
                 """
         expect = """\
-                with open("in", "r") as PLACEHOLDER_0, open("out", "w") as PLACEHOLDER_1:
-                    PLACEHOLDER_1.write(PLACEHOLDER_0.read())
+                with open("in", "r") as placeholder_0, open("out", "w") as placeholder_1:
+                    placeholder_1.write(placeholder_0.read())
                 """
         self.assertCodeEqual(before, expect)
 
@@ -144,8 +144,8 @@ class RepresenterNormalizationTest(unittest.TestCase):
         expect = """\
                 try:
                     raise TypeError from ValueError("foo")
-                except (TypeError, ValueError) as PLACEHOLDER_0:
-                    print(PLACEHOLDER_0)
+                except (TypeError, ValueError) as placeholder_0:
+                    print(placeholder_0)
                     sys.exit(2)
                 else:
                     sys.exit(0)
@@ -157,64 +157,64 @@ class RepresenterNormalizationTest(unittest.TestCase):
     def test_with_list_comprehension(self):
         before = "[i + 1 for i in range(5) if not i % 2]"
         expect = (
-            "[(PLACEHOLDER_0 + 1) for PLACEHOLDER_0 in range(5)"
-            "if not PLACEHOLDER_0 % 2]"
+            "[(placeholder_0 + 1) for placeholder_0 in range(5)"
+            "if not placeholder_0 % 2]"
         )
         self.assertCodeEqual(before, expect)
 
     def test_with_set_comprehension(self):
         before = "{i + 1 for i in range(5) if not i % 2}"
         expect = (
-            "{(PLACEHOLDER_0 + 1) for PLACEHOLDER_0 in range(5)"
-            "if not PLACEHOLDER_0 % 2}"
+            "{(placeholder_0 + 1) for placeholder_0 in range(5)"
+            "if not placeholder_0 % 2}"
         )
         self.assertCodeEqual(before, expect)
 
     def test_with_generator_comprehension(self):
         before = "(i + 1 for i in range(5) if not i % 2)"
         expect = (
-            "(PLACEHOLDER_0 + 1 for PLACEHOLDER_0 in range(5)"
-            "if not PLACEHOLDER_0 % 2)"
+            "(placeholder_0 + 1 for placeholder_0 in range(5)"
+            "if not placeholder_0 % 2)"
         )
         self.assertCodeEqual(before, expect)
 
     def test_with_dict_comprehension(self):
         before = "{k: None for k in range(5) if not k % 2}"
         expect = (
-            "{PLACEHOLDER_0 : None for PLACEHOLDER_0 in range(5)"
-            "if not PLACEHOLDER_0 % 2}"
+            "{placeholder_0 : None for placeholder_0 in range(5)"
+            "if not placeholder_0 % 2}"
         )
         self.assertCodeEqual(before, expect)
 
     def test_with_list_compound_comprehension(self):
         before = "[i + n for i in range(5) for n in range(5) if not i % 2]"
         expect = (
-            "[(PLACEHOLDER_0 + PLACEHOLDER_1) for PLACEHOLDER_0 in range(5)"
-            "for PLACEHOLDER_1 in range(5) if not PLACEHOLDER_0 % 2]"
+            "[(placeholder_0 + placeholder_1) for placeholder_0 in range(5)"
+            "for placeholder_1 in range(5) if not placeholder_0 % 2]"
         )
         self.assertCodeEqual(before, expect)
 
     def test_with_set_compound_comprehension(self):
         before = "{i + n for i in range(5) for n in range(5) if not i % 2}"
         expect = (
-            "{(PLACEHOLDER_0 + PLACEHOLDER_1) for PLACEHOLDER_0 in range(5)"
-            "for PLACEHOLDER_1 in range(5) if not PLACEHOLDER_0 % 2}"
+            "{(placeholder_0 + placeholder_1) for placeholder_0 in range(5)"
+            "for placeholder_1 in range(5) if not placeholder_0 % 2}"
         )
         self.assertCodeEqual(before, expect)
 
     def test_with_generator_compound_comprehension(self):
         before = "(i + n for i in range(5) for n in range(5) if not i % 2)"
         expect = (
-            "(PLACEHOLDER_0 + PLACEHOLDER_1 for PLACEHOLDER_0 in range(5)"
-            "for PLACEHOLDER_1 in range(5) if not PLACEHOLDER_0 % 2)"
+            "(placeholder_0 + placeholder_1 for placeholder_0 in range(5)"
+            "for placeholder_1 in range(5) if not placeholder_0 % 2)"
         )
         self.assertCodeEqual(before, expect)
 
     def test_with_dict_compound_comprehension(self):
         before = "{k: v for k in range(5) for v in range(5) if not k % 2}"
         expect = (
-            "{PLACEHOLDER_0 : PLACEHOLDER_1 for PLACEHOLDER_0 in range(5)"
-            "for PLACEHOLDER_1 in range(5) if not PLACEHOLDER_0 % 2}"
+            "{placeholder_0 : placeholder_1 for placeholder_0 in range(5)"
+            "for placeholder_1 in range(5) if not placeholder_0 % 2}"
         )
         self.assertCodeEqual(before, expect)
 
@@ -224,8 +224,8 @@ class RepresenterNormalizationTest(unittest.TestCase):
                     print(name + 1)
                 """
         expect = """\
-                for PLACEHOLDER_0 in range(21):
-                    print(PLACEHOLDER_0 + 1)
+                for placeholder_0 in range(21):
+                    print(placeholder_0 + 1)
                 """
         self.assertCodeEqual(before, expect)
 
@@ -235,8 +235,8 @@ class RepresenterNormalizationTest(unittest.TestCase):
                     print(idx, item)
                 """
         expect = """\
-                for PLACEHOLDER_0, PLACEHOLDER_1 in enumerate(range(21)):
-                    print(PLACEHOLDER_0, PLACEHOLDER_1)
+                for placeholder_0, placeholder_1 in enumerate(range(21)):
+                    print(placeholder_0, placeholder_1)
                 """
         self.assertCodeEqual(before, expect)
 
@@ -246,8 +246,8 @@ class RepresenterNormalizationTest(unittest.TestCase):
                     print(name)
                 """
         expect = """\
-                while (PLACEHOLDER_0 := True):
-                    print(PLACEHOLDER_0)
+                while (placeholder_0 := True):
+                    print(placeholder_0)
                 """
         self.assertCodeEqual(before, expect)
 
@@ -259,10 +259,10 @@ class RepresenterNormalizationTest(unittest.TestCase):
                 x, y = y, x
                 """
         expect = """\
-                PLACEHOLDER_0 = 10
-                PLACEHOLDER_1 = PLACEHOLDER_0 + 10
-                PLACEHOLDER_0 = PLACEHOLDER_0 + PLACEHOLDER_1
-                PLACEHOLDER_0, PLACEHOLDER_1 = PLACEHOLDER_1, PLACEHOLDER_0
+                placeholder_0 = 10
+                placeholder_1 = placeholder_0 + 10
+                placeholder_0 = placeholder_0 + placeholder_1
+                placeholder_0, placeholder_1 = placeholder_1, placeholder_0
                 """
         self.assertCodeEqual(before, expect)
 
@@ -274,10 +274,10 @@ class RepresenterNormalizationTest(unittest.TestCase):
                 y *= 0
                 """
         expect = """\
-                PLACEHOLDER_0 = 10
-                PLACEHOLDER_1 = PLACEHOLDER_0 + 10
-                PLACEHOLDER_0 += PLACEHOLDER_1
-                PLACEHOLDER_1 *= 0
+                placeholder_0 = 10
+                placeholder_1 = placeholder_0 + 10
+                placeholder_0 += placeholder_1
+                placeholder_1 *= 0
                 """
         self.assertCodeEqual(before, expect)
 
@@ -294,12 +294,12 @@ class RepresenterNormalizationTest(unittest.TestCase):
                     return item
                 """
         expect = """\
-                def PLACEHOLDER_0(PLACEHOLDER_1, PLACEHOLDER_2=None, 
-                                  *PLACEHOLDER_3, **PLACEHOLDER_4):
-                    with PLACEHOLDER_0() as PLACEHOLDER_5:
-                        for PLACEHOLDER_6 in PLACEHOLDER_5:
-                            print(PLACEHOLDER_6)
-                    return PLACEHOLDER_6
+                def placeholder_0(placeholder_1, placeholder_2=None, 
+                                  *placeholder_3, **placeholder_4):
+                    with placeholder_0() as placeholder_5:
+                        for placeholder_6 in placeholder_5:
+                            print(placeholder_6)
+                    return placeholder_6
                 """
         self.assertCodeEqual(before, expect)
 
@@ -316,12 +316,12 @@ class RepresenterNormalizationTest(unittest.TestCase):
                     await afunc()
                 """
         expect = """\
-                async def PLACEHOLDER_0(PLACEHOLDER_1, PLACEHOLDER_2=None, 
-                                        *PLACEHOLDER_3, **PLACEHOLDER_4):
-                    async with PLACEHOLDER_0() as PLACEHOLDER_5:
-                        async for PLACEHOLDER_6 in PLACEHOLDER_5:
-                            print(PLACEHOLDER_6)
-                    await PLACEHOLDER_0()
+                async def placeholder_0(placeholder_1, placeholder_2=None, 
+                                        *placeholder_3, **placeholder_4):
+                    async with placeholder_0() as placeholder_5:
+                        async for placeholder_6 in placeholder_5:
+                            print(placeholder_6)
+                    await placeholder_0()
                 """
         self.assertCodeEqual(before, expect)
 
@@ -341,13 +341,13 @@ class RepresenterNormalizationTest(unittest.TestCase):
                         self.instance_attr = self.class_attr + 2 # not self is preserved
                 """
         expect = """\
-                 class PLACEHOLDER_0:
-                     PLACEHOLDER_1 = 2
+                 class placeholder_0:
+                     placeholder_1 = 2
                 
-                     def PLACEHOLDER_2(
-                         self, PLACEHOLDER_3, PLACEHOLDER_4=None, *PLACEHOLDER_5, **PLACEHOLDER_6
+                     def placeholder_2(
+                         self, placeholder_3, placeholder_4=None, *placeholder_5, **placeholder_6
                      ):
-                         self.PLACEHOLDER_7 = self.PLACEHOLDER_1 + 2
+                         self.placeholder_7 = self.placeholder_1 + 2
                 """
         self.assertCodeEqual(before, expect)
 
@@ -369,15 +369,15 @@ class RepresenterNormalizationTest(unittest.TestCase):
                         self.instance_attr = self.class_attr + 2 # not self is preserved
                 """
         expect = """\
-                class PLACEHOLDER_0: pass
+                class placeholder_0: pass
 
-                class PLACEHOLDER_1(PLACEHOLDER_0):
-                    PLACEHOLDER_2 = 2
+                class placeholder_1(placeholder_0):
+                    placeholder_2 = 2
                 
-                    def PLACEHOLDER_3(
-                        self, PLACEHOLDER_4, PLACEHOLDER_5=None, *PLACEHOLDER_6, **PLACEHOLDER_7
+                    def placeholder_3(
+                        self, placeholder_4, placeholder_5=None, *placeholder_6, **placeholder_7
                     ):
-                        self.PLACEHOLDER_8 = self.PLACEHOLDER_2 + 2
+                        self.placeholder_8 = self.placeholder_2 + 2
                 """
         self.assertCodeEqual(before, expect)
 
@@ -392,7 +392,7 @@ class RepresenterNormalizationTest(unittest.TestCase):
         expect = """\
                 from abc import ABCMeta
 
-                class PLACEHOLDER_0(metaclass=ABCMeta):
+                class placeholder_0(metaclass=ABCMeta):
                     pass
                 """
         self.assertCodeEqual(before, expect)
@@ -405,8 +405,8 @@ class RepresenterNormalizationTest(unittest.TestCase):
                 """
         expect = """\
                 lambda : None
-                lambda PLACEHOLDER_0 : PLACEHOLDER_0 + 10
-                lambda PLACEHOLDER_1,PLACEHOLDER_2 : PLACEHOLDER_1 + PLACEHOLDER_2
+                lambda placeholder_0 : placeholder_0 + 10
+                lambda placeholder_1,placeholder_2 : placeholder_1 + placeholder_2
                 """
         self.assertCodeEqual(before, expect)
 
