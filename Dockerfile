@@ -1,4 +1,4 @@
-FROM python:3.9-slim as base
+FROM python:3.10-slim as base
 
 FROM base as builder
 
@@ -17,8 +17,6 @@ COPY --from=builder /install /usr/local
 
 
 RUN apt-get update \
- && apt-get install curl -y \
- && apt-get remove curl -y \
  && apt-get autoremove -y \
  && rm -rf /var/lib/apt/lists/*
 
