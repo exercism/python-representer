@@ -303,6 +303,30 @@ class RepresenterNormalizationTest(unittest.TestCase):
                 """
         self.assertCodeEqual(before, expect)
 
+    def test_def_functions_with_annotations_in_signature(self):
+        before = """\
+                def func(a: int, b: int) -> int:
+                    return a + b
+                """
+        expect = """\
+                def placeholder_0(placeholder_1, placeholder_2):
+                    return placeholder_1 + placeholder_2
+                """
+        self.assertCodeEqual(before, expect)
+
+    def test_def_functions_with_annotations_in_body(self):
+        before = """\
+                def func(a: int, b: int) -> int:
+                    c: int = 2
+                    return a + b + c
+                """
+        expect = """\
+                def placeholder_0(placeholder_1, placeholder_2):
+                    placeholder_3 = 2
+                    return placeholder_1 + placeholder_2 + placeholder_3
+                """
+        self.assertCodeEqual(before, expect)
+
     def test_async_def_functions(self):
         before = """\
                 async def afunc(posarg, defarg=None, *varargs, **nameargs):
