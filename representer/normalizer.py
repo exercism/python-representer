@@ -5,7 +5,9 @@ import builtins
 from itertools import count
 from typing import Dict, Optional, overload
 from ast import (
+    AnnAssign,
     AST,
+    Assign,
     AsyncFunctionDef,
     Attribute,
     ClassDef,
@@ -113,7 +115,21 @@ class Normalizer(NodeTransformer):
         """
         Any `def name` definition.
         """
+        if node.returns:
+            node.returns = None
         return self._visit_definition(node)
+
+    def visit_AnnAssign(self, node: AnnAssign) -> Assign:
+        """
+        Any type-annotated assignment
+
+        Converts type-annotated assignments to regular assignments.
+        """
+        new_assign = Assign(targets=[node.target],
+                            value=node.value,
+                            lineno=node.lineno)
+        self.generic_visit(new_assign)
+        return new_assign
 
     def visit_AsyncFunctionDef(self, node: AsyncFunctionDef) -> AsyncFunctionDef:
         """
