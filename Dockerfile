@@ -27,4 +27,4 @@ COPY . /opt/representer
 WORKDIR /opt/representer
 
 ENTRYPOINT ["sh","/opt/representer/bin/run.sh"]
-#ENTRYPOINT ["/bin/bash"]
+
