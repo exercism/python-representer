@@ -1,4 +1,4 @@
-FROM python:3.10.6-slim as base
+FROM python:3.11.2-slim as base
 
 FROM base as builder
 
@@ -27,3 +27,4 @@ COPY . /opt/representer
 WORKDIR /opt/representer
 
 ENTRYPOINT ["sh","/opt/representer/bin/run.sh"]
+
