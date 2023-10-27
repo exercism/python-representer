@@ -102,3 +102,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+test/smoke_tests/**/*/mapping.json
+test/smoke_tests/**/*/representation.txt
+test/smoke_tests/**/*/representation.out
