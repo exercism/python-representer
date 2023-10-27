@@ -13,7 +13,7 @@
 
 exit_code=0
 
-# pytest
+pytest
 
 # Iterate over all test directories
 for test_dir in test/smoke_tests/*; do
