@@ -1,0 +1,11 @@
+{
+    "placeholder_0": "Bar",
+    "placeholder_1": "Foo",
+    "placeholder_2": "class_attr",
+    "placeholder_3": "method",
+    "placeholder_4": "posarg",
+    "placeholder_5": "defarg",
+    "placeholder_6": "varargs",
+    "placeholder_7": "nameargs",
+    "placeholder_8": "instance_attr"
+}

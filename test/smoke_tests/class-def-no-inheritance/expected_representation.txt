@@ -1,0 +1,11 @@
+class placeholder_0:
+    pass
+
+
+class placeholder_1(placeholder_0):
+    placeholder_2 = 2
+
+    def placeholder_3(
+        self, placeholder_4, placeholder_5=None, *placeholder_6, **placeholder_7
+    ):
+        self.placeholder_8 = self.placeholder_2 + 2
