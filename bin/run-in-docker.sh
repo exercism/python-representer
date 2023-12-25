@@ -33,8 +33,13 @@ output_dir="$3"
 mkdir -p "$output_dir"
 
 # run image passing the arguments
+# run image passing the arguments
 docker run \
+    --rm \
+    --network none \
+    --read-only \
     --mount type=bind,src=$PWD/$2,dst=/solution \
     --mount type=bind,src=$PWD/$output_dir,dst=/output \
-    python-representer $1 /solution/ /output/
+    --mount type=tmpfs,destination=/tmp \
+    exercism/python-representer $1 /solution/ /output/
 

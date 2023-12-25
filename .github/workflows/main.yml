@@ -6,19 +6,18 @@ on:
     branches:
       - main
     paths-ignore:
-      - '.gitignore'
-      - 'LICENSE'
-      - '**.md'
+      - ".gitignore"
+      - "LICENSE"
+      - "**.md"
   push:
     paths-ignore:
-      - '.gitignore'
-      - 'LICENSE'
-      - '**.md'
-
+      - ".gitignore"
+      - "LICENSE"
+      - "**.md"
 jobs:
   build:
-    name: Representer
-    runs-on: ubuntu-22.04
+    name: Test Representer
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9
