@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 set -e
 
 # Synopsis:
@@ -37,3 +37,4 @@ docker run \
     --mount type=bind,src=$PWD/$2,dst=/solution \
     --mount type=bind,src=$PWD/$output_dir,dst=/output \
     python-representer $1 /solution/ /output/
+
