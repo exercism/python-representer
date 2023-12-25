@@ -1,0 +1,17 @@
+{
+    "placeholder_0": "meetup",
+    "placeholder_1": "year",
+    "placeholder_2": "month",
+    "placeholder_3": "week",
+    "placeholder_4": "day_of_week",
+    "placeholder_5": "candidates",
+    "placeholder_6": "date",
+    "placeholder_7": "_choice",
+    "placeholder_8": "dates",
+    "placeholder_9": "ordinals",
+    "placeholder_10": "day",
+    "placeholder_11": "_func",
+    "placeholder_12": "MeetupDayException",
+    "placeholder_13": "__init__",
+    "placeholder_14": "message"
+}

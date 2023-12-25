@@ -1,0 +1,13 @@
+{
+    "placeholder_0": "BLOCK_SIZE",
+    "placeholder_1": "trtbl",
+    "placeholder_2": "base_trans",
+    "placeholder_3": "text",
+    "placeholder_4": "character",
+    "placeholder_5": "encode",
+    "placeholder_6": "plain",
+    "placeholder_7": "cipher",
+    "placeholder_8": "idx",
+    "placeholder_9": "decode",
+    "placeholder_10": "ciphered"
+}

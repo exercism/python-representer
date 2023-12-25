@@ -1,0 +1,205 @@
+{
+  "version": 3,
+  "status": "fail",
+  "tests": [
+    {
+      "name": "Yacht > yacht",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([5, 5, 5, 5, 5], yacht.YACHT), 50)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > not yacht",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([1, 3, 3, 2, 5], yacht.YACHT), 0)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > ones",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([1, 1, 1, 3, 5], yacht.ONES), 3)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > ones out of order",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([3, 1, 1, 5, 1], yacht.ONES), 3)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > no ones",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([4, 3, 6, 5, 5], yacht.ONES), 0)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > twos",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([2, 3, 4, 5, 6], yacht.TWOS), 2)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > fours",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([1, 4, 1, 4, 1], yacht.FOURS), 8)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > yacht counted as threes",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([3, 3, 3, 3, 3], yacht.THREES), 15)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > yacht of 3s counted as fives",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([3, 3, 3, 3, 3], yacht.FIVES), 0)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > fives",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([5, 1, 5, 2, 6], yacht.FIVES), 10)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > sixes",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([2, 3, 4, 5, 6], yacht.SIXES), 6)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > full house two small three big",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([2, 2, 4, 4, 4], yacht.FULL_HOUSE), 16)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > full house three small two big",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([5, 3, 3, 5, 3], yacht.FULL_HOUSE), 19)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > two pair is not a full house",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([2, 2, 4, 4, 5], yacht.FULL_HOUSE), 0)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > four of a kind is not a full house",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([1, 4, 4, 4, 4], yacht.FULL_HOUSE), 0)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > yacht is not a full house",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([2, 2, 2, 2, 2], yacht.FULL_HOUSE), 0)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > four of a kind one",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([4, 6, 6, 6, 6], yacht.FOUR_OF_A_KIND), 24)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > four of a kind two",
+      "status": "fail",
+      "message": "AssertionError: 16 != 24",
+      "test_code": "self.assertEqual(yacht.score([6, 4, 6, 6, 6], yacht.FOUR_OF_A_KIND), 24)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > four of a kind three",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([6, 6, 4, 6, 6], yacht.FOUR_OF_A_KIND), 24)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > four of a kind four",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([6, 6, 6, 4, 6], yacht.FOUR_OF_A_KIND), 24)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > four of a kind five",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([6, 6, 6, 6, 4], yacht.FOUR_OF_A_KIND), 24)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > yacht can be scored as four of a kind",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([3, 3, 3, 3, 3], yacht.FOUR_OF_A_KIND), 12)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > full house is not four of a kind",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([3, 3, 3, 5, 5], yacht.FOUR_OF_A_KIND), 0)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > little straight",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([3, 5, 4, 1, 2], yacht.LITTLE_STRAIGHT), 30)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > little straight as big straight",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([1, 2, 3, 4, 5], yacht.BIG_STRAIGHT), 0)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > four in order but not a little straight",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([1, 1, 2, 3, 4], yacht.LITTLE_STRAIGHT), 0)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > no pairs but not a little straight",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([1, 2, 3, 4, 6], yacht.LITTLE_STRAIGHT), 0)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > minimum is 1 maximum is 5 but not a little straight",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([1, 1, 3, 4, 5], yacht.LITTLE_STRAIGHT), 0)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > big straight",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([4, 6, 2, 5, 3], yacht.BIG_STRAIGHT), 30)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > big straight as little straight",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([6, 5, 4, 3, 2], yacht.LITTLE_STRAIGHT), 0)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > no pairs but not a big straight",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([6, 5, 4, 3, 1], yacht.BIG_STRAIGHT), 0)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > choice",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([3, 3, 5, 6, 6], yacht.CHOICE), 23)",
+      "task_id": 0
+    },
+    {
+      "name": "Yacht > yacht as choice",
+      "status": "pass",
+      "test_code": "self.assertEqual(yacht.score([2, 2, 2, 2, 2], yacht.CHOICE), 10)",
+      "task_id": 0
+    }
+  ]
+}

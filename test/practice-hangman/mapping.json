@@ -1,0 +1,21 @@
+{
+    "placeholder_0": "STATUS_WIN",
+    "placeholder_1": "STATUS_LOSE",
+    "placeholder_2": "STATUS_ONGOING",
+    "placeholder_3": "Hangman",
+    "placeholder_4": "__init__",
+    "placeholder_5": "word",
+    "placeholder_6": "remaining_guesses",
+    "placeholder_7": "status",
+    "placeholder_8": "masked_word",
+    "placeholder_9": "guesses",
+    "placeholder_10": "_",
+    "placeholder_11": "guess",
+    "placeholder_12": "char",
+    "placeholder_13": "update_masked_word",
+    "placeholder_14": "idx",
+    "placeholder_15": "update_remaining_guesses",
+    "placeholder_16": "update_status",
+    "placeholder_17": "get_masked_word",
+    "placeholder_18": "get_status"
+}

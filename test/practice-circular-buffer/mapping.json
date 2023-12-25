@@ -1,0 +1,17 @@
+{
+    "placeholder_0": "BufferFullException",
+    "placeholder_1": "__init__",
+    "placeholder_2": "message",
+    "placeholder_3": "BufferEmptyException",
+    "placeholder_4": "CircularBuffer",
+    "placeholder_5": "capacity",
+    "placeholder_6": "buffer",
+    "placeholder_7": "read_point",
+    "placeholder_8": "write_point",
+    "placeholder_9": "_update_buffer",
+    "placeholder_10": "data",
+    "placeholder_11": "clear",
+    "placeholder_12": "write",
+    "placeholder_13": "overwrite",
+    "placeholder_14": "read"
+}

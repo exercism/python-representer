@@ -1,0 +1,14 @@
+{
+    "placeholder_0": "tree_from_traversals",
+    "placeholder_1": "preorder",
+    "placeholder_2": "inorder",
+    "placeholder_3": "value",
+    "placeholder_4": "index",
+    "placeholder_5": "left_inorder",
+    "placeholder_6": "right_inorder",
+    "placeholder_7": "left_preorder",
+    "placeholder_8": "idx",
+    "placeholder_9": "right_preorder",
+    "placeholder_10": "left",
+    "placeholder_11": "right"
+}

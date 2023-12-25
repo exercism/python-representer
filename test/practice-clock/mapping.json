@@ -1,0 +1,14 @@
+{
+    "placeholder_0": "Clock",
+    "placeholder_1": "__init__",
+    "placeholder_2": "hour",
+    "placeholder_3": "minute",
+    "placeholder_4": "__repr__",
+    "placeholder_5": "__str__",
+    "placeholder_6": "__eq__",
+    "placeholder_7": "other",
+    "placeholder_8": "__add__",
+    "placeholder_9": "minutes",
+    "placeholder_10": "__sub__",
+    "placeholder_11": "cleanup"
+}

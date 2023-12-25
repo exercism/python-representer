@@ -1,0 +1,16 @@
+{
+    "placeholder_0": "Character",
+    "placeholder_1": "__init__",
+    "placeholder_2": "strength",
+    "placeholder_3": "dexterity",
+    "placeholder_4": "constitution",
+    "placeholder_5": "intelligence",
+    "placeholder_6": "wisdom",
+    "placeholder_7": "charisma",
+    "placeholder_8": "hitpoints",
+    "placeholder_9": "ability",
+    "placeholder_10": "dice_rolls",
+    "placeholder_11": "_",
+    "placeholder_12": "modifier",
+    "placeholder_13": "value"
+}

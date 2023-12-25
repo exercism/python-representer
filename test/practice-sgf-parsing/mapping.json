@@ -1,0 +1,20 @@
+{
+    "placeholder_0": "SgfTree",
+    "placeholder_1": "properties",
+    "placeholder_2": "default_factory",
+    "placeholder_3": "children",
+    "placeholder_4": "parse_property_vals",
+    "placeholder_5": "sgf",
+    "placeholder_6": "idx",
+    "placeholder_7": "values",
+    "placeholder_8": "prop_val",
+    "placeholder_9": "char",
+    "placeholder_10": "parse_node",
+    "placeholder_11": "prop_key_start",
+    "placeholder_12": "prop_key",
+    "placeholder_13": "prop_vals",
+    "placeholder_14": "child",
+    "placeholder_15": "child_start",
+    "placeholder_16": "parse",
+    "placeholder_17": "inside"
+}

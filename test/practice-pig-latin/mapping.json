@@ -1,0 +1,12 @@
+{
+    "placeholder_0": "re_cons",
+    "placeholder_1": "re_vowel",
+    "placeholder_2": "split_initial_consonant_sound",
+    "placeholder_3": "word",
+    "placeholder_4": "starts_with_vowel_sound",
+    "placeholder_5": "translate",
+    "placeholder_6": "text",
+    "placeholder_7": "words",
+    "placeholder_8": "head",
+    "placeholder_9": "tail"
+}

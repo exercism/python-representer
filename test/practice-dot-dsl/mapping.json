@@ -1,0 +1,20 @@
+{
+    "placeholder_0": "NODE",
+    "placeholder_1": "EDGE",
+    "placeholder_2": "ATTR",
+    "placeholder_3": "Node",
+    "placeholder_4": "__init__",
+    "placeholder_5": "name",
+    "placeholder_6": "attrs",
+    "placeholder_7": "__eq__",
+    "placeholder_8": "other",
+    "placeholder_9": "Edge",
+    "placeholder_10": "src",
+    "placeholder_11": "dst",
+    "placeholder_12": "Graph",
+    "placeholder_13": "data",
+    "placeholder_14": "nodes",
+    "placeholder_15": "edges",
+    "placeholder_16": "item",
+    "placeholder_17": "type_"
+}

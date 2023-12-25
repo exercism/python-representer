@@ -1,0 +1,15 @@
+{
+    "placeholder_0": "Zipper",
+    "placeholder_1": "from_tree",
+    "placeholder_2": "tree",
+    "placeholder_3": "__init__",
+    "placeholder_4": "ancestors",
+    "placeholder_5": "value",
+    "placeholder_6": "set_value",
+    "placeholder_7": "left",
+    "placeholder_8": "set_left",
+    "placeholder_9": "right",
+    "placeholder_10": "set_right",
+    "placeholder_11": "up",
+    "placeholder_12": "to_tree"
+}

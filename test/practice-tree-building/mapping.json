@@ -1,0 +1,21 @@
+{
+    "placeholder_0": "Record",
+    "placeholder_1": "__init__",
+    "placeholder_2": "record_id",
+    "placeholder_3": "parent_id",
+    "placeholder_4": "equal_id",
+    "placeholder_5": "Node",
+    "placeholder_6": "node_id",
+    "placeholder_7": "children",
+    "placeholder_8": "validate_record",
+    "placeholder_9": "record",
+    "placeholder_10": "BuildTree",
+    "placeholder_11": "records",
+    "placeholder_12": "parent_dict",
+    "placeholder_13": "node_dict",
+    "placeholder_14": "ordered_id",
+    "placeholder_15": "idx",
+    "placeholder_16": "root_id",
+    "placeholder_17": "root",
+    "placeholder_18": "index"
+}

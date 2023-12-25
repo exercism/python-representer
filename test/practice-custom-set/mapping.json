@@ -1,0 +1,19 @@
+{
+    "placeholder_0": "CustomSet",
+    "placeholder_1": "__init__",
+    "placeholder_2": "elements",
+    "placeholder_3": "isempty",
+    "placeholder_4": "__iter__",
+    "placeholder_5": "__contains__",
+    "placeholder_6": "element",
+    "placeholder_7": "issubset",
+    "placeholder_8": "other",
+    "placeholder_9": "idx",
+    "placeholder_10": "isdisjoint",
+    "placeholder_11": "__eq__",
+    "placeholder_12": "add",
+    "placeholder_13": "intersection",
+    "placeholder_14": "result",
+    "placeholder_15": "__sub__",
+    "placeholder_16": "__add__"
+}

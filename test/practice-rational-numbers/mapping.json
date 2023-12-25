@@ -1,0 +1,20 @@
+{
+    "placeholder_0": "Rational",
+    "placeholder_1": "__init__",
+    "placeholder_2": "numer",
+    "placeholder_3": "denom",
+    "placeholder_4": "gcd_num",
+    "placeholder_5": "__eq__",
+    "placeholder_6": "other",
+    "placeholder_7": "__repr__",
+    "placeholder_8": "__add__",
+    "placeholder_9": "__sub__",
+    "placeholder_10": "__mul__",
+    "placeholder_11": "__truediv__",
+    "placeholder_12": "__abs__",
+    "placeholder_13": "__pow__",
+    "placeholder_14": "power",
+    "placeholder_15": "__rpow__",
+    "placeholder_16": "base",
+    "placeholder_17": "__neg__"
+}
