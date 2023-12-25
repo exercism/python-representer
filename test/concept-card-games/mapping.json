@@ -1,0 +1,16 @@
+{
+    "placeholder_0": "get_rounds",
+    "placeholder_1": "number",
+    "placeholder_2": "concatenate_rounds",
+    "placeholder_3": "rounds_1",
+    "placeholder_4": "rounds_2",
+    "placeholder_5": "list_contains_round",
+    "placeholder_6": "rounds",
+    "placeholder_7": "card_average",
+    "placeholder_8": "hand",
+    "placeholder_9": "approx_average_is_average",
+    "placeholder_10": "real_average",
+    "placeholder_11": "is_same",
+    "placeholder_12": "average_even_is_average_odd",
+    "placeholder_13": "maybe_double_last"
+}

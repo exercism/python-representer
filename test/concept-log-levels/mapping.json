@@ -1,0 +1,23 @@
+{
+    "placeholder_0": "LogLevel",
+    "placeholder_1": "TRACE",
+    "placeholder_2": "DEBUG",
+    "placeholder_3": "INFO",
+    "placeholder_4": "WARNING",
+    "placeholder_5": "WARN",
+    "placeholder_6": "ERROR",
+    "placeholder_7": "FATAL",
+    "placeholder_8": "UNKNOWN",
+    "placeholder_9": "LogLevelInt",
+    "placeholder_10": "parse_log_level",
+    "placeholder_11": "message",
+    "placeholder_12": "str_split",
+    "placeholder_13": "lvl",
+    "placeholder_14": "level",
+    "placeholder_15": "convert_to_short_log",
+    "placeholder_16": "log_level",
+    "placeholder_17": "get_warn_alias",
+    "placeholder_18": "get_members",
+    "placeholder_19": "out_list",
+    "placeholder_20": "member"
+}

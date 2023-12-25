@@ -1,0 +1,18 @@
+{
+    "placeholder_0": "Alien",
+    "placeholder_1": "total_aliens_created",
+    "placeholder_2": "__init__",
+    "placeholder_3": "x_coordinate",
+    "placeholder_4": "y_coordinate",
+    "placeholder_5": "health",
+    "placeholder_6": "hit",
+    "placeholder_7": "is_alive",
+    "placeholder_8": "teleport",
+    "placeholder_9": "new_x_coordinate",
+    "placeholder_10": "new_y_coordinate",
+    "placeholder_11": "collision_detection",
+    "placeholder_12": "other",
+    "placeholder_13": "new_aliens_collection",
+    "placeholder_14": "positions",
+    "placeholder_15": "position"
+}

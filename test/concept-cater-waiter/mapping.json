@@ -1,0 +1,22 @@
+{
+    "placeholder_0": "clean_ingredients",
+    "placeholder_1": "dish_name",
+    "placeholder_2": "dish_ingredients",
+    "placeholder_3": "check_drinks",
+    "placeholder_4": "drink_name",
+    "placeholder_5": "drink_ingredients",
+    "placeholder_6": "categorize_dish",
+    "placeholder_7": "categories",
+    "placeholder_8": "category",
+    "placeholder_9": "tag_special_ingredients",
+    "placeholder_10": "dish",
+    "placeholder_11": "compile_ingredients",
+    "placeholder_12": "dishes",
+    "placeholder_13": "combined_ingredients",
+    "placeholder_14": "ingredients",
+    "placeholder_15": "separate_appetizers",
+    "placeholder_16": "appetizers",
+    "placeholder_17": "singleton_ingredients",
+    "placeholder_18": "intersection",
+    "placeholder_19": "all_ingredients"
+}

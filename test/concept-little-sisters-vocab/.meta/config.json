@@ -1,0 +1,13 @@
+{
+  "authors": [
+    "aldraco",
+    "BethanyG"
+  ],
+  "files": {
+    "solution": [
+      "strings.py"
+    ]
+  },
+  "icon": "two-fer",
+  "blurb": "Learn about strings by helping your little sister with her vocabulary homework."
+}

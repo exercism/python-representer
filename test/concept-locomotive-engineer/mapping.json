@@ -1,0 +1,21 @@
+{
+    "placeholder_0": "get_list_of_wagons",
+    "placeholder_1": "args",
+    "placeholder_2": "fix_list_of_wagons",
+    "placeholder_3": "each_wagons_id",
+    "placeholder_4": "missing_wagons",
+    "placeholder_5": "first",
+    "placeholder_6": "second",
+    "placeholder_7": "locomotive",
+    "placeholder_8": "rest",
+    "placeholder_9": "add_missing_stops",
+    "placeholder_10": "route",
+    "placeholder_11": "kwargs",
+    "placeholder_12": "extend_route_information",
+    "placeholder_13": "more_route_information",
+    "placeholder_14": "fix_wagon_depot",
+    "placeholder_15": "wagons_rows",
+    "placeholder_16": "row_one",
+    "placeholder_17": "row_two",
+    "placeholder_18": "row_three"
+}

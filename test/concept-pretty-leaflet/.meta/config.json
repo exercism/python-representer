@@ -1,0 +1,12 @@
+{
+  "authors": [
+    "valentin-p"
+  ],
+  "files": {
+    "solution": [
+      "string_formatting.py"
+    ]
+  },
+  "icon": "scale-generator",
+  "blurb": "Learn about string formatting by \"prettifying\" promotional leaflets."
+}

@@ -1,0 +1,16 @@
+{
+    "placeholder_0": "value_of_card",
+    "placeholder_1": "card",
+    "placeholder_2": "value",
+    "placeholder_3": "higher_card",
+    "placeholder_4": "card_one",
+    "placeholder_5": "card_two",
+    "placeholder_6": "card_one_value",
+    "placeholder_7": "card_two_value",
+    "placeholder_8": "result",
+    "placeholder_9": "value_of_ace",
+    "placeholder_10": "ace_value",
+    "placeholder_11": "is_blackjack",
+    "placeholder_12": "can_split_pairs",
+    "placeholder_13": "can_double_down"
+}

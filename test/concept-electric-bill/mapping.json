@@ -1,0 +1,11 @@
+{
+    "placeholder_0": "get_extra_hours",
+    "placeholder_1": "hours",
+    "placeholder_2": "get_kW_amount",
+    "placeholder_3": "watts",
+    "placeholder_4": "get_kwh_amount",
+    "placeholder_5": "get_efficiency",
+    "placeholder_6": "power_factor",
+    "placeholder_7": "get_cost",
+    "placeholder_8": "price"
+}

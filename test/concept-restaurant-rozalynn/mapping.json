@@ -1,0 +1,23 @@
+{
+    "placeholder_0": "new_seating_chart",
+    "placeholder_1": "size",
+    "placeholder_2": "number",
+    "placeholder_3": "arrange_reservations",
+    "placeholder_4": "guests",
+    "placeholder_5": "seats",
+    "placeholder_6": "seat_number",
+    "placeholder_7": "find_all_available_seats",
+    "placeholder_8": "available",
+    "placeholder_9": "seat_num",
+    "placeholder_10": "value",
+    "placeholder_11": "current_empty_seat_capacity",
+    "placeholder_12": "count",
+    "placeholder_13": "accommodate_waiting_guests",
+    "placeholder_14": "curr_empty_seats",
+    "placeholder_15": "empty_seat_list",
+    "placeholder_16": "index",
+    "placeholder_17": "_",
+    "placeholder_18": "empty_seats",
+    "placeholder_19": "seat_numbers",
+    "placeholder_20": "seat"
+}

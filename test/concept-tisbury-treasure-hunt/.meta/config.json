@@ -1,0 +1,12 @@
+{
+  "authors": [
+    "BethanyG"
+  ],
+  "files": {
+    "solution": [
+      "tuples.py"
+    ]
+  },
+  "icon": "tisbury-treasure-hunt",
+  "blurb": "Learn about tuples by helping out competitors in the Tisbury Treasure Hunt."
+}
