@@ -10,14 +10,18 @@ from ast import (
     Assign,
     AsyncFunctionDef,
     Attribute,
+    Call,
     ClassDef,
+    Compare,
     Constant,
     DictComp,
+    Eq,
     ExceptHandler,
     Expr,
     FunctionDef,
     GeneratorExp,
     Global,
+    If,
     ListComp,
     Load,
     Module,
@@ -25,7 +29,9 @@ from ast import (
     NodeTransformer,
     Nonlocal,
     SetComp,
+    Str,
     Store,
+    Yield,
     alias,
     arg,
     get_docstring,
@@ -140,6 +146,7 @@ class Normalizer(NodeTransformer):
     def visit_arg(self, node: arg) -> arg:
         """
         Arguments in definition signatures.
+        Drops type annotations.
         """
         node.arg = self.add_placeholder(node.arg)
         if node.annotation:
@@ -190,17 +197,6 @@ class Normalizer(NodeTransformer):
         self.generic_visit(node)
         return node
 
-    def visit_Expr(self, node: Expr) -> Optional[Expr]:
-        """
-        Expressions not assigned to an identifier.
-        """
-        if isinstance(node.value, Constant):
-            # eliminate registered docstrings
-            if utils.md5sum(node.value.value) in self._docstring_cache:
-                return None
-        self.generic_visit(node)
-        return node
-
     @overload
     def _visit_identifier(self, node: Name) -> Name:
         ...
@@ -230,6 +226,7 @@ class Normalizer(NodeTransformer):
         Any named attribute may be loaded, stored, or deleted.
         """
         return self._visit_identifier(node)
+
 
     @overload
     def _visit_comprehension(self, node: ListComp) -> ListComp:
@@ -279,6 +276,53 @@ class Normalizer(NodeTransformer):
         A dict comprehension.
         """
         return self._visit_comprehension(node)
+
+    @overload
+    def _visit_If(self, node: If) -> If:
+        ...
+
+    def visit_If(self, node: If) -> None:
+        """Remove if __name__ == '__main__' nodes.
+
+        Looks for ast.If that includes __name__ == __main__ checks
+        and removes the block.
+        """
+        if isinstance(node.test, Compare):
+            if not (isinstance(node.test.left, Name) and node.test.left.id == '__name__'):
+                self.generic_visit(node)
+                return node
+            else:
+                if node.test.comparators[0].value == '__main__':
+                    return None
+
+        self.generic_visit(node)
+        return node
+
+    def visit_Expr(self, node: Expr) -> Optional[Expr]:
+        """Expressions not assigned to an identifier.
+
+           Removes print statements and docstrings from
+           the representation.
+        """
+
+        # Remove print() statements from representation.
+        if (isinstance(node.value, Call) and
+            isinstance(node.value.func, Name)):
+            if node.value.func.id == 'print':
+                return None
+
+        # Pass through generator code.
+        if isinstance(node.value, Yield):
+            return node
+
+
+        # Eliminate previously registered docstrings
+        if not isinstance(node.value, Call):
+            if utils.md5sum(node.value.value) in self._docstring_cache:
+                return None
+
+        self.generic_visit(node)
+        return node
 
 
 __all__ = ["Normalizer"]
