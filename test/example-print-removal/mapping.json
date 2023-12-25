@@ -1,0 +1,23 @@
+{
+    "placeholder_0": "get_rounds",
+    "placeholder_1": "number",
+    "placeholder_2": "concatenate_rounds",
+    "placeholder_3": "rounds_1",
+    "placeholder_4": "rounds_2",
+    "placeholder_5": "list_contains_round",
+    "placeholder_6": "rounds",
+    "placeholder_7": "card_average",
+    "placeholder_8": "hand",
+    "placeholder_9": "approx_average_is_average",
+    "placeholder_10": "avg",
+    "placeholder_11": "skrajne",
+    "placeholder_12": "mediana",
+    "placeholder_13": "average_even_is_average_odd",
+    "placeholder_14": "list_odd",
+    "placeholder_15": "list_even",
+    "placeholder_16": "count_odd",
+    "placeholder_17": "avg_odd",
+    "placeholder_18": "count_even",
+    "placeholder_19": "avg_even",
+    "placeholder_20": "maybe_double_last"
+}
