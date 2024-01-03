@@ -42,4 +42,3 @@ docker run \
     --mount type=bind,src=$PWD/$output_dir,dst=/output \
     --mount type=tmpfs,destination=/tmp \
     exercism/python-representer $1 /solution/ /output/
-
