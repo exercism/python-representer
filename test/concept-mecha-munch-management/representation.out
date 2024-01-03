@@ -1,4 +1,45 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1, placeholder_2):
+    for placeholder_3 in placeholder_2:
+        placeholder_1.setdefault(placeholder_3, 0)
+        placeholder_1[placeholder_3] += 1
+    return placeholder_1
+
+
+def placeholder_4(placeholder_5):
+    return dict.fromkeys(placeholder_5, 1)
+
+
+def placeholder_6(placeholder_7, placeholder_8):
+    placeholder_7.update(placeholder_8)
+    return placeholder_7
+
+
+def placeholder_9(placeholder_10):
+    return dict(sorted(placeholder_10.items()))
+
+
+def placeholder_11(placeholder_10, placeholder_12):
+    placeholder_13 = {}
+    for placeholder_14 in placeholder_10.keys():
+        placeholder_13[placeholder_14] = [
+            placeholder_10[placeholder_14]
+        ] + placeholder_12[placeholder_14]
+    return dict(sorted(placeholder_13.items(), placeholder_15=True))
+
+
+def placeholder_16(placeholder_13, placeholder_17):
+    for placeholder_14, placeholder_18 in placeholder_13.items():
+        placeholder_17[placeholder_14][0] = (
+            placeholder_17[placeholder_14][0] - placeholder_18[0]
+        )
+        if placeholder_17[placeholder_14][0] == 0:
+            placeholder_17[placeholder_14][0] = "Out of Stock"
+    return placeholder_17
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Expr(
@@ -918,8 +959,9 @@ Module(
       end_lineno=79,
       end_col_offset=26)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -1762,42 +1804,4 @@ Module(
       end_lineno=79,
       end_col_offset=26)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1, placeholder_2):
-    for placeholder_3 in placeholder_2:
-        placeholder_1.setdefault(placeholder_3, 0)
-        placeholder_1[placeholder_3] += 1
-    return placeholder_1
-
-
-def placeholder_4(placeholder_5):
-    return dict.fromkeys(placeholder_5, 1)
-
-
-def placeholder_6(placeholder_7, placeholder_8):
-    placeholder_7.update(placeholder_8)
-    return placeholder_7
-
-
-def placeholder_9(placeholder_10):
-    return dict(sorted(placeholder_10.items()))
-
-
-def placeholder_11(placeholder_10, placeholder_12):
-    placeholder_13 = {}
-    for placeholder_14 in placeholder_10.keys():
-        placeholder_13[placeholder_14] = [
-            placeholder_10[placeholder_14]
-        ] + placeholder_12[placeholder_14]
-    return dict(sorted(placeholder_13.items(), placeholder_15=True))
-
-
-def placeholder_16(placeholder_13, placeholder_17):
-    for placeholder_14, placeholder_18 in placeholder_13.items():
-        placeholder_17[placeholder_14][0] = (
-            placeholder_17[placeholder_14][0] - placeholder_18[0]
-        )
-        if placeholder_17[placeholder_14][0] == 0:
-            placeholder_17[placeholder_14][0] = "Out of Stock"
-    return placeholder_17
+## END NORMALIZED TREE ##

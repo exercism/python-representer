@@ -1,4 +1,32 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1):
+    return "un" + placeholder_1
+
+
+def placeholder_2(placeholder_3):
+    placeholder_4 = placeholder_3[0]
+    placeholder_5 = " :: " + placeholder_4
+    return placeholder_5.join(placeholder_3)
+
+
+def placeholder_6(placeholder_1):
+    placeholder_1 = placeholder_1[:-4]
+    if placeholder_1[-1] == "i":
+        placeholder_1 = placeholder_1[:-1] + "y"
+    return placeholder_1
+
+
+def placeholder_7(placeholder_8, placeholder_9):
+    placeholder_1 = placeholder_8.split()[placeholder_9]
+    if placeholder_1[-1] == ".":
+        placeholder_1 = placeholder_1[:-1] + "en"
+    else:
+        placeholder_1 = placeholder_1 + "en"
+    return placeholder_1
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Expr(
@@ -612,8 +640,9 @@ Module(
       end_lineno=68,
       end_col_offset=15)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -1172,29 +1201,4 @@ Module(
       end_lineno=68,
       end_col_offset=15)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1):
-    return "un" + placeholder_1
-
-
-def placeholder_2(placeholder_3):
-    placeholder_4 = placeholder_3[0]
-    placeholder_5 = " :: " + placeholder_4
-    return placeholder_5.join(placeholder_3)
-
-
-def placeholder_6(placeholder_1):
-    placeholder_1 = placeholder_1[:-4]
-    if placeholder_1[-1] == "i":
-        placeholder_1 = placeholder_1[:-1] + "y"
-    return placeholder_1
-
-
-def placeholder_7(placeholder_8, placeholder_9):
-    placeholder_1 = placeholder_8.split()[placeholder_9]
-    if placeholder_1[-1] == ".":
-        placeholder_1 = placeholder_1[:-1] + "en"
-    else:
-        placeholder_1 = placeholder_1 + "en"
-    return placeholder_1
+## END NORMALIZED TREE ##

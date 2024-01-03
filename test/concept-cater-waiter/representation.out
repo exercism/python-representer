@@ -1,4 +1,63 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+from sets_categories_data import (
+    VEGAN,
+    VEGETARIAN,
+    KETO,
+    PALEO,
+    OMNIVORE,
+    ALCOHOLS,
+    SPECIAL_INGREDIENTS,
+)
+
+
+def placeholder_0(placeholder_1, placeholder_2):
+    return (placeholder_1, set(placeholder_2))
+
+
+def placeholder_3(placeholder_4, placeholder_5):
+    if not ALCOHOLS.isdisjoint(placeholder_5):
+        return placeholder_4 + " Cocktail"
+    return placeholder_4 + " Mocktail"
+
+
+def placeholder_6(placeholder_1, placeholder_2):
+    placeholder_7 = (
+        (VEGAN, "VEGAN"),
+        (VEGETARIAN, "VEGETARIAN"),
+        (KETO, "KETO"),
+        (PALEO, "PALEO"),
+        (OMNIVORE, "OMNIVORE"),
+    )
+    for placeholder_8 in placeholder_7:
+        if set(placeholder_2) <= placeholder_8[0]:
+            return placeholder_1 + ": " + placeholder_8[1]
+    return None
+
+
+def placeholder_9(placeholder_10):
+    return (placeholder_10[0], SPECIAL_INGREDIENTS & set(placeholder_10[1]))
+
+
+def placeholder_11(placeholder_12):
+    placeholder_13 = set()
+    for placeholder_14 in placeholder_12:
+        placeholder_13 = placeholder_13.union(placeholder_14)
+    return placeholder_13
+
+
+def placeholder_15(placeholder_12, placeholder_16):
+    return list(set(placeholder_12) - set(placeholder_16))
+
+
+def placeholder_17(placeholder_12, placeholder_18):
+    placeholder_19 = set()
+    for placeholder_14 in placeholder_12:
+        placeholder_19 = placeholder_19 ^ placeholder_14
+    return placeholder_19 - placeholder_18
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Expr(
@@ -1046,8 +1105,9 @@ Module(
       end_lineno=134,
       end_col_offset=41)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     ImportFrom(
@@ -2007,60 +2067,4 @@ Module(
       end_lineno=134,
       end_col_offset=41)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-from sets_categories_data import (
-    VEGAN,
-    VEGETARIAN,
-    KETO,
-    PALEO,
-    OMNIVORE,
-    ALCOHOLS,
-    SPECIAL_INGREDIENTS,
-)
-
-
-def placeholder_0(placeholder_1, placeholder_2):
-    return (placeholder_1, set(placeholder_2))
-
-
-def placeholder_3(placeholder_4, placeholder_5):
-    if not ALCOHOLS.isdisjoint(placeholder_5):
-        return placeholder_4 + " Cocktail"
-    return placeholder_4 + " Mocktail"
-
-
-def placeholder_6(placeholder_1, placeholder_2):
-    placeholder_7 = (
-        (VEGAN, "VEGAN"),
-        (VEGETARIAN, "VEGETARIAN"),
-        (KETO, "KETO"),
-        (PALEO, "PALEO"),
-        (OMNIVORE, "OMNIVORE"),
-    )
-    for placeholder_8 in placeholder_7:
-        if set(placeholder_2) <= placeholder_8[0]:
-            return placeholder_1 + ": " + placeholder_8[1]
-    return None
-
-
-def placeholder_9(placeholder_10):
-    return (placeholder_10[0], SPECIAL_INGREDIENTS & set(placeholder_10[1]))
-
-
-def placeholder_11(placeholder_12):
-    placeholder_13 = set()
-    for placeholder_14 in placeholder_12:
-        placeholder_13 = placeholder_13.union(placeholder_14)
-    return placeholder_13
-
-
-def placeholder_15(placeholder_12, placeholder_16):
-    return list(set(placeholder_12) - set(placeholder_16))
-
-
-def placeholder_17(placeholder_12, placeholder_18):
-    placeholder_19 = set()
-    for placeholder_14 in placeholder_12:
-        placeholder_19 = placeholder_19 ^ placeholder_14
-    return placeholder_19 - placeholder_18
+## END NORMALIZED TREE ##

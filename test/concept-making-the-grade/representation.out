@@ -1,4 +1,60 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1):
+    placeholder_2 = []
+    while placeholder_1:
+        placeholder_2.append(round(placeholder_1.pop()))
+    return placeholder_2
+
+
+def placeholder_3(placeholder_1):
+    placeholder_4 = 0
+    for placeholder_5 in placeholder_1:
+        if placeholder_5 <= 40:
+            placeholder_4 += 1
+    return placeholder_4
+
+
+def placeholder_6(placeholder_1, placeholder_7):
+    placeholder_8 = []
+    for placeholder_5 in placeholder_1:
+        if placeholder_5 >= placeholder_7:
+            placeholder_8.append(placeholder_5)
+    return placeholder_8
+
+
+def placeholder_9(placeholder_10):
+    placeholder_11 = round((placeholder_10 - 40) / 4)
+    placeholder_12 = []
+    for placeholder_5 in range(41, placeholder_10, placeholder_11):
+        placeholder_12.append(placeholder_5)
+    return placeholder_12
+
+
+def placeholder_13(placeholder_1, placeholder_14):
+    placeholder_15 = []
+    for placeholder_16, placeholder_17 in enumerate(placeholder_14):
+        placeholder_18 = (
+            str(placeholder_16 + 1)
+            + ". "
+            + placeholder_17
+            + ": "
+            + str(placeholder_1[placeholder_16])
+        )
+        placeholder_15.append(placeholder_18)
+    return placeholder_15
+
+
+def placeholder_19(placeholder_20):
+    placeholder_21 = []
+    for placeholder_22 in placeholder_20:
+        if placeholder_22[1] == 100:
+            placeholder_21 = placeholder_22
+            break
+    return placeholder_21
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Expr(
@@ -1058,8 +1114,9 @@ Module(
       end_lineno=98,
       end_col_offset=17)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -2042,57 +2099,4 @@ Module(
       end_lineno=98,
       end_col_offset=17)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1):
-    placeholder_2 = []
-    while placeholder_1:
-        placeholder_2.append(round(placeholder_1.pop()))
-    return placeholder_2
-
-
-def placeholder_3(placeholder_1):
-    placeholder_4 = 0
-    for placeholder_5 in placeholder_1:
-        if placeholder_5 <= 40:
-            placeholder_4 += 1
-    return placeholder_4
-
-
-def placeholder_6(placeholder_1, placeholder_7):
-    placeholder_8 = []
-    for placeholder_5 in placeholder_1:
-        if placeholder_5 >= placeholder_7:
-            placeholder_8.append(placeholder_5)
-    return placeholder_8
-
-
-def placeholder_9(placeholder_10):
-    placeholder_11 = round((placeholder_10 - 40) / 4)
-    placeholder_12 = []
-    for placeholder_5 in range(41, placeholder_10, placeholder_11):
-        placeholder_12.append(placeholder_5)
-    return placeholder_12
-
-
-def placeholder_13(placeholder_1, placeholder_14):
-    placeholder_15 = []
-    for placeholder_16, placeholder_17 in enumerate(placeholder_14):
-        placeholder_18 = (
-            str(placeholder_16 + 1)
-            + ". "
-            + placeholder_17
-            + ": "
-            + str(placeholder_1[placeholder_16])
-        )
-        placeholder_15.append(placeholder_18)
-    return placeholder_15
-
-
-def placeholder_19(placeholder_20):
-    placeholder_21 = []
-    for placeholder_22 in placeholder_20:
-        if placeholder_22[1] == 100:
-            placeholder_21 = placeholder_22
-            break
-    return placeholder_21
+## END NORMALIZED TREE ##

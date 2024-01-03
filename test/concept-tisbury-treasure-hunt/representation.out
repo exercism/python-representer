@@ -1,4 +1,32 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1):
+    return placeholder_1[1]
+
+
+def placeholder_2(placeholder_3):
+    return tuple(placeholder_3)
+
+
+def placeholder_4(placeholder_5, placeholder_6):
+    return placeholder_2(placeholder_5[1]) in placeholder_6
+
+
+def placeholder_7(placeholder_5, placeholder_6):
+    placeholder_8 = "not a match"
+    if placeholder_4(placeholder_5, placeholder_6):
+        placeholder_8 = placeholder_5 + placeholder_6
+    return placeholder_8
+
+
+def placeholder_9(placeholder_10):
+    placeholder_11 = ""
+    for placeholder_12 in placeholder_10:
+        placeholder_11 += f"{(placeholder_12[0], placeholder_12[2], placeholder_12[3], placeholder_12[4])}\n"
+    return placeholder_11
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Expr(
@@ -548,8 +576,9 @@ Module(
       end_lineno=67,
       end_col_offset=17)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -1033,29 +1062,4 @@ Module(
       end_lineno=67,
       end_col_offset=17)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1):
-    return placeholder_1[1]
-
-
-def placeholder_2(placeholder_3):
-    return tuple(placeholder_3)
-
-
-def placeholder_4(placeholder_5, placeholder_6):
-    return placeholder_2(placeholder_5[1]) in placeholder_6
-
-
-def placeholder_7(placeholder_5, placeholder_6):
-    placeholder_8 = "not a match"
-    if placeholder_4(placeholder_5, placeholder_6):
-        placeholder_8 = placeholder_5 + placeholder_6
-    return placeholder_8
-
-
-def placeholder_9(placeholder_10):
-    placeholder_11 = ""
-    for placeholder_12 in placeholder_10:
-        placeholder_11 += f"{(placeholder_12[0], placeholder_12[2], placeholder_12[3], placeholder_12[4])}\n"
-    return placeholder_11
+## END NORMALIZED TREE ##

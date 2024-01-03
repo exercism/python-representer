@@ -1,4 +1,28 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(*placeholder_1):
+    return list(placeholder_1)
+
+
+def placeholder_2(placeholder_3, placeholder_4):
+    placeholder_5, placeholder_6, placeholder_7, *placeholder_8 = placeholder_3
+    return [placeholder_7, *placeholder_4, *placeholder_8, placeholder_5, placeholder_6]
+
+
+def placeholder_9(placeholder_10, **placeholder_11):
+    return {**placeholder_10, "stops": list(placeholder_11.values())}
+
+
+def placeholder_12(placeholder_10, placeholder_13):
+    return {**placeholder_10, **placeholder_13}
+
+
+def placeholder_14(placeholder_15):
+    [*placeholder_16], [*placeholder_17], [*placeholder_18] = zip(*placeholder_15)
+    return [placeholder_16, placeholder_17, placeholder_18]
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Expr(
@@ -547,8 +571,9 @@ Module(
       end_lineno=58,
       end_col_offset=40)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -1031,25 +1056,4 @@ Module(
       end_lineno=58,
       end_col_offset=40)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(*placeholder_1):
-    return list(placeholder_1)
-
-
-def placeholder_2(placeholder_3, placeholder_4):
-    placeholder_5, placeholder_6, placeholder_7, *placeholder_8 = placeholder_3
-    return [placeholder_7, *placeholder_4, *placeholder_8, placeholder_5, placeholder_6]
-
-
-def placeholder_9(placeholder_10, **placeholder_11):
-    return {**placeholder_10, "stops": list(placeholder_11.values())}
-
-
-def placeholder_12(placeholder_10, placeholder_13):
-    return {**placeholder_10, **placeholder_13}
-
-
-def placeholder_14(placeholder_15):
-    [*placeholder_16], [*placeholder_17], [*placeholder_18] = zip(*placeholder_15)
-    return [placeholder_16, placeholder_17, placeholder_18]
+## END NORMALIZED TREE ##

@@ -1,4 +1,43 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1):
+    return [placeholder_1, placeholder_1 + 1, placeholder_1 + 2]
+
+
+def placeholder_2(placeholder_3, placeholder_4):
+    return placeholder_3 + placeholder_4
+
+
+def placeholder_5(placeholder_6, placeholder_1):
+    return placeholder_1 in placeholder_6
+
+
+def placeholder_7(placeholder_8):
+    return sum(placeholder_8) / len(placeholder_8)
+
+
+def placeholder_9(placeholder_8):
+    placeholder_10 = placeholder_7(placeholder_8)
+    if placeholder_7([placeholder_8[0], placeholder_8[-1]]) == placeholder_10:
+        placeholder_11 = True
+    elif placeholder_8[len(placeholder_8) // 2] == placeholder_10:
+        placeholder_11 = True
+    else:
+        placeholder_11 = False
+    return placeholder_11
+
+
+def placeholder_12(placeholder_8):
+    return placeholder_7(placeholder_8[::2]) == placeholder_7(placeholder_8[1::2])
+
+
+def placeholder_13(placeholder_8):
+    if placeholder_8[-1] == 11:
+        placeholder_8[-1] *= 2
+    return placeholder_8
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Expr(
@@ -852,8 +891,9 @@ Module(
       end_lineno=88,
       end_col_offset=15)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -1619,40 +1659,4 @@ Module(
       end_lineno=88,
       end_col_offset=15)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1):
-    return [placeholder_1, placeholder_1 + 1, placeholder_1 + 2]
-
-
-def placeholder_2(placeholder_3, placeholder_4):
-    return placeholder_3 + placeholder_4
-
-
-def placeholder_5(placeholder_6, placeholder_1):
-    return placeholder_1 in placeholder_6
-
-
-def placeholder_7(placeholder_8):
-    return sum(placeholder_8) / len(placeholder_8)
-
-
-def placeholder_9(placeholder_8):
-    placeholder_10 = placeholder_7(placeholder_8)
-    if placeholder_7([placeholder_8[0], placeholder_8[-1]]) == placeholder_10:
-        placeholder_11 = True
-    elif placeholder_8[len(placeholder_8) // 2] == placeholder_10:
-        placeholder_11 = True
-    else:
-        placeholder_11 = False
-    return placeholder_11
-
-
-def placeholder_12(placeholder_8):
-    return placeholder_7(placeholder_8[::2]) == placeholder_7(placeholder_8[1::2])
-
-
-def placeholder_13(placeholder_8):
-    if placeholder_8[-1] == 11:
-        placeholder_8[-1] *= 2
-    return placeholder_8
+## END NORMALIZED TREE ##

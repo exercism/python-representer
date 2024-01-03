@@ -1,4 +1,34 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1, placeholder_2):
+    return placeholder_1 / placeholder_2
+
+
+def placeholder_3(placeholder_1, placeholder_4):
+    return placeholder_1 - placeholder_4
+
+
+def placeholder_5(placeholder_6, placeholder_7):
+    return placeholder_6 * placeholder_7
+
+
+def placeholder_8(placeholder_9, placeholder_6):
+    return int(placeholder_9) // placeholder_6
+
+
+def placeholder_10(placeholder_9, placeholder_6):
+    return placeholder_9 % placeholder_6
+
+
+def placeholder_11(placeholder_1, placeholder_2, placeholder_12, placeholder_6):
+    placeholder_13 = placeholder_2 / 100 * placeholder_12
+    placeholder_14 = placeholder_0(placeholder_1, placeholder_2 + placeholder_13)
+    placeholder_7 = placeholder_8(placeholder_14, placeholder_6)
+    placeholder_15 = placeholder_5(placeholder_6, placeholder_7)
+    return placeholder_15
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     FunctionDef(
@@ -568,8 +598,9 @@ Module(
       end_lineno=70,
       end_col_offset=25)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -1073,31 +1104,4 @@ Module(
       end_lineno=70,
       end_col_offset=25)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1, placeholder_2):
-    return placeholder_1 / placeholder_2
-
-
-def placeholder_3(placeholder_1, placeholder_4):
-    return placeholder_1 - placeholder_4
-
-
-def placeholder_5(placeholder_6, placeholder_7):
-    return placeholder_6 * placeholder_7
-
-
-def placeholder_8(placeholder_9, placeholder_6):
-    return int(placeholder_9) // placeholder_6
-
-
-def placeholder_10(placeholder_9, placeholder_6):
-    return placeholder_9 % placeholder_6
-
-
-def placeholder_11(placeholder_1, placeholder_2, placeholder_12, placeholder_6):
-    placeholder_13 = placeholder_2 / 100 * placeholder_12
-    placeholder_14 = placeholder_0(placeholder_1, placeholder_2 + placeholder_13)
-    placeholder_7 = placeholder_8(placeholder_14, placeholder_6)
-    placeholder_15 = placeholder_5(placeholder_6, placeholder_7)
-    return placeholder_15
+## END NORMALIZED TREE ##

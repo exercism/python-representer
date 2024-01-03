@@ -1,4 +1,49 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1):
+    if placeholder_1 in "JQK":
+        placeholder_2 = 10
+    elif placeholder_1 == "A":
+        placeholder_2 = 1
+    else:
+        placeholder_2 = int(placeholder_1)
+    return placeholder_2
+
+
+def placeholder_3(placeholder_4, placeholder_5):
+    placeholder_6 = placeholder_0(placeholder_4)
+    placeholder_7 = placeholder_0(placeholder_5)
+    if placeholder_6 == placeholder_7:
+        placeholder_8 = (placeholder_4, placeholder_5)
+    elif placeholder_6 > placeholder_7:
+        placeholder_8 = placeholder_4
+    else:
+        placeholder_8 = placeholder_5
+    return placeholder_8
+
+
+def placeholder_9(placeholder_4, placeholder_5):
+    placeholder_6 = 11 if placeholder_4 == "A" else placeholder_0(placeholder_4)
+    placeholder_7 = 11 if placeholder_5 == "A" else placeholder_0(placeholder_5)
+    placeholder_10 = 1 if 11 + (placeholder_6 + placeholder_7) > 21 else 11
+    return placeholder_10
+
+
+def placeholder_11(placeholder_4, placeholder_5):
+    return (placeholder_4 == "A" or placeholder_5 == "A") and (
+        placeholder_0(placeholder_4) == 10 or placeholder_0(placeholder_5) == 10
+    )
+
+
+def placeholder_12(placeholder_4, placeholder_5):
+    return placeholder_0(placeholder_4) == placeholder_0(placeholder_5)
+
+
+def placeholder_13(placeholder_4, placeholder_5):
+    return 8 < placeholder_0(placeholder_4) + placeholder_0(placeholder_5) < 12
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Expr(
@@ -1068,8 +1113,9 @@ Module(
       end_lineno=107,
       end_col_offset=69)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -2062,46 +2108,4 @@ Module(
       end_lineno=107,
       end_col_offset=69)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1):
-    if placeholder_1 in "JQK":
-        placeholder_2 = 10
-    elif placeholder_1 == "A":
-        placeholder_2 = 1
-    else:
-        placeholder_2 = int(placeholder_1)
-    return placeholder_2
-
-
-def placeholder_3(placeholder_4, placeholder_5):
-    placeholder_6 = placeholder_0(placeholder_4)
-    placeholder_7 = placeholder_0(placeholder_5)
-    if placeholder_6 == placeholder_7:
-        placeholder_8 = (placeholder_4, placeholder_5)
-    elif placeholder_6 > placeholder_7:
-        placeholder_8 = placeholder_4
-    else:
-        placeholder_8 = placeholder_5
-    return placeholder_8
-
-
-def placeholder_9(placeholder_4, placeholder_5):
-    placeholder_6 = 11 if placeholder_4 == "A" else placeholder_0(placeholder_4)
-    placeholder_7 = 11 if placeholder_5 == "A" else placeholder_0(placeholder_5)
-    placeholder_10 = 1 if 11 + (placeholder_6 + placeholder_7) > 21 else 11
-    return placeholder_10
-
-
-def placeholder_11(placeholder_4, placeholder_5):
-    return (placeholder_4 == "A" or placeholder_5 == "A") and (
-        placeholder_0(placeholder_4) == 10 or placeholder_0(placeholder_5) == 10
-    )
-
-
-def placeholder_12(placeholder_4, placeholder_5):
-    return placeholder_0(placeholder_4) == placeholder_0(placeholder_5)
-
-
-def placeholder_13(placeholder_4, placeholder_5):
-    return 8 < placeholder_0(placeholder_4) + placeholder_0(placeholder_5) < 12
+## END NORMALIZED TREE ##

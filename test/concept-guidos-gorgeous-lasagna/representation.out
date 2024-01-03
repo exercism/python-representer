@@ -1,4 +1,22 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+placeholder_0 = 40
+placeholder_1 = 2
+
+
+def placeholder_2(placeholder_3):
+    return placeholder_0 - placeholder_3
+
+
+def placeholder_4(placeholder_5):
+    return placeholder_5 * placeholder_1
+
+
+def placeholder_6(placeholder_5, placeholder_3):
+    return placeholder_4(placeholder_5) + placeholder_3
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Expr(
@@ -239,8 +257,9 @@ Module(
       end_lineno=50,
       end_col_offset=76)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     Assign(
@@ -437,19 +456,4 @@ Module(
       end_lineno=50,
       end_col_offset=76)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-placeholder_0 = 40
-placeholder_1 = 2
-
-
-def placeholder_2(placeholder_3):
-    return placeholder_0 - placeholder_3
-
-
-def placeholder_4(placeholder_5):
-    return placeholder_5 * placeholder_1
-
-
-def placeholder_6(placeholder_5, placeholder_3):
-    return placeholder_4(placeholder_5) + placeholder_3
+## END NORMALIZED TREE ##

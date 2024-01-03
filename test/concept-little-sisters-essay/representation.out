@@ -1,4 +1,24 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1):
+    return placeholder_1.title()
+
+
+def placeholder_2(placeholder_3):
+    return placeholder_3.endswith(".")
+
+
+def placeholder_4(placeholder_3):
+    placeholder_5 = placeholder_3.strip()
+    return placeholder_5
+
+
+def placeholder_6(placeholder_3, placeholder_7, placeholder_8):
+    placeholder_9 = placeholder_3.replace(placeholder_7, placeholder_8)
+    return placeholder_9
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Expr(
@@ -313,8 +333,9 @@ Module(
       end_lineno=45,
       end_col_offset=26)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -574,21 +595,4 @@ Module(
       end_lineno=45,
       end_col_offset=26)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1):
-    return placeholder_1.title()
-
-
-def placeholder_2(placeholder_3):
-    return placeholder_3.endswith(".")
-
-
-def placeholder_4(placeholder_3):
-    placeholder_5 = placeholder_3.strip()
-    return placeholder_5
-
-
-def placeholder_6(placeholder_3, placeholder_7, placeholder_8):
-    placeholder_9 = placeholder_3.replace(placeholder_7, placeholder_8)
-    return placeholder_9
+## END NORMALIZED TREE ##

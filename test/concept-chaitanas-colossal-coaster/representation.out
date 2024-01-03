@@ -1,4 +1,40 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1, placeholder_2, placeholder_3, placeholder_4):
+    placeholder_5 = placeholder_1 if placeholder_3 == 1 else placeholder_2
+    placeholder_5.append(placeholder_4)
+    return placeholder_5
+
+
+def placeholder_6(placeholder_7, placeholder_8):
+    return placeholder_7.index(placeholder_8)
+
+
+def placeholder_9(placeholder_7, placeholder_10, placeholder_4):
+    placeholder_7.insert(placeholder_10, placeholder_4)
+    return placeholder_7
+
+
+def placeholder_11(placeholder_7, placeholder_4):
+    placeholder_7.remove(placeholder_4)
+    return placeholder_7
+
+
+def placeholder_12(placeholder_7, placeholder_4):
+    return placeholder_7.count(placeholder_4)
+
+
+def placeholder_13(placeholder_7):
+    return placeholder_7.pop()
+
+
+def placeholder_14(placeholder_7):
+    placeholder_15 = placeholder_7[:]
+    placeholder_15.sort()
+    return placeholder_15
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Expr(
@@ -634,8 +670,9 @@ Module(
       end_lineno=85,
       end_col_offset=20)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -1183,37 +1220,4 @@ Module(
       end_lineno=85,
       end_col_offset=20)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1, placeholder_2, placeholder_3, placeholder_4):
-    placeholder_5 = placeholder_1 if placeholder_3 == 1 else placeholder_2
-    placeholder_5.append(placeholder_4)
-    return placeholder_5
-
-
-def placeholder_6(placeholder_7, placeholder_8):
-    return placeholder_7.index(placeholder_8)
-
-
-def placeholder_9(placeholder_7, placeholder_10, placeholder_4):
-    placeholder_7.insert(placeholder_10, placeholder_4)
-    return placeholder_7
-
-
-def placeholder_11(placeholder_7, placeholder_4):
-    placeholder_7.remove(placeholder_4)
-    return placeholder_7
-
-
-def placeholder_12(placeholder_7, placeholder_4):
-    return placeholder_7.count(placeholder_4)
-
-
-def placeholder_13(placeholder_7):
-    return placeholder_7.pop()
-
-
-def placeholder_14(placeholder_7):
-    placeholder_15 = placeholder_7[:]
-    placeholder_15.sort()
-    return placeholder_15
+## END NORMALIZED TREE ##

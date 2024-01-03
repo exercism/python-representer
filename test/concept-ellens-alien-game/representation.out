@@ -1,4 +1,36 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+class placeholder_0:
+    placeholder_1 = 0
+
+    def placeholder_2(self, placeholder_3, placeholder_4):
+        placeholder_0.placeholder_1 += 1
+        self.placeholder_3 = placeholder_3
+        self.placeholder_4 = placeholder_4
+        self.placeholder_5 = 3
+
+    def placeholder_6(self):
+        self.placeholder_5 -= 1
+
+    def placeholder_7(self):
+        return self.placeholder_5 > 0
+
+    def placeholder_8(self, placeholder_9, placeholder_10):
+        self.placeholder_3 = placeholder_9
+        self.placeholder_4 = placeholder_10
+
+    def placeholder_11(self, placeholder_12):
+        pass
+
+
+def placeholder_13(placeholder_14):
+    return [
+        placeholder_0(placeholder_15[0], placeholder_15[1])
+        for placeholder_15 in placeholder_14
+    ]
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Expr(
@@ -573,8 +605,9 @@ Module(
       end_lineno=90,
       end_col_offset=70)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     ClassDef(
@@ -1061,33 +1094,4 @@ Module(
       end_lineno=90,
       end_col_offset=70)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-class placeholder_0:
-    placeholder_1 = 0
-
-    def placeholder_2(self, placeholder_3, placeholder_4):
-        placeholder_0.placeholder_1 += 1
-        self.placeholder_3 = placeholder_3
-        self.placeholder_4 = placeholder_4
-        self.placeholder_5 = 3
-
-    def placeholder_6(self):
-        self.placeholder_5 -= 1
-
-    def placeholder_7(self):
-        return self.placeholder_5 > 0
-
-    def placeholder_8(self, placeholder_9, placeholder_10):
-        self.placeholder_3 = placeholder_9
-        self.placeholder_4 = placeholder_10
-
-    def placeholder_11(self, placeholder_12):
-        pass
-
-
-def placeholder_13(placeholder_14):
-    return [
-        placeholder_0(placeholder_15[0], placeholder_15[1])
-        for placeholder_15 in placeholder_14
-    ]
+## END NORMALIZED TREE ##

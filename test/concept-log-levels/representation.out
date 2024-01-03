@@ -1,4 +1,54 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+from enum import Enum
+
+
+class placeholder_0(Enum):
+    placeholder_1 = "TRC"
+    placeholder_2 = "DBG"
+    placeholder_3 = "INF"
+    placeholder_4 = "WRN"
+    placeholder_5 = "WRN"
+    placeholder_6 = "ERR"
+    placeholder_7 = "FTL"
+    placeholder_8 = "UKN"
+
+
+class placeholder_9(Enum):
+    placeholder_1 = 0
+    placeholder_2 = 1
+    placeholder_3 = 4
+    placeholder_4 = 5
+    placeholder_5 = 5
+    placeholder_6 = 6
+    placeholder_7 = 7
+    placeholder_8 = 42
+
+
+def placeholder_10(placeholder_11):
+    placeholder_12 = placeholder_11.split(":")
+    placeholder_13 = placeholder_12[0][1:-1]
+    if placeholder_13 in [placeholder_14.value for placeholder_14 in placeholder_0]:
+        return placeholder_0(placeholder_13)
+    return placeholder_0("UKN")
+
+
+def placeholder_15(placeholder_16, placeholder_11):
+    return f"{placeholder_9[placeholder_16.name].value}:{placeholder_11}"
+
+
+def placeholder_17():
+    return placeholder_0("WRN")
+
+
+def placeholder_18():
+    placeholder_19 = []
+    for placeholder_20 in placeholder_0:
+        placeholder_19.append((placeholder_20.name, placeholder_20.value))
+    return placeholder_19
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     ImportFrom(
@@ -914,8 +964,9 @@ Module(
       end_lineno=73,
       end_col_offset=19)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     ImportFrom(
@@ -1765,51 +1816,4 @@ Module(
       end_lineno=73,
       end_col_offset=19)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-from enum import Enum
-
-
-class placeholder_0(Enum):
-    placeholder_1 = "TRC"
-    placeholder_2 = "DBG"
-    placeholder_3 = "INF"
-    placeholder_4 = "WRN"
-    placeholder_5 = "WRN"
-    placeholder_6 = "ERR"
-    placeholder_7 = "FTL"
-    placeholder_8 = "UKN"
-
-
-class placeholder_9(Enum):
-    placeholder_1 = 0
-    placeholder_2 = 1
-    placeholder_3 = 4
-    placeholder_4 = 5
-    placeholder_5 = 5
-    placeholder_6 = 6
-    placeholder_7 = 7
-    placeholder_8 = 42
-
-
-def placeholder_10(placeholder_11):
-    placeholder_12 = placeholder_11.split(":")
-    placeholder_13 = placeholder_12[0][1:-1]
-    if placeholder_13 in [placeholder_14.value for placeholder_14 in placeholder_0]:
-        return placeholder_0(placeholder_13)
-    return placeholder_0("UKN")
-
-
-def placeholder_15(placeholder_16, placeholder_11):
-    return f"{placeholder_9[placeholder_16.name].value}:{placeholder_11}"
-
-
-def placeholder_17():
-    return placeholder_0("WRN")
-
-
-def placeholder_18():
-    placeholder_19 = []
-    for placeholder_20 in placeholder_0:
-        placeholder_19.append((placeholder_20.name, placeholder_20.value))
-    return placeholder_19
+## END NORMALIZED TREE ##

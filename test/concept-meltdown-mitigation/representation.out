@@ -1,4 +1,41 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1, placeholder_2):
+    placeholder_3 = placeholder_1 * placeholder_2
+    placeholder_4 = False
+    if (placeholder_1 < 800 and placeholder_2 > 500) and placeholder_3 < 500000:
+        placeholder_4 = True
+    return placeholder_4
+
+
+def placeholder_5(placeholder_6, placeholder_7, placeholder_8):
+    placeholder_9 = placeholder_6 * placeholder_7
+    placeholder_10 = placeholder_9 / placeholder_8 * 100
+    placeholder_11 = "unknown"
+    if 80 <= placeholder_10 <= 100:
+        placeholder_11 = "green"
+    elif 60 <= placeholder_10 < 80:
+        placeholder_11 = "orange"
+    elif 30 <= placeholder_10 < 60:
+        placeholder_11 = "red"
+    else:
+        placeholder_11 = "black"
+    return placeholder_11
+
+
+def placeholder_12(placeholder_1, placeholder_13, placeholder_14):
+    placeholder_3 = placeholder_1 * placeholder_13
+    placeholder_15 = placeholder_3 / placeholder_14 * 100
+    if placeholder_15 < 90:
+        placeholder_16 = "LOW"
+    elif placeholder_15 <= 110:
+        placeholder_16 = "NORMAL"
+    else:
+        placeholder_16 = "DANGER"
+    return placeholder_16
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Expr(
@@ -796,8 +833,9 @@ Module(
       end_lineno=85,
       end_col_offset=22)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -1551,38 +1589,4 @@ Module(
       end_lineno=85,
       end_col_offset=22)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1, placeholder_2):
-    placeholder_3 = placeholder_1 * placeholder_2
-    placeholder_4 = False
-    if (placeholder_1 < 800 and placeholder_2 > 500) and placeholder_3 < 500000:
-        placeholder_4 = True
-    return placeholder_4
-
-
-def placeholder_5(placeholder_6, placeholder_7, placeholder_8):
-    placeholder_9 = placeholder_6 * placeholder_7
-    placeholder_10 = placeholder_9 / placeholder_8 * 100
-    placeholder_11 = "unknown"
-    if 80 <= placeholder_10 <= 100:
-        placeholder_11 = "green"
-    elif 60 <= placeholder_10 < 80:
-        placeholder_11 = "orange"
-    elif 30 <= placeholder_10 < 60:
-        placeholder_11 = "red"
-    else:
-        placeholder_11 = "black"
-    return placeholder_11
-
-
-def placeholder_12(placeholder_1, placeholder_13, placeholder_14):
-    placeholder_3 = placeholder_1 * placeholder_13
-    placeholder_15 = placeholder_3 / placeholder_14 * 100
-    if placeholder_15 < 90:
-        placeholder_16 = "LOW"
-    elif placeholder_15 <= 110:
-        placeholder_16 = "NORMAL"
-    else:
-        placeholder_16 = "DANGER"
-    return placeholder_16
+## END NORMALIZED TREE ##
