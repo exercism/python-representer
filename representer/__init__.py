@@ -101,16 +101,16 @@ def represent(slug: utils.Slug, input: utils.Directory, output: utils.Directory)
     representation = Representer(src.read_text())
 
     # save dump of the initial tree for debug
-    out = ["# BEGIN TREE BEFORE", representation.dump_tree(), ""]
+    out = ['## BEGIN TREE BEFORE ##', representation.dump_tree(), '## END TREE BEFORE ##', '']
 
     # normalize the tree
     representation.normalize()
 
-    # save dump of the normalized tree for debug
-    out.extend(["# BEGIN TREE AFTER", representation.dump_tree(), ""])
-
     # save dump of normalized code for debug (from un-parsing the normalized AST).
-    out.extend(["# BEGIN NORMALIZED CODE AFTER", representation.dump_code()])
+    out[0:0] = ['## BEGIN NORMALIZED CODE ##', representation.dump_code(), "## END NORMALIZED CODE ##", '']
+
+    # save dump of the normalized tree for debug
+    out.extend(['## BEGIN NORMALIZED TREE ##', representation.dump_tree(), '## END NORMALIZED TREE ##'])
 
     # dump the representation files
     out_dst.write_text("\n".join(out))
