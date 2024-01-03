@@ -1,4 +1,53 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+import statistics
+
+
+def placeholder_0(placeholder_1):
+    return [int(placeholder_1), int(placeholder_1) + 1, int(placeholder_1) + 2]
+
+
+def placeholder_2(placeholder_3, placeholder_4):
+    return placeholder_3 + placeholder_4
+
+
+def placeholder_5(placeholder_6, placeholder_1):
+    if placeholder_1 in placeholder_6:
+        return True
+    else:
+        return False
+
+
+def placeholder_7(placeholder_8):
+    return round(sum(placeholder_8) / len(placeholder_8), 1)
+
+
+def placeholder_9(placeholder_8):
+    placeholder_10 = sum(placeholder_8) / len(placeholder_8)
+    placeholder_11 = placeholder_10 == (placeholder_8[0] + placeholder_8[-1]) / 2
+    placeholder_12 = placeholder_10 == statistics.median(placeholder_8)
+    if placeholder_12 == True or placeholder_11 == True:
+        return True
+    else:
+        return False
+
+
+def placeholder_13(placeholder_8):
+    placeholder_14 = len(placeholder_8[0 : len(placeholder_8) : 2])
+    placeholder_15 = sum(placeholder_8[0 : len(placeholder_8) : 2]) / placeholder_14
+    placeholder_16 = len(placeholder_8[1 : len(placeholder_8) : 2])
+    placeholder_17 = sum(placeholder_8[1 : len(placeholder_8) : 2]) / placeholder_16
+    return placeholder_15 == placeholder_17
+
+
+def placeholder_18(placeholder_8):
+    if placeholder_8[-1] == 11:
+        return [placeholder_8[0], placeholder_8[1], placeholder_8[-1] * 2]
+    else:
+        return placeholder_8
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Expr(
@@ -1881,8 +1930,9 @@ Module(
       end_lineno=102,
       end_col_offset=72)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     Import(
@@ -3093,50 +3143,4 @@ Module(
       end_lineno=91,
       end_col_offset=19)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-import statistics
-
-
-def placeholder_0(placeholder_1):
-    return [int(placeholder_1), int(placeholder_1) + 1, int(placeholder_1) + 2]
-
-
-def placeholder_2(placeholder_3, placeholder_4):
-    return placeholder_3 + placeholder_4
-
-
-def placeholder_5(placeholder_6, placeholder_1):
-    if placeholder_1 in placeholder_6:
-        return True
-    else:
-        return False
-
-
-def placeholder_7(placeholder_8):
-    return round(sum(placeholder_8) / len(placeholder_8), 1)
-
-
-def placeholder_9(placeholder_8):
-    placeholder_10 = sum(placeholder_8) / len(placeholder_8)
-    placeholder_11 = placeholder_10 == (placeholder_8[0] + placeholder_8[-1]) / 2
-    placeholder_12 = placeholder_10 == statistics.median(placeholder_8)
-    if placeholder_12 == True or placeholder_11 == True:
-        return True
-    else:
-        return False
-
-
-def placeholder_13(placeholder_8):
-    placeholder_14 = len(placeholder_8[0 : len(placeholder_8) : 2])
-    placeholder_15 = sum(placeholder_8[0 : len(placeholder_8) : 2]) / placeholder_14
-    placeholder_16 = len(placeholder_8[1 : len(placeholder_8) : 2])
-    placeholder_17 = sum(placeholder_8[1 : len(placeholder_8) : 2]) / placeholder_16
-    return placeholder_15 == placeholder_17
-
-
-def placeholder_18(placeholder_8):
-    if placeholder_8[-1] == 11:
-        return [placeholder_8[0], placeholder_8[1], placeholder_8[-1] * 2]
-    else:
-        return placeholder_8
+## END NORMALIZED TREE ##

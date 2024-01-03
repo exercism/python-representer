@@ -1,4 +1,37 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1, placeholder_2):
+    return (
+        placeholder_1 < 800
+        and placeholder_2 > 500
+        and (placeholder_1 * placeholder_2 < 500000)
+    )
+
+
+def placeholder_3(placeholder_4, placeholder_5, placeholder_6):
+    placeholder_7 = placeholder_4 * placeholder_5
+    placeholder_8 = placeholder_7 / placeholder_6 * 100
+    if placeholder_8 >= 80:
+        return "green"
+    if placeholder_8 >= 60:
+        return "orange"
+    if placeholder_8 >= 30:
+        return "red"
+    return "black"
+
+
+def placeholder_9(placeholder_1, placeholder_10, placeholder_11):
+    placeholder_12 = placeholder_1 * placeholder_10
+    match placeholder_12:
+        case n if n < placeholder_11 * 0.9:
+            return "LOW"
+        case n if n > placeholder_11 * 1.1:
+            return "DANGER"
+        case _:
+            return "NORMAL"
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Expr(
@@ -854,8 +887,9 @@ Module(
       end_lineno=84,
       end_col_offset=27)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -1404,34 +1438,4 @@ Module(
       end_lineno=84,
       end_col_offset=27)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1, placeholder_2):
-    return (
-        placeholder_1 < 800
-        and placeholder_2 > 500
-        and (placeholder_1 * placeholder_2 < 500000)
-    )
-
-
-def placeholder_3(placeholder_4, placeholder_5, placeholder_6):
-    placeholder_7 = placeholder_4 * placeholder_5
-    placeholder_8 = placeholder_7 / placeholder_6 * 100
-    if placeholder_8 >= 80:
-        return "green"
-    if placeholder_8 >= 60:
-        return "orange"
-    if placeholder_8 >= 30:
-        return "red"
-    return "black"
-
-
-def placeholder_9(placeholder_1, placeholder_10, placeholder_11):
-    placeholder_12 = placeholder_1 * placeholder_10
-    match placeholder_12:
-        case n if n < placeholder_11 * 0.9:
-            return "LOW"
-        case n if n > placeholder_11 * 1.1:
-            return "DANGER"
-        case _:
-            return "NORMAL"
+## END NORMALIZED TREE ##

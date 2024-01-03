@@ -1,4 +1,113 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+import logging
+from collections import defaultdict, Counter
+
+placeholder_0 = lambda placeholder_1: 50 if len(set(placeholder_1)) == 1 else 0
+placeholder_2 = lambda placeholder_1: sum(
+    (placeholder_3 for placeholder_3 in placeholder_1 if placeholder_3 == 1)
+)
+placeholder_4 = lambda placeholder_1: sum(
+    (placeholder_3 for placeholder_3 in placeholder_1 if placeholder_3 == 2)
+)
+placeholder_5 = lambda placeholder_1: sum(
+    (placeholder_3 for placeholder_3 in placeholder_1 if placeholder_3 == 3)
+)
+placeholder_6 = lambda placeholder_1: sum(
+    (placeholder_3 for placeholder_3 in placeholder_1 if placeholder_3 == 4)
+)
+placeholder_7 = lambda placeholder_1: sum(
+    (placeholder_3 for placeholder_3 in placeholder_1 if placeholder_3 == 5)
+)
+placeholder_8 = lambda placeholder_1: sum(
+    (placeholder_3 for placeholder_3 in placeholder_1 if placeholder_3 == 6)
+)
+placeholder_9 = (
+    lambda placeholder_1: sum(placeholder_1)
+    if len(set(placeholder_1)) == 2
+    and any(
+        (
+            placeholder_1.count(placeholder_3) == 3
+            for placeholder_3 in set(placeholder_1)
+        )
+    )
+    else 0
+)
+placeholder_10 = lambda placeholder_1: sum(
+    (
+        placeholder_3 * 4
+        for placeholder_3 in set(placeholder_1)
+        if placeholder_1.count(placeholder_3) > 3
+    )
+)
+placeholder_11 = (
+    lambda placeholder_1: 30
+    if sum(placeholder_1) == 15 and len(set(placeholder_1)) == 5
+    else 0
+)
+placeholder_12 = (
+    lambda placeholder_1: 30
+    if sum(placeholder_1) == 20 and len(set(placeholder_1)) == 5
+    else 0
+)
+placeholder_13 = lambda placeholder_1: sum(placeholder_1)
+
+
+def placeholder_14(placeholder_15, placeholder_16):
+    if any((not 0 < placeholder_3 < 7 for placeholder_3 in placeholder_15)):
+        raise ValueError("Invalid dice {}".format(placeholder_15))
+    return placeholder_16(placeholder_15)
+
+
+def placeholder_17(placeholder_18):
+    try:
+        placeholder_19 = (
+            placeholder_20.split(";") for placeholder_20 in placeholder_18
+        )
+        placeholder_21 = compile_statistics(placeholder_19)
+    except AttributeError:
+        logger.exception(f"There is a problem with the tournament results string: ")
+        raise
+    except IndexError:
+        logger.exception(f"Compiling team statistics failed: ")
+        raise
+    return make_report(placeholder_21)
+
+
+def placeholder_22(placeholder_19):
+    placeholder_23 = defaultdict(Counter)
+    placeholder_24 = {"win": "loss", "loss": "win", "draw": "draw"}
+    for placeholder_25, placeholder_26, placeholder_27 in placeholder_19:
+        placeholder_23[placeholder_25].update([placeholder_27])
+        placeholder_23[placeholder_26].update([placeholder_24[placeholder_27]])
+    return placeholder_23
+
+
+def placeholder_28(placeholder_23):
+    placeholder_29 = "{:<30} | {:4>} |  {:4>} |  {:4>} |  {:4>} | {:>2}"
+    placeholder_30 = [("Team", "MP", "W", "D", "L", "P")]
+    placeholder_31 = (
+        (
+            placeholder_32,
+            " " + str(sum(placeholder_23[placeholder_32].values())),
+            placeholder_23[placeholder_32]["win"],
+            placeholder_23[placeholder_32]["draw"],
+            placeholder_23[placeholder_32]["loss"],
+            placeholder_23[placeholder_32]["win"] * 3
+            + placeholder_23[placeholder_32]["draw"],
+        )
+        for placeholder_32 in placeholder_23.keys()
+    )
+    placeholder_33 = placeholder_30 + sorted(
+        placeholder_31,
+        placeholder_34=lambda placeholder_3: (-placeholder_3[5], placeholder_3),
+    )
+    return "\n".join(
+        (placeholder_29.format(*placeholder_32) for placeholder_32 in placeholder_33)
+    ).split("\n")
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Import(
@@ -2765,8 +2874,9 @@ Module(
       end_lineno=98,
       end_col_offset=86)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     Import(
@@ -5500,110 +5610,4 @@ Module(
       end_lineno=98,
       end_col_offset=86)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-import logging
-from collections import defaultdict, Counter
-
-placeholder_0 = lambda placeholder_1: 50 if len(set(placeholder_1)) == 1 else 0
-placeholder_2 = lambda placeholder_1: sum(
-    (placeholder_3 for placeholder_3 in placeholder_1 if placeholder_3 == 1)
-)
-placeholder_4 = lambda placeholder_1: sum(
-    (placeholder_3 for placeholder_3 in placeholder_1 if placeholder_3 == 2)
-)
-placeholder_5 = lambda placeholder_1: sum(
-    (placeholder_3 for placeholder_3 in placeholder_1 if placeholder_3 == 3)
-)
-placeholder_6 = lambda placeholder_1: sum(
-    (placeholder_3 for placeholder_3 in placeholder_1 if placeholder_3 == 4)
-)
-placeholder_7 = lambda placeholder_1: sum(
-    (placeholder_3 for placeholder_3 in placeholder_1 if placeholder_3 == 5)
-)
-placeholder_8 = lambda placeholder_1: sum(
-    (placeholder_3 for placeholder_3 in placeholder_1 if placeholder_3 == 6)
-)
-placeholder_9 = (
-    lambda placeholder_1: sum(placeholder_1)
-    if len(set(placeholder_1)) == 2
-    and any(
-        (
-            placeholder_1.count(placeholder_3) == 3
-            for placeholder_3 in set(placeholder_1)
-        )
-    )
-    else 0
-)
-placeholder_10 = lambda placeholder_1: sum(
-    (
-        placeholder_3 * 4
-        for placeholder_3 in set(placeholder_1)
-        if placeholder_1.count(placeholder_3) > 3
-    )
-)
-placeholder_11 = (
-    lambda placeholder_1: 30
-    if sum(placeholder_1) == 15 and len(set(placeholder_1)) == 5
-    else 0
-)
-placeholder_12 = (
-    lambda placeholder_1: 30
-    if sum(placeholder_1) == 20 and len(set(placeholder_1)) == 5
-    else 0
-)
-placeholder_13 = lambda placeholder_1: sum(placeholder_1)
-
-
-def placeholder_14(placeholder_15, placeholder_16):
-    if any((not 0 < placeholder_3 < 7 for placeholder_3 in placeholder_15)):
-        raise ValueError("Invalid dice {}".format(placeholder_15))
-    return placeholder_16(placeholder_15)
-
-
-def placeholder_17(placeholder_18):
-    try:
-        placeholder_19 = (
-            placeholder_20.split(";") for placeholder_20 in placeholder_18
-        )
-        placeholder_21 = compile_statistics(placeholder_19)
-    except AttributeError:
-        logger.exception(f"There is a problem with the tournament results string: ")
-        raise
-    except IndexError:
-        logger.exception(f"Compiling team statistics failed: ")
-        raise
-    return make_report(placeholder_21)
-
-
-def placeholder_22(placeholder_19):
-    placeholder_23 = defaultdict(Counter)
-    placeholder_24 = {"win": "loss", "loss": "win", "draw": "draw"}
-    for placeholder_25, placeholder_26, placeholder_27 in placeholder_19:
-        placeholder_23[placeholder_25].update([placeholder_27])
-        placeholder_23[placeholder_26].update([placeholder_24[placeholder_27]])
-    return placeholder_23
-
-
-def placeholder_28(placeholder_23):
-    placeholder_29 = "{:<30} | {:4>} |  {:4>} |  {:4>} |  {:4>} | {:>2}"
-    placeholder_30 = [("Team", "MP", "W", "D", "L", "P")]
-    placeholder_31 = (
-        (
-            placeholder_32,
-            " " + str(sum(placeholder_23[placeholder_32].values())),
-            placeholder_23[placeholder_32]["win"],
-            placeholder_23[placeholder_32]["draw"],
-            placeholder_23[placeholder_32]["loss"],
-            placeholder_23[placeholder_32]["win"] * 3
-            + placeholder_23[placeholder_32]["draw"],
-        )
-        for placeholder_32 in placeholder_23.keys()
-    )
-    placeholder_33 = placeholder_30 + sorted(
-        placeholder_31,
-        placeholder_34=lambda placeholder_3: (-placeholder_3[5], placeholder_3),
-    )
-    return "\n".join(
-        (placeholder_29.format(*placeholder_32) for placeholder_32 in placeholder_33)
-    ).split("\n")
+## END NORMALIZED TREE ##

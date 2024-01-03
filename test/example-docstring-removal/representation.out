@@ -1,4 +1,24 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1):
+    return "un" + placeholder_1
+
+
+def placeholder_2(placeholder_3):
+    placeholder_4 = "This is a multi-line string.\n    This should NOT get cleaned as a docstring, but retained, because it is assigned\n    a name, and is therefore a plain string, and not a docstring."
+    return (" :: " + placeholder_3[0]).join(placeholder_3)
+
+
+def placeholder_5(placeholder_1):
+    placeholder_6 = "This is a multi-line string constant.\n       This should NOT get cleaned as a docstring, but retained, because it is assigned\n       a name, and is therefore a plain string, and not a docstring."
+    return placeholder_1[:-4] if placeholder_1[-5] != "i" else placeholder_1[:-5] + "y"
+
+
+def placeholder_7(placeholder_8, placeholder_9):
+    return placeholder_8.split()[placeholder_9].strip(".") + "en"
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Expr(
@@ -454,8 +474,9 @@ Module(
       end_lineno=67,
       end_col_offset=52)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -856,21 +877,4 @@ Module(
       end_lineno=67,
       end_col_offset=52)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1):
-    return "un" + placeholder_1
-
-
-def placeholder_2(placeholder_3):
-    placeholder_4 = "This is a multi-line string.\n    This should NOT get cleaned as a docstring, but retained, because it is assigned\n    a name, and is therefore a plain string, and not a docstring."
-    return (" :: " + placeholder_3[0]).join(placeholder_3)
-
-
-def placeholder_5(placeholder_1):
-    placeholder_6 = "This is a multi-line string constant.\n       This should NOT get cleaned as a docstring, but retained, because it is assigned\n       a name, and is therefore a plain string, and not a docstring."
-    return placeholder_1[:-4] if placeholder_1[-5] != "i" else placeholder_1[:-5] + "y"
-
-
-def placeholder_7(placeholder_8, placeholder_9):
-    return placeholder_8.split()[placeholder_9].strip(".") + "en"
+## END NORMALIZED TREE ##
