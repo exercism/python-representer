@@ -1,4 +1,15 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1):
+    placeholder_2 = [
+        placeholder_3.lower()
+        for placeholder_3 in placeholder_1
+        if placeholder_3.isalpha()
+    ]
+    return len(set(placeholder_2)) == len(placeholder_2)
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     FunctionDef(
@@ -169,8 +180,9 @@ Module(
       end_lineno=3,
       end_col_offset=62)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -341,12 +353,4 @@ Module(
       end_lineno=3,
       end_col_offset=62)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1):
-    placeholder_2 = [
-        placeholder_3.lower()
-        for placeholder_3 in placeholder_1
-        if placeholder_3.isalpha()
-    ]
-    return len(set(placeholder_2)) == len(placeholder_2)
+## END NORMALIZED TREE ##

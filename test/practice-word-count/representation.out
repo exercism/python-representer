@@ -1,4 +1,21 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+import re
+from collections import Counter
+
+placeholder_0 = re.compile("[a-z0-9]+(['][a-z]+)?")
+
+
+def placeholder_1(placeholder_2):
+    return Counter(
+        (
+            placeholder_3.group(0)
+            for placeholder_3 in placeholder_0.finditer(placeholder_2.lower())
+        )
+    )
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Import(
@@ -192,8 +209,9 @@ Module(
       end_lineno=9,
       end_col_offset=74)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     Import(
@@ -387,18 +405,4 @@ Module(
       end_lineno=9,
       end_col_offset=74)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-import re
-from collections import Counter
-
-placeholder_0 = re.compile("[a-z0-9]+(['][a-z]+)?")
-
-
-def placeholder_1(placeholder_2):
-    return Counter(
-        (
-            placeholder_3.group(0)
-            for placeholder_3 in placeholder_0.finditer(placeholder_2.lower())
-        )
-    )
+## END NORMALIZED TREE ##

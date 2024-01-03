@@ -1,4 +1,13 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+from datetime import timedelta
+
+
+def placeholder_0(placeholder_1):
+    return placeholder_1 + timedelta(placeholder_2=1000000000.0)
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     ImportFrom(
@@ -80,8 +89,9 @@ Module(
       end_lineno=5,
       end_col_offset=42)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     ImportFrom(
@@ -163,10 +173,4 @@ Module(
       end_lineno=5,
       end_col_offset=42)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-from datetime import timedelta
-
-
-def placeholder_0(placeholder_1):
-    return placeholder_1 + timedelta(placeholder_2=1000000000.0)
+## END NORMALIZED TREE ##

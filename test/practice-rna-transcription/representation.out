@@ -1,4 +1,13 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+placeholder_0 = str.maketrans("AGCT", "UCGA")
+
+
+def placeholder_1(placeholder_2):
+    return placeholder_2.translate(placeholder_0)
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Assign(
@@ -101,8 +110,9 @@ Module(
       end_lineno=4,
       end_col_offset=43)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     Assign(
@@ -205,10 +215,4 @@ Module(
       end_lineno=4,
       end_col_offset=43)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-placeholder_0 = str.maketrans("AGCT", "UCGA")
-
-
-def placeholder_1(placeholder_2):
-    return placeholder_2.translate(placeholder_0)
+## END NORMALIZED TREE ##

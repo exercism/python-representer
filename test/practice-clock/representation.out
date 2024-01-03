@@ -1,4 +1,36 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+class placeholder_0:
+    def placeholder_1(self, placeholder_2, placeholder_3):
+        self.placeholder_2 = placeholder_2
+        self.placeholder_3 = placeholder_3
+        self.cleanup()
+
+    def placeholder_4(self):
+        return f"Clock({self.placeholder_2}, {self.placeholder_3})"
+
+    def placeholder_5(self):
+        return "{:02d}:{:02d}".format(self.placeholder_2, self.placeholder_3)
+
+    def placeholder_6(self, placeholder_7):
+        return repr(self) == repr(placeholder_7)
+
+    def placeholder_8(self, placeholder_9):
+        self.placeholder_3 += placeholder_9
+        return self.cleanup()
+
+    def placeholder_10(self, placeholder_9):
+        self.placeholder_3 -= placeholder_9
+        return self.cleanup()
+
+    def placeholder_11(self):
+        self.placeholder_2 += self.placeholder_3 // 60
+        self.placeholder_2 %= 24
+        self.placeholder_3 %= 60
+        return self
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     ClassDef(
@@ -666,8 +698,9 @@ Module(
       end_lineno=30,
       end_col_offset=19)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     ClassDef(
@@ -1324,33 +1357,4 @@ Module(
       end_lineno=30,
       end_col_offset=19)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-class placeholder_0:
-    def placeholder_1(self, placeholder_2, placeholder_3):
-        self.placeholder_2 = placeholder_2
-        self.placeholder_3 = placeholder_3
-        self.cleanup()
-
-    def placeholder_4(self):
-        return f"Clock({self.placeholder_2}, {self.placeholder_3})"
-
-    def placeholder_5(self):
-        return "{:02d}:{:02d}".format(self.placeholder_2, self.placeholder_3)
-
-    def placeholder_6(self, placeholder_7):
-        return repr(self) == repr(placeholder_7)
-
-    def placeholder_8(self, placeholder_9):
-        self.placeholder_3 += placeholder_9
-        return self.cleanup()
-
-    def placeholder_10(self, placeholder_9):
-        self.placeholder_3 -= placeholder_9
-        return self.cleanup()
-
-    def placeholder_11(self):
-        self.placeholder_2 += self.placeholder_3 // 60
-        self.placeholder_2 %= 24
-        self.placeholder_3 %= 60
-        return self
+## END NORMALIZED TREE ##

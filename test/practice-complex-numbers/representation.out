@@ -1,4 +1,120 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+import math
+
+
+class placeholder_0:
+    def placeholder_1(self, placeholder_2=0, placeholder_3=0):
+        self.placeholder_2 = placeholder_2
+        self.placeholder_3 = placeholder_3
+
+    def placeholder_4(self, placeholder_5):
+        if not isinstance(placeholder_5, placeholder_0):
+            placeholder_5 = placeholder_0(placeholder_5)
+        return (
+            self.placeholder_2 == placeholder_5.placeholder_2
+            and self.placeholder_3 == placeholder_5.placeholder_3
+        )
+
+    def placeholder_6(self, placeholder_5):
+        if not isinstance(placeholder_5, placeholder_0):
+            placeholder_5 = placeholder_0(placeholder_5)
+        placeholder_7 = self.placeholder_2 + placeholder_5.placeholder_2
+        placeholder_8 = self.placeholder_3 + placeholder_5.placeholder_3
+        return placeholder_0(placeholder_7, placeholder_8)
+
+    def placeholder_9(self, placeholder_5):
+        if not isinstance(placeholder_5, placeholder_0):
+            placeholder_5 = placeholder_0(placeholder_5)
+        placeholder_7 = self.placeholder_2 + placeholder_5.placeholder_2
+        placeholder_8 = self.placeholder_3 + placeholder_5.placeholder_3
+        return placeholder_0(placeholder_7, placeholder_8)
+
+    def placeholder_10(self, placeholder_5):
+        if not isinstance(placeholder_5, placeholder_0):
+            placeholder_5 = placeholder_0(placeholder_5)
+        placeholder_7 = (
+            self.placeholder_2 * placeholder_5.placeholder_2
+            - self.placeholder_3 * placeholder_5.placeholder_3
+        )
+        placeholder_8 = (
+            self.placeholder_2 * placeholder_5.placeholder_3
+            + self.placeholder_3 * placeholder_5.placeholder_2
+        )
+        return placeholder_0(placeholder_7, placeholder_8)
+
+    def placeholder_11(self, placeholder_5):
+        if not isinstance(placeholder_5, placeholder_0):
+            placeholder_5 = placeholder_0(placeholder_5)
+        placeholder_7 = (
+            self.placeholder_2 * placeholder_5.placeholder_2
+            - self.placeholder_3 * placeholder_5.placeholder_3
+        )
+        placeholder_8 = (
+            self.placeholder_2 * placeholder_5.placeholder_3
+            + self.placeholder_3 * placeholder_5.placeholder_2
+        )
+        return placeholder_0(placeholder_7, placeholder_8)
+
+    def placeholder_12(self, placeholder_5):
+        if not isinstance(placeholder_5, placeholder_0):
+            placeholder_5 = placeholder_0(placeholder_5)
+        placeholder_7 = self.placeholder_2 - placeholder_5.placeholder_2
+        placeholder_8 = self.placeholder_3 - placeholder_5.placeholder_3
+        return placeholder_0(placeholder_7, placeholder_8)
+
+    def placeholder_13(self, placeholder_5):
+        if not isinstance(placeholder_5, placeholder_0):
+            placeholder_5 = placeholder_0(placeholder_5)
+        placeholder_7 = placeholder_5.placeholder_2 - self.placeholder_2
+        placeholder_8 = placeholder_5.placeholder_3 - self.placeholder_3
+        return placeholder_0(placeholder_7, placeholder_8)
+
+    def placeholder_14(self, placeholder_5):
+        if not isinstance(placeholder_5, placeholder_0):
+            placeholder_5 = placeholder_0(placeholder_5)
+        placeholder_15 = placeholder_5.conjugate()
+        placeholder_16 = placeholder_5 * placeholder_15
+        placeholder_17 = placeholder_16.placeholder_2
+        placeholder_18 = self * placeholder_15
+        return placeholder_0(
+            placeholder_18.placeholder_2 / placeholder_17,
+            placeholder_18.placeholder_3 / placeholder_17,
+        )
+
+    def placeholder_19(self, placeholder_5):
+        if not isinstance(placeholder_5, placeholder_0):
+            placeholder_5 = placeholder_0(placeholder_5)
+        placeholder_15 = self.conjugate()
+        placeholder_16 = self * placeholder_15
+        placeholder_17 = float(placeholder_16.placeholder_2)
+        placeholder_18 = placeholder_5 * placeholder_15
+        return placeholder_0(
+            placeholder_18.placeholder_2 / placeholder_17,
+            placeholder_18.placeholder_3 / placeholder_17,
+        )
+
+    def placeholder_20(self):
+        placeholder_21 = (
+            self.placeholder_2 * self.placeholder_2
+            + self.placeholder_3 * self.placeholder_3
+        )
+        return math.sqrt(placeholder_21)
+
+    def placeholder_22(self):
+        return placeholder_0(self.placeholder_2, -1 * self.placeholder_3)
+
+    def placeholder_23(self):
+        placeholder_7 = math.cos(self.placeholder_3) * math.placeholder_23(
+            self.placeholder_2
+        )
+        placeholder_8 = math.sin(self.placeholder_3) * math.placeholder_23(
+            self.placeholder_2
+        )
+        return placeholder_0(placeholder_7, placeholder_8)
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Import(
@@ -2907,8 +3023,9 @@ Module(
       end_lineno=96,
       end_col_offset=55)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     Import(
@@ -5817,117 +5934,4 @@ Module(
       end_lineno=96,
       end_col_offset=55)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-import math
-
-
-class placeholder_0:
-    def placeholder_1(self, placeholder_2=0, placeholder_3=0):
-        self.placeholder_2 = placeholder_2
-        self.placeholder_3 = placeholder_3
-
-    def placeholder_4(self, placeholder_5):
-        if not isinstance(placeholder_5, placeholder_0):
-            placeholder_5 = placeholder_0(placeholder_5)
-        return (
-            self.placeholder_2 == placeholder_5.placeholder_2
-            and self.placeholder_3 == placeholder_5.placeholder_3
-        )
-
-    def placeholder_6(self, placeholder_5):
-        if not isinstance(placeholder_5, placeholder_0):
-            placeholder_5 = placeholder_0(placeholder_5)
-        placeholder_7 = self.placeholder_2 + placeholder_5.placeholder_2
-        placeholder_8 = self.placeholder_3 + placeholder_5.placeholder_3
-        return placeholder_0(placeholder_7, placeholder_8)
-
-    def placeholder_9(self, placeholder_5):
-        if not isinstance(placeholder_5, placeholder_0):
-            placeholder_5 = placeholder_0(placeholder_5)
-        placeholder_7 = self.placeholder_2 + placeholder_5.placeholder_2
-        placeholder_8 = self.placeholder_3 + placeholder_5.placeholder_3
-        return placeholder_0(placeholder_7, placeholder_8)
-
-    def placeholder_10(self, placeholder_5):
-        if not isinstance(placeholder_5, placeholder_0):
-            placeholder_5 = placeholder_0(placeholder_5)
-        placeholder_7 = (
-            self.placeholder_2 * placeholder_5.placeholder_2
-            - self.placeholder_3 * placeholder_5.placeholder_3
-        )
-        placeholder_8 = (
-            self.placeholder_2 * placeholder_5.placeholder_3
-            + self.placeholder_3 * placeholder_5.placeholder_2
-        )
-        return placeholder_0(placeholder_7, placeholder_8)
-
-    def placeholder_11(self, placeholder_5):
-        if not isinstance(placeholder_5, placeholder_0):
-            placeholder_5 = placeholder_0(placeholder_5)
-        placeholder_7 = (
-            self.placeholder_2 * placeholder_5.placeholder_2
-            - self.placeholder_3 * placeholder_5.placeholder_3
-        )
-        placeholder_8 = (
-            self.placeholder_2 * placeholder_5.placeholder_3
-            + self.placeholder_3 * placeholder_5.placeholder_2
-        )
-        return placeholder_0(placeholder_7, placeholder_8)
-
-    def placeholder_12(self, placeholder_5):
-        if not isinstance(placeholder_5, placeholder_0):
-            placeholder_5 = placeholder_0(placeholder_5)
-        placeholder_7 = self.placeholder_2 - placeholder_5.placeholder_2
-        placeholder_8 = self.placeholder_3 - placeholder_5.placeholder_3
-        return placeholder_0(placeholder_7, placeholder_8)
-
-    def placeholder_13(self, placeholder_5):
-        if not isinstance(placeholder_5, placeholder_0):
-            placeholder_5 = placeholder_0(placeholder_5)
-        placeholder_7 = placeholder_5.placeholder_2 - self.placeholder_2
-        placeholder_8 = placeholder_5.placeholder_3 - self.placeholder_3
-        return placeholder_0(placeholder_7, placeholder_8)
-
-    def placeholder_14(self, placeholder_5):
-        if not isinstance(placeholder_5, placeholder_0):
-            placeholder_5 = placeholder_0(placeholder_5)
-        placeholder_15 = placeholder_5.conjugate()
-        placeholder_16 = placeholder_5 * placeholder_15
-        placeholder_17 = placeholder_16.placeholder_2
-        placeholder_18 = self * placeholder_15
-        return placeholder_0(
-            placeholder_18.placeholder_2 / placeholder_17,
-            placeholder_18.placeholder_3 / placeholder_17,
-        )
-
-    def placeholder_19(self, placeholder_5):
-        if not isinstance(placeholder_5, placeholder_0):
-            placeholder_5 = placeholder_0(placeholder_5)
-        placeholder_15 = self.conjugate()
-        placeholder_16 = self * placeholder_15
-        placeholder_17 = float(placeholder_16.placeholder_2)
-        placeholder_18 = placeholder_5 * placeholder_15
-        return placeholder_0(
-            placeholder_18.placeholder_2 / placeholder_17,
-            placeholder_18.placeholder_3 / placeholder_17,
-        )
-
-    def placeholder_20(self):
-        placeholder_21 = (
-            self.placeholder_2 * self.placeholder_2
-            + self.placeholder_3 * self.placeholder_3
-        )
-        return math.sqrt(placeholder_21)
-
-    def placeholder_22(self):
-        return placeholder_0(self.placeholder_2, -1 * self.placeholder_3)
-
-    def placeholder_23(self):
-        placeholder_7 = math.cos(self.placeholder_3) * math.placeholder_23(
-            self.placeholder_2
-        )
-        placeholder_8 = math.sin(self.placeholder_3) * math.placeholder_23(
-            self.placeholder_2
-        )
-        return placeholder_0(placeholder_7, placeholder_8)
+## END NORMALIZED TREE ##

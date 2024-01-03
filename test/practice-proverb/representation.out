@@ -1,4 +1,22 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(*placeholder_1, placeholder_2):
+    if not placeholder_1:
+        return []
+    placeholder_3 = [
+        f"For want of a {placeholder_4} the {placeholder_5} was lost."
+        for placeholder_4, placeholder_5 in zip(placeholder_1, placeholder_1[1:])
+    ]
+    if placeholder_2:
+        placeholder_3.append(
+            f"And all for the want of a {placeholder_2} {placeholder_1[0]}."
+        )
+    else:
+        placeholder_3.append(f"And all for the want of a {placeholder_1[0]}.")
+    return placeholder_3
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     FunctionDef(
@@ -408,8 +426,9 @@ Module(
       end_lineno=11,
       end_col_offset=18)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -793,19 +812,4 @@ Module(
       end_lineno=11,
       end_col_offset=18)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(*placeholder_1, placeholder_2):
-    if not placeholder_1:
-        return []
-    placeholder_3 = [
-        f"For want of a {placeholder_4} the {placeholder_5} was lost."
-        for placeholder_4, placeholder_5 in zip(placeholder_1, placeholder_1[1:])
-    ]
-    if placeholder_2:
-        placeholder_3.append(
-            f"And all for the want of a {placeholder_2} {placeholder_1[0]}."
-        )
-    else:
-        placeholder_3.append(f"And all for the want of a {placeholder_1[0]}.")
-    return placeholder_3
+## END NORMALIZED TREE ##

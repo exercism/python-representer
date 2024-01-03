@@ -1,4 +1,19 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+import re
+
+
+def placeholder_0(placeholder_1):
+    placeholder_2 = "[A-Z]+['a-z]*|['a-z]+"
+    return "".join(
+        (
+            placeholder_3[0].upper()
+            for placeholder_3 in re.findall(placeholder_2, placeholder_1)
+        )
+    )
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Import(
@@ -162,8 +177,9 @@ Module(
       end_lineno=6,
       end_col_offset=72)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     Import(
@@ -327,16 +343,4 @@ Module(
       end_lineno=6,
       end_col_offset=72)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-import re
-
-
-def placeholder_0(placeholder_1):
-    placeholder_2 = "[A-Z]+['a-z]*|['a-z]+"
-    return "".join(
-        (
-            placeholder_3[0].upper()
-            for placeholder_3 in re.findall(placeholder_2, placeholder_1)
-        )
-    )
+## END NORMALIZED TREE ##

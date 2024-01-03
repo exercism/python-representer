@@ -1,4 +1,20 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1):
+    placeholder_2 = placeholder_1 * (placeholder_1 + 1) / 2
+    return placeholder_2 * placeholder_2
+
+
+def placeholder_3(placeholder_1):
+    placeholder_4 = placeholder_1 * (placeholder_1 + 1) * (2 * placeholder_1 + 1)
+    return placeholder_4 / 6
+
+
+def placeholder_5(placeholder_1):
+    return placeholder_0(placeholder_1) - placeholder_3(placeholder_1)
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     FunctionDef(
@@ -303,8 +319,9 @@ Module(
       end_lineno=12,
       end_col_offset=57)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -609,17 +626,4 @@ Module(
       end_lineno=12,
       end_col_offset=57)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1):
-    placeholder_2 = placeholder_1 * (placeholder_1 + 1) / 2
-    return placeholder_2 * placeholder_2
-
-
-def placeholder_3(placeholder_1):
-    placeholder_4 = placeholder_1 * (placeholder_1 + 1) * (2 * placeholder_1 + 1)
-    return placeholder_4 / 6
-
-
-def placeholder_5(placeholder_1):
-    return placeholder_0(placeholder_1) - placeholder_3(placeholder_1)
+## END NORMALIZED TREE ##

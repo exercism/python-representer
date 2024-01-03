@@ -1,4 +1,92 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+from json import dumps
+
+
+class placeholder_0:
+    def placeholder_1(self, placeholder_2, placeholder_3=None):
+        self.placeholder_2 = placeholder_2
+        self.placeholder_3 = placeholder_3 if placeholder_3 is not None else []
+
+    def placeholder_4(self):
+        return {
+            self.placeholder_2: [
+                placeholder_5.placeholder_4()
+                for placeholder_5 in sorted(self.placeholder_3)
+            ]
+        }
+
+    def placeholder_6(self, placeholder_7=None):
+        return dumps(self.placeholder_4(), placeholder_7=placeholder_7)
+
+    def placeholder_8(self, placeholder_9):
+        return self.placeholder_2 < placeholder_9.placeholder_2
+
+    def placeholder_10(self, placeholder_9):
+        return self.placeholder_4() == placeholder_9.placeholder_4()
+
+    def placeholder_11(self):
+        yield self.label
+        for placeholder_12 in self.placeholder_3:
+            for placeholder_13 in placeholder_12:
+                yield grandchild
+
+    def placeholder_14(self):
+        return placeholder_0(
+            self.placeholder_2,
+            [placeholder_5.placeholder_14() for placeholder_5 in self.placeholder_3],
+        )
+
+    def placeholder_15(self, placeholder_9):
+        placeholder_16 = self.placeholder_14()
+        placeholder_16.placeholder_3.append(placeholder_9)
+        return placeholder_16
+
+    def placeholder_17(self, placeholder_18):
+        placeholder_16 = self.placeholder_14()
+        for placeholder_12 in list(placeholder_16.placeholder_3):
+            placeholder_16.placeholder_3.placeholder_17(placeholder_12)
+            if placeholder_12.placeholder_2 == placeholder_18:
+                break
+            placeholder_16.placeholder_3.append(
+                placeholder_12.placeholder_17(placeholder_18)
+            )
+        return placeholder_16
+
+    def placeholder_19(self, placeholder_20):
+        placeholder_21 = [self]
+        placeholder_22 = set()
+        while placeholder_21:
+            placeholder_16 = placeholder_21.pop(0)
+            if placeholder_16.placeholder_2 in placeholder_22:
+                continue
+            placeholder_22.placeholder_15(placeholder_16.placeholder_2)
+            if placeholder_20 == placeholder_16.placeholder_2:
+                return placeholder_16
+            for placeholder_12 in placeholder_16.placeholder_3:
+                placeholder_21.append(
+                    placeholder_12.placeholder_15(
+                        placeholder_16.placeholder_17(placeholder_12.placeholder_2)
+                    )
+                )
+        raise ValueError("Tree could not be reoriented")
+
+    def placeholder_23(self, placeholder_20, placeholder_24):
+        placeholder_25 = self.placeholder_19(placeholder_20)
+        placeholder_21 = placeholder_25.placeholder_3
+        placeholder_26 = [placeholder_20]
+        while placeholder_26[-1] != placeholder_24:
+            try:
+                placeholder_16 = placeholder_21.pop()
+            except IndexError as placeholder_27:
+                raise ValueError("No path found") from placeholder_27
+            if placeholder_24 in placeholder_16:
+                placeholder_26.append(placeholder_16.placeholder_2)
+                placeholder_21 = placeholder_16.placeholder_3
+        return placeholder_26
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     ImportFrom(
@@ -1846,8 +1934,9 @@ Module(
       end_lineno=77,
       end_col_offset=19)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     ImportFrom(
@@ -3695,89 +3784,4 @@ Module(
       end_lineno=77,
       end_col_offset=19)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-from json import dumps
-
-
-class placeholder_0:
-    def placeholder_1(self, placeholder_2, placeholder_3=None):
-        self.placeholder_2 = placeholder_2
-        self.placeholder_3 = placeholder_3 if placeholder_3 is not None else []
-
-    def placeholder_4(self):
-        return {
-            self.placeholder_2: [
-                placeholder_5.placeholder_4()
-                for placeholder_5 in sorted(self.placeholder_3)
-            ]
-        }
-
-    def placeholder_6(self, placeholder_7=None):
-        return dumps(self.placeholder_4(), placeholder_7=placeholder_7)
-
-    def placeholder_8(self, placeholder_9):
-        return self.placeholder_2 < placeholder_9.placeholder_2
-
-    def placeholder_10(self, placeholder_9):
-        return self.placeholder_4() == placeholder_9.placeholder_4()
-
-    def placeholder_11(self):
-        yield self.label
-        for placeholder_12 in self.placeholder_3:
-            for placeholder_13 in placeholder_12:
-                yield grandchild
-
-    def placeholder_14(self):
-        return placeholder_0(
-            self.placeholder_2,
-            [placeholder_5.placeholder_14() for placeholder_5 in self.placeholder_3],
-        )
-
-    def placeholder_15(self, placeholder_9):
-        placeholder_16 = self.placeholder_14()
-        placeholder_16.placeholder_3.append(placeholder_9)
-        return placeholder_16
-
-    def placeholder_17(self, placeholder_18):
-        placeholder_16 = self.placeholder_14()
-        for placeholder_12 in list(placeholder_16.placeholder_3):
-            placeholder_16.placeholder_3.placeholder_17(placeholder_12)
-            if placeholder_12.placeholder_2 == placeholder_18:
-                break
-            placeholder_16.placeholder_3.append(
-                placeholder_12.placeholder_17(placeholder_18)
-            )
-        return placeholder_16
-
-    def placeholder_19(self, placeholder_20):
-        placeholder_21 = [self]
-        placeholder_22 = set()
-        while placeholder_21:
-            placeholder_16 = placeholder_21.pop(0)
-            if placeholder_16.placeholder_2 in placeholder_22:
-                continue
-            placeholder_22.placeholder_15(placeholder_16.placeholder_2)
-            if placeholder_20 == placeholder_16.placeholder_2:
-                return placeholder_16
-            for placeholder_12 in placeholder_16.placeholder_3:
-                placeholder_21.append(
-                    placeholder_12.placeholder_15(
-                        placeholder_16.placeholder_17(placeholder_12.placeholder_2)
-                    )
-                )
-        raise ValueError("Tree could not be reoriented")
-
-    def placeholder_23(self, placeholder_20, placeholder_24):
-        placeholder_25 = self.placeholder_19(placeholder_20)
-        placeholder_21 = placeholder_25.placeholder_3
-        placeholder_26 = [placeholder_20]
-        while placeholder_26[-1] != placeholder_24:
-            try:
-                placeholder_16 = placeholder_21.pop()
-            except IndexError as placeholder_27:
-                raise ValueError("No path found") from placeholder_27
-            if placeholder_24 in placeholder_16:
-                placeholder_26.append(placeholder_16.placeholder_2)
-                placeholder_21 = placeholder_16.placeholder_3
-        return placeholder_26
+## END NORMALIZED TREE ##

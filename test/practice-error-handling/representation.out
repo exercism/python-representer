@@ -1,4 +1,29 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0():
+    raise Exception("Meaningful message describing the source of the error")
+
+
+def placeholder_1(placeholder_2):
+    try:
+        return int(placeholder_2)
+    except ValueError:
+        return None
+
+
+def placeholder_3(placeholder_2):
+    try:
+        return (True, int(placeholder_2))
+    except ValueError:
+        return (False, None)
+
+
+def placeholder_4(placeholder_5):
+    with placeholder_5 as placeholder_6:
+        placeholder_6.do_something()
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     FunctionDef(
@@ -293,8 +318,9 @@ Module(
       end_lineno=21,
       end_col_offset=31)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -589,26 +615,4 @@ Module(
       end_lineno=21,
       end_col_offset=31)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0():
-    raise Exception("Meaningful message describing the source of the error")
-
-
-def placeholder_1(placeholder_2):
-    try:
-        return int(placeholder_2)
-    except ValueError:
-        return None
-
-
-def placeholder_3(placeholder_2):
-    try:
-        return (True, int(placeholder_2))
-    except ValueError:
-        return (False, None)
-
-
-def placeholder_4(placeholder_5):
-    with placeholder_5 as placeholder_6:
-        placeholder_6.do_something()
+## END NORMALIZED TREE ##

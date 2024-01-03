@@ -1,4 +1,45 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+from string import ascii_lowercase
+from time import time
+import random
+from itertools import cycle
+
+
+class placeholder_0:
+    def placeholder_1(self, placeholder_2=None):
+        if placeholder_2 is None:
+            random.seed(time())
+            placeholder_2 = "".join(
+                (random.choice(ascii_lowercase) for placeholder_3 in range(100))
+            )
+        self.placeholder_2 = placeholder_2
+
+    def placeholder_4(self, placeholder_5):
+        return "".join(
+            (
+                chr(
+                    (ord(placeholder_6) - 2 * ord("a") + ord(placeholder_2)) % 26
+                    + ord("a")
+                )
+                for placeholder_6, placeholder_2 in zip(
+                    placeholder_5, cycle(self.placeholder_2)
+                )
+            )
+        )
+
+    def placeholder_7(self, placeholder_5):
+        return "".join(
+            (
+                chr((ord(placeholder_6) - ord(placeholder_2) + 26) % 26 + ord("a"))
+                for placeholder_6, placeholder_2 in zip(
+                    placeholder_5, cycle(self.placeholder_2)
+                )
+            )
+        )
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     ImportFrom(
@@ -800,8 +841,9 @@ Module(
       end_lineno=25,
       end_col_offset=9)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     ImportFrom(
@@ -1603,42 +1645,4 @@ Module(
       end_lineno=25,
       end_col_offset=9)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-from string import ascii_lowercase
-from time import time
-import random
-from itertools import cycle
-
-
-class placeholder_0:
-    def placeholder_1(self, placeholder_2=None):
-        if placeholder_2 is None:
-            random.seed(time())
-            placeholder_2 = "".join(
-                (random.choice(ascii_lowercase) for placeholder_3 in range(100))
-            )
-        self.placeholder_2 = placeholder_2
-
-    def placeholder_4(self, placeholder_5):
-        return "".join(
-            (
-                chr(
-                    (ord(placeholder_6) - 2 * ord("a") + ord(placeholder_2)) % 26
-                    + ord("a")
-                )
-                for placeholder_6, placeholder_2 in zip(
-                    placeholder_5, cycle(self.placeholder_2)
-                )
-            )
-        )
-
-    def placeholder_7(self, placeholder_5):
-        return "".join(
-            (
-                chr((ord(placeholder_6) - ord(placeholder_2) + 26) % 26 + ord("a"))
-                for placeholder_6, placeholder_2 in zip(
-                    placeholder_5, cycle(self.placeholder_2)
-                )
-            )
-        )
+## END NORMALIZED TREE ##

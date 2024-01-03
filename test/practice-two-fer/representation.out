@@ -1,4 +1,10 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1="you"):
+    return f"One for {placeholder_1}, one for me."
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     FunctionDef(
@@ -64,8 +70,9 @@ Module(
       end_lineno=2,
       end_col_offset=41)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -131,7 +138,4 @@ Module(
       end_lineno=2,
       end_col_offset=41)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1="you"):
-    return f"One for {placeholder_1}, one for me."
+## END NORMALIZED TREE ##

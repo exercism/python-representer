@@ -1,4 +1,96 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+import copy
+
+
+class placeholder_0:
+    def placeholder_1(self, placeholder_2, placeholder_3):
+        self.placeholder_2 = placeholder_2
+        self.placeholder_3 = placeholder_3
+
+    def placeholder_4(self):
+        return f"Point({self.placeholder_2}:{self.placeholder_3})"
+
+    def placeholder_5(self, placeholder_6):
+        return placeholder_0(
+            self.placeholder_2 + placeholder_6.placeholder_2,
+            self.placeholder_3 + placeholder_6.placeholder_3,
+        )
+
+    def placeholder_7(self, placeholder_6):
+        return placeholder_0(
+            self.placeholder_2 - placeholder_6.placeholder_2,
+            self.placeholder_3 - placeholder_6.placeholder_3,
+        )
+
+    def placeholder_8(self, placeholder_6):
+        return (
+            self.placeholder_2 == placeholder_6.placeholder_2
+            and self.placeholder_3 == placeholder_6.placeholder_3
+        )
+
+    def placeholder_9(self, placeholder_6):
+        return not self == placeholder_6
+
+
+placeholder_10 = (
+    placeholder_0(1, 0),
+    placeholder_0(1, -1),
+    placeholder_0(1, 1),
+    placeholder_0(-1, -1),
+    placeholder_0(0, -1),
+    placeholder_0(0, 1),
+    placeholder_0(-1, 1),
+    placeholder_0(-1, 0),
+)
+
+
+class placeholder_11:
+    def placeholder_1(self, placeholder_12):
+        self.placeholder_13 = placeholder_12
+        self.placeholder_14 = len(self.placeholder_13[0])
+        self.placeholder_15 = len(self.placeholder_13)
+
+    def placeholder_16(self, placeholder_17):
+        if (
+            placeholder_17.placeholder_2 < 0
+            or placeholder_17.placeholder_2 >= self.placeholder_14
+        ):
+            return None
+        if (
+            placeholder_17.placeholder_3 < 0
+            or placeholder_17.placeholder_3 >= self.placeholder_15
+        ):
+            return None
+        return self.placeholder_13[placeholder_17.placeholder_3][
+            placeholder_17.placeholder_2
+        ]
+
+    def placeholder_18(self, placeholder_19, placeholder_20, placeholder_21):
+        placeholder_22 = copy.copy(placeholder_20)
+        for placeholder_23 in placeholder_19:
+            if self.placeholder_16(placeholder_22) != placeholder_23:
+                return None
+            placeholder_22 += placeholder_21
+        return (placeholder_20, placeholder_22 - placeholder_21)
+
+    def placeholder_24(self, placeholder_19):
+        placeholder_25 = (
+            placeholder_0(placeholder_26, placeholder_27)
+            for placeholder_26 in range(self.placeholder_14)
+            for placeholder_27 in range(self.placeholder_15)
+        )
+        for placeholder_20 in placeholder_25:
+            for placeholder_21 in placeholder_10:
+                placeholder_28 = self.placeholder_18(
+                    placeholder_19, placeholder_20, placeholder_21
+                )
+                if placeholder_28:
+                    return placeholder_28
+        return None
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Import(
@@ -1795,8 +1887,9 @@ Module(
       end_lineno=58,
       end_col_offset=19)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     Import(
@@ -3593,93 +3686,4 @@ Module(
       end_lineno=58,
       end_col_offset=19)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-import copy
-
-
-class placeholder_0:
-    def placeholder_1(self, placeholder_2, placeholder_3):
-        self.placeholder_2 = placeholder_2
-        self.placeholder_3 = placeholder_3
-
-    def placeholder_4(self):
-        return f"Point({self.placeholder_2}:{self.placeholder_3})"
-
-    def placeholder_5(self, placeholder_6):
-        return placeholder_0(
-            self.placeholder_2 + placeholder_6.placeholder_2,
-            self.placeholder_3 + placeholder_6.placeholder_3,
-        )
-
-    def placeholder_7(self, placeholder_6):
-        return placeholder_0(
-            self.placeholder_2 - placeholder_6.placeholder_2,
-            self.placeholder_3 - placeholder_6.placeholder_3,
-        )
-
-    def placeholder_8(self, placeholder_6):
-        return (
-            self.placeholder_2 == placeholder_6.placeholder_2
-            and self.placeholder_3 == placeholder_6.placeholder_3
-        )
-
-    def placeholder_9(self, placeholder_6):
-        return not self == placeholder_6
-
-
-placeholder_10 = (
-    placeholder_0(1, 0),
-    placeholder_0(1, -1),
-    placeholder_0(1, 1),
-    placeholder_0(-1, -1),
-    placeholder_0(0, -1),
-    placeholder_0(0, 1),
-    placeholder_0(-1, 1),
-    placeholder_0(-1, 0),
-)
-
-
-class placeholder_11:
-    def placeholder_1(self, placeholder_12):
-        self.placeholder_13 = placeholder_12
-        self.placeholder_14 = len(self.placeholder_13[0])
-        self.placeholder_15 = len(self.placeholder_13)
-
-    def placeholder_16(self, placeholder_17):
-        if (
-            placeholder_17.placeholder_2 < 0
-            or placeholder_17.placeholder_2 >= self.placeholder_14
-        ):
-            return None
-        if (
-            placeholder_17.placeholder_3 < 0
-            or placeholder_17.placeholder_3 >= self.placeholder_15
-        ):
-            return None
-        return self.placeholder_13[placeholder_17.placeholder_3][
-            placeholder_17.placeholder_2
-        ]
-
-    def placeholder_18(self, placeholder_19, placeholder_20, placeholder_21):
-        placeholder_22 = copy.copy(placeholder_20)
-        for placeholder_23 in placeholder_19:
-            if self.placeholder_16(placeholder_22) != placeholder_23:
-                return None
-            placeholder_22 += placeholder_21
-        return (placeholder_20, placeholder_22 - placeholder_21)
-
-    def placeholder_24(self, placeholder_19):
-        placeholder_25 = (
-            placeholder_0(placeholder_26, placeholder_27)
-            for placeholder_26 in range(self.placeholder_14)
-            for placeholder_27 in range(self.placeholder_15)
-        )
-        for placeholder_20 in placeholder_25:
-            for placeholder_21 in placeholder_10:
-                placeholder_28 = self.placeholder_18(
-                    placeholder_19, placeholder_20, placeholder_21
-                )
-                if placeholder_28:
-                    return placeholder_28
-        return None
+## END NORMALIZED TREE ##

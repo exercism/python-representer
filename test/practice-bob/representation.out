@@ -1,4 +1,33 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1):
+    placeholder_1 = placeholder_1.strip()
+    if _is_silence(placeholder_1):
+        return "Fine. Be that way!"
+    if _is_shouting(placeholder_1):
+        if _is_question(placeholder_1):
+            return "Calm down, I know what I'm doing!"
+        else:
+            return "Whoa, chill out!"
+    elif _is_question(placeholder_1):
+        return "Sure."
+    else:
+        return "Whatever."
+
+
+def placeholder_2(placeholder_1):
+    return placeholder_1 == ""
+
+
+def placeholder_3(placeholder_1):
+    return placeholder_1.isupper()
+
+
+def placeholder_4(placeholder_1):
+    return placeholder_1.endswith("?")
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     FunctionDef(
@@ -367,8 +396,9 @@ Module(
       end_lineno=26,
       end_col_offset=32)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -737,30 +767,4 @@ Module(
       end_lineno=26,
       end_col_offset=32)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1):
-    placeholder_1 = placeholder_1.strip()
-    if _is_silence(placeholder_1):
-        return "Fine. Be that way!"
-    if _is_shouting(placeholder_1):
-        if _is_question(placeholder_1):
-            return "Calm down, I know what I'm doing!"
-        else:
-            return "Whoa, chill out!"
-    elif _is_question(placeholder_1):
-        return "Sure."
-    else:
-        return "Whatever."
-
-
-def placeholder_2(placeholder_1):
-    return placeholder_1 == ""
-
-
-def placeholder_3(placeholder_1):
-    return placeholder_1.isupper()
-
-
-def placeholder_4(placeholder_1):
-    return placeholder_1.endswith("?")
+## END NORMALIZED TREE ##

@@ -1,4 +1,78 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+class placeholder_0:
+    def placeholder_1(self, placeholder_2):
+        self.placeholder_3 = placeholder_2
+        self.placeholder_4 = None
+
+    def placeholder_2(self):
+        return self.placeholder_3
+
+    def next(self):
+        return self.placeholder_4
+
+
+class placeholder_5:
+    def placeholder_1(self, placeholder_6):
+        self.placeholder_7 = placeholder_6._head
+
+    def placeholder_8(self):
+        return self
+
+    def placeholder_9(self):
+        if self.placeholder_7 is None:
+            raise StopIteration
+        placeholder_2 = self.placeholder_7.placeholder_2()
+        self.placeholder_7 = self.placeholder_7.next()
+        return placeholder_2
+
+    def next(self):
+        return self.placeholder_9()
+
+
+class placeholder_10:
+    def placeholder_1(self, placeholder_11=None):
+        placeholder_11 = placeholder_11 if placeholder_11 is not None else []
+        self.placeholder_12 = None
+        self.placeholder_13 = 0
+        for placeholder_2 in placeholder_11:
+            self.push(placeholder_2)
+
+    def placeholder_8(self):
+        return placeholder_5(self)
+
+    def placeholder_14(self):
+        return self.placeholder_13
+
+    def placeholder_15(self):
+        if self.placeholder_12 is None:
+            raise EmptyListException("The list is empty.")
+        return self.placeholder_12
+
+    def placeholder_16(self, placeholder_2):
+        placeholder_17 = placeholder_0(placeholder_2)
+        placeholder_17.placeholder_4 = self.placeholder_12
+        self.placeholder_12 = placeholder_17
+        self.placeholder_13 += 1
+
+    def placeholder_18(self):
+        if self.placeholder_12 is None:
+            raise EmptyListException("The list is empty.")
+        self.placeholder_13 -= 1
+        placeholder_19 = self.placeholder_12.placeholder_2()
+        self.placeholder_12 = self.placeholder_12.next()
+        return placeholder_19
+
+    def reversed(self):
+        return placeholder_10(self)
+
+
+class placeholder_20(Exception):
+    def placeholder_1(self, placeholder_21):
+        self.placeholder_21 = placeholder_21
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     ClassDef(
@@ -1351,8 +1425,9 @@ Module(
       end_lineno=76,
       end_col_offset=30)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     ClassDef(
@@ -2694,75 +2769,4 @@ Module(
       end_lineno=76,
       end_col_offset=30)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-class placeholder_0:
-    def placeholder_1(self, placeholder_2):
-        self.placeholder_3 = placeholder_2
-        self.placeholder_4 = None
-
-    def placeholder_2(self):
-        return self.placeholder_3
-
-    def next(self):
-        return self.placeholder_4
-
-
-class placeholder_5:
-    def placeholder_1(self, placeholder_6):
-        self.placeholder_7 = placeholder_6._head
-
-    def placeholder_8(self):
-        return self
-
-    def placeholder_9(self):
-        if self.placeholder_7 is None:
-            raise StopIteration
-        placeholder_2 = self.placeholder_7.placeholder_2()
-        self.placeholder_7 = self.placeholder_7.next()
-        return placeholder_2
-
-    def next(self):
-        return self.placeholder_9()
-
-
-class placeholder_10:
-    def placeholder_1(self, placeholder_11=None):
-        placeholder_11 = placeholder_11 if placeholder_11 is not None else []
-        self.placeholder_12 = None
-        self.placeholder_13 = 0
-        for placeholder_2 in placeholder_11:
-            self.push(placeholder_2)
-
-    def placeholder_8(self):
-        return placeholder_5(self)
-
-    def placeholder_14(self):
-        return self.placeholder_13
-
-    def placeholder_15(self):
-        if self.placeholder_12 is None:
-            raise EmptyListException("The list is empty.")
-        return self.placeholder_12
-
-    def placeholder_16(self, placeholder_2):
-        placeholder_17 = placeholder_0(placeholder_2)
-        placeholder_17.placeholder_4 = self.placeholder_12
-        self.placeholder_12 = placeholder_17
-        self.placeholder_13 += 1
-
-    def placeholder_18(self):
-        if self.placeholder_12 is None:
-            raise EmptyListException("The list is empty.")
-        self.placeholder_13 -= 1
-        placeholder_19 = self.placeholder_12.placeholder_2()
-        self.placeholder_12 = self.placeholder_12.next()
-        return placeholder_19
-
-    def reversed(self):
-        return placeholder_10(self)
-
-
-class placeholder_20(Exception):
-    def placeholder_1(self, placeholder_21):
-        self.placeholder_21 = placeholder_21
+## END NORMALIZED TREE ##

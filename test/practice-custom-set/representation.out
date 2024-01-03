@@ -1,4 +1,55 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+class placeholder_0:
+    def placeholder_1(self, placeholder_2=None):
+        self.placeholder_2 = (
+            list(placeholder_2) if placeholder_2 is not None else list([])
+        )
+
+    def placeholder_3(self):
+        return not self.placeholder_2
+
+    def placeholder_4(self):
+        return iter(self.placeholder_2)
+
+    def placeholder_5(self, placeholder_6):
+        return placeholder_6 in self.placeholder_2
+
+    def placeholder_7(self, placeholder_8):
+        return all((placeholder_9 in placeholder_8 for placeholder_9 in self))
+
+    def placeholder_10(self, placeholder_8):
+        return all((placeholder_9 not in placeholder_8 for placeholder_9 in self))
+
+    def placeholder_11(self, placeholder_8):
+        return self.placeholder_7(placeholder_8) and placeholder_8.placeholder_7(self)
+
+    def placeholder_12(self, placeholder_6):
+        if placeholder_6 not in self:
+            self.placeholder_2.append(placeholder_6)
+
+    def placeholder_13(self, placeholder_8):
+        placeholder_14 = placeholder_0()
+        for placeholder_9 in self:
+            if placeholder_9 in placeholder_8:
+                placeholder_14.placeholder_12(placeholder_9)
+        return placeholder_14
+
+    def placeholder_15(self, placeholder_8):
+        placeholder_14 = placeholder_0()
+        for placeholder_9 in self:
+            if placeholder_9 not in placeholder_8:
+                placeholder_14.placeholder_12(placeholder_9)
+        return placeholder_14
+
+    def placeholder_16(self, placeholder_8):
+        placeholder_14 = placeholder_0(self.placeholder_2)
+        for placeholder_9 in placeholder_8:
+            placeholder_14.placeholder_12(placeholder_9)
+        return placeholder_14
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     ClassDef(
@@ -1088,8 +1139,9 @@ Module(
       end_lineno=45,
       end_col_offset=21)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     ClassDef(
@@ -2179,52 +2231,4 @@ Module(
       end_lineno=45,
       end_col_offset=21)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-class placeholder_0:
-    def placeholder_1(self, placeholder_2=None):
-        self.placeholder_2 = (
-            list(placeholder_2) if placeholder_2 is not None else list([])
-        )
-
-    def placeholder_3(self):
-        return not self.placeholder_2
-
-    def placeholder_4(self):
-        return iter(self.placeholder_2)
-
-    def placeholder_5(self, placeholder_6):
-        return placeholder_6 in self.placeholder_2
-
-    def placeholder_7(self, placeholder_8):
-        return all((placeholder_9 in placeholder_8 for placeholder_9 in self))
-
-    def placeholder_10(self, placeholder_8):
-        return all((placeholder_9 not in placeholder_8 for placeholder_9 in self))
-
-    def placeholder_11(self, placeholder_8):
-        return self.placeholder_7(placeholder_8) and placeholder_8.placeholder_7(self)
-
-    def placeholder_12(self, placeholder_6):
-        if placeholder_6 not in self:
-            self.placeholder_2.append(placeholder_6)
-
-    def placeholder_13(self, placeholder_8):
-        placeholder_14 = placeholder_0()
-        for placeholder_9 in self:
-            if placeholder_9 in placeholder_8:
-                placeholder_14.placeholder_12(placeholder_9)
-        return placeholder_14
-
-    def placeholder_15(self, placeholder_8):
-        placeholder_14 = placeholder_0()
-        for placeholder_9 in self:
-            if placeholder_9 not in placeholder_8:
-                placeholder_14.placeholder_12(placeholder_9)
-        return placeholder_14
-
-    def placeholder_16(self, placeholder_8):
-        placeholder_14 = placeholder_0(self.placeholder_2)
-        for placeholder_9 in placeholder_8:
-            placeholder_14.placeholder_12(placeholder_9)
-        return placeholder_14
+## END NORMALIZED TREE ##

@@ -1,4 +1,44 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+placeholder_0 = {
+    "a": 1,
+    "b": 3,
+    "c": 3,
+    "d": 2,
+    "e": 1,
+    "f": 4,
+    "g": 2,
+    "h": 4,
+    "i": 1,
+    "j": 8,
+    "k": 5,
+    "l": 1,
+    "m": 3,
+    "n": 1,
+    "o": 1,
+    "p": 3,
+    "q": 10,
+    "r": 1,
+    "s": 1,
+    "t": 1,
+    "u": 1,
+    "v": 4,
+    "w": 4,
+    "x": 8,
+    "y": 4,
+    "z": 10,
+}
+
+
+def placeholder_1(placeholder_2):
+    if not placeholder_2.isalpha():
+        return 0
+    return sum(
+        (placeholder_0[placeholder_3] for placeholder_3 in placeholder_2.lower())
+    )
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Assign(
@@ -475,8 +515,9 @@ Module(
       end_lineno=14,
       end_col_offset=57)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     Assign(
@@ -953,41 +994,4 @@ Module(
       end_lineno=14,
       end_col_offset=57)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-placeholder_0 = {
-    "a": 1,
-    "b": 3,
-    "c": 3,
-    "d": 2,
-    "e": 1,
-    "f": 4,
-    "g": 2,
-    "h": 4,
-    "i": 1,
-    "j": 8,
-    "k": 5,
-    "l": 1,
-    "m": 3,
-    "n": 1,
-    "o": 1,
-    "p": 3,
-    "q": 10,
-    "r": 1,
-    "s": 1,
-    "t": 1,
-    "u": 1,
-    "v": 4,
-    "w": 4,
-    "x": 8,
-    "y": 4,
-    "z": 10,
-}
-
-
-def placeholder_1(placeholder_2):
-    if not placeholder_2.isalpha():
-        return 0
-    return sum(
-        (placeholder_0[placeholder_3] for placeholder_3 in placeholder_2.lower())
-    )
+## END NORMALIZED TREE ##

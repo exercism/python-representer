@@ -1,4 +1,29 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+import random
+import math
+
+
+class placeholder_0:
+    def placeholder_1(self):
+        self.placeholder_2 = self.ability()
+        self.placeholder_3 = self.ability()
+        self.placeholder_4 = self.ability()
+        self.placeholder_5 = self.ability()
+        self.placeholder_6 = self.ability()
+        self.placeholder_7 = self.ability()
+        self.placeholder_8 = 10 + modifier(self.placeholder_4)
+
+    def placeholder_9(self):
+        placeholder_10 = sorted((random.randint(1, 6) for placeholder_11 in range(4)))
+        return sum(placeholder_10[1:])
+
+
+def placeholder_12(placeholder_13):
+    return math.floor((placeholder_13 - 10) / 2)
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Import(
@@ -598,8 +623,9 @@ Module(
       end_lineno=21,
       end_col_offset=35)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     Import(
@@ -1199,26 +1225,4 @@ Module(
       end_lineno=21,
       end_col_offset=35)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-import random
-import math
-
-
-class placeholder_0:
-    def placeholder_1(self):
-        self.placeholder_2 = self.ability()
-        self.placeholder_3 = self.ability()
-        self.placeholder_4 = self.ability()
-        self.placeholder_5 = self.ability()
-        self.placeholder_6 = self.ability()
-        self.placeholder_7 = self.ability()
-        self.placeholder_8 = 10 + modifier(self.placeholder_4)
-
-    def placeholder_9(self):
-        placeholder_10 = sorted((random.randint(1, 6) for placeholder_11 in range(4)))
-        return sum(placeholder_10[1:])
-
-
-def placeholder_12(placeholder_13):
-    return math.floor((placeholder_13 - 10) / 2)
+## END NORMALIZED TREE ##

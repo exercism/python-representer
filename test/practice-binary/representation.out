@@ -1,4 +1,17 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1):
+    if set(placeholder_1) - set("01"):
+        raise ValueError("Invalid binary literal: " + placeholder_1)
+    return sum(
+        (
+            int(placeholder_3) * 2**placeholder_2
+            for placeholder_2, placeholder_3 in enumerate(reversed(placeholder_1))
+        )
+    )
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     FunctionDef(
@@ -244,8 +257,9 @@ Module(
       end_lineno=5,
       end_col_offset=63)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -491,14 +505,4 @@ Module(
       end_lineno=5,
       end_col_offset=63)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1):
-    if set(placeholder_1) - set("01"):
-        raise ValueError("Invalid binary literal: " + placeholder_1)
-    return sum(
-        (
-            int(placeholder_3) * 2**placeholder_2
-            for placeholder_2, placeholder_3 in enumerate(reversed(placeholder_1))
-        )
-    )
+## END NORMALIZED TREE ##

@@ -1,4 +1,21 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+import random
+
+
+def placeholder_0(placeholder_1):
+    return random.randint(2, placeholder_1 - 1)
+
+
+def placeholder_2(placeholder_1, placeholder_3, placeholder_4):
+    return pow(placeholder_3, placeholder_4, placeholder_1)
+
+
+def placeholder_5(placeholder_1, placeholder_6, placeholder_4):
+    return pow(placeholder_6, placeholder_4, placeholder_1)
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Import(
@@ -229,8 +246,9 @@ Module(
       end_lineno=13,
       end_col_offset=34)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     Import(
@@ -461,18 +479,4 @@ Module(
       end_lineno=13,
       end_col_offset=34)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-import random
-
-
-def placeholder_0(placeholder_1):
-    return random.randint(2, placeholder_1 - 1)
-
-
-def placeholder_2(placeholder_1, placeholder_3, placeholder_4):
-    return pow(placeholder_3, placeholder_4, placeholder_1)
-
-
-def placeholder_5(placeholder_1, placeholder_6, placeholder_4):
-    return pow(placeholder_6, placeholder_4, placeholder_1)
+## END NORMALIZED TREE ##

@@ -1,4 +1,28 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+placeholder_0 = [
+    "black",
+    "brown",
+    "red",
+    "orange",
+    "yellow",
+    "green",
+    "blue",
+    "violet",
+    "grey",
+    "white",
+]
+
+
+def placeholder_1(placeholder_2):
+    return placeholder_0.index(placeholder_2)
+
+
+def placeholder_3():
+    return placeholder_0
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Assign(
@@ -161,8 +185,9 @@ Module(
       end_lineno=20,
       end_col_offset=17)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     Assign(
@@ -325,25 +350,4 @@ Module(
       end_lineno=20,
       end_col_offset=17)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-placeholder_0 = [
-    "black",
-    "brown",
-    "red",
-    "orange",
-    "yellow",
-    "green",
-    "blue",
-    "violet",
-    "grey",
-    "white",
-]
-
-
-def placeholder_1(placeholder_2):
-    return placeholder_0.index(placeholder_2)
-
-
-def placeholder_3():
-    return placeholder_0
+## END NORMALIZED TREE ##

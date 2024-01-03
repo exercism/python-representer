@@ -1,4 +1,14 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1):
+    placeholder_2 = 0
+    while placeholder_1:
+        placeholder_2 += placeholder_1 % 2
+        placeholder_1 //= 2
+    return placeholder_2
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     FunctionDef(
@@ -118,8 +128,9 @@ Module(
       end_lineno=6,
       end_col_offset=15)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -239,11 +250,4 @@ Module(
       end_lineno=6,
       end_col_offset=15)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1):
-    placeholder_2 = 0
-    while placeholder_1:
-        placeholder_2 += placeholder_1 % 2
-        placeholder_1 //= 2
-    return placeholder_2
+## END NORMALIZED TREE ##

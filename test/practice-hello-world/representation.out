@@ -1,4 +1,10 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0():
+    return "Hello, World!"
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     FunctionDef(
@@ -27,8 +33,9 @@ Module(
       end_lineno=2,
       end_col_offset=26)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -57,7 +64,4 @@ Module(
       end_lineno=2,
       end_col_offset=26)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0():
-    return "Hello, World!"
+## END NORMALIZED TREE ##

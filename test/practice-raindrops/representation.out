@@ -1,4 +1,19 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1):
+    placeholder_2 = ""
+    if placeholder_1 % 3 == 0:
+        placeholder_2 += "Pling"
+    if placeholder_1 % 5 == 0:
+        placeholder_2 += "Plang"
+    if placeholder_1 % 7 == 0:
+        placeholder_2 += "Plong"
+    if not placeholder_2:
+        placeholder_2 = str(placeholder_1)
+    return placeholder_2
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     FunctionDef(
@@ -295,8 +310,9 @@ Module(
       end_lineno=16,
       end_col_offset=17)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -582,16 +598,4 @@ Module(
       end_lineno=16,
       end_col_offset=17)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1):
-    placeholder_2 = ""
-    if placeholder_1 % 3 == 0:
-        placeholder_2 += "Pling"
-    if placeholder_1 % 5 == 0:
-        placeholder_2 += "Plang"
-    if placeholder_1 % 7 == 0:
-        placeholder_2 += "Plong"
-    if not placeholder_2:
-        placeholder_2 = str(placeholder_1)
-    return placeholder_2
+## END NORMALIZED TREE ##

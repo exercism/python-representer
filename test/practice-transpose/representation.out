@@ -1,4 +1,21 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1):
+    placeholder_2 = [
+        placeholder_3.replace(" ", "_") for placeholder_3 in placeholder_1.splitlines()
+    ]
+    placeholder_2 = [
+        placeholder_3.ljust(len(max(placeholder_2, placeholder_5=len)))
+        for placeholder_3 in placeholder_2
+    ]
+    placeholder_2 = ["".join(placeholder_3) for placeholder_3 in zip(*placeholder_2)]
+    placeholder_2 = [
+        placeholder_3.rstrip().replace("_", " ") for placeholder_3 in placeholder_2
+    ]
+    return "\n".join(placeholder_2)
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     FunctionDef(
@@ -408,8 +425,9 @@ Module(
       end_lineno=6,
       end_col_offset=26)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -819,18 +837,4 @@ Module(
       end_lineno=6,
       end_col_offset=26)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1):
-    placeholder_2 = [
-        placeholder_3.replace(" ", "_") for placeholder_3 in placeholder_1.splitlines()
-    ]
-    placeholder_2 = [
-        placeholder_3.ljust(len(max(placeholder_2, placeholder_5=len)))
-        for placeholder_3 in placeholder_2
-    ]
-    placeholder_2 = ["".join(placeholder_3) for placeholder_3 in zip(*placeholder_2)]
-    placeholder_2 = [
-        placeholder_3.rstrip().replace("_", " ") for placeholder_3 in placeholder_2
-    ]
-    return "\n".join(placeholder_2)
+## END NORMALIZED TREE ##

@@ -1,4 +1,26 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+from string import ascii_lowercase, ascii_uppercase
+
+placeholder_0 = len(ascii_lowercase)
+
+
+def placeholder_1(placeholder_2, placeholder_3):
+    placeholder_4 = ""
+    for placeholder_5 in placeholder_2:
+        if placeholder_5 in ascii_lowercase:
+            placeholder_5 = ascii_lowercase[
+                (ascii_lowercase.index(placeholder_5) + placeholder_3) % placeholder_0
+            ]
+        elif placeholder_5 in ascii_uppercase:
+            placeholder_5 = ascii_uppercase[
+                (ascii_uppercase.index(placeholder_5) + placeholder_3) % placeholder_0
+            ]
+        placeholder_4 += placeholder_5
+    return placeholder_4
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     ImportFrom(
@@ -372,8 +394,9 @@ Module(
       end_lineno=15,
       end_col_offset=24)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     ImportFrom(
@@ -747,23 +770,4 @@ Module(
       end_lineno=15,
       end_col_offset=24)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-from string import ascii_lowercase, ascii_uppercase
-
-placeholder_0 = len(ascii_lowercase)
-
-
-def placeholder_1(placeholder_2, placeholder_3):
-    placeholder_4 = ""
-    for placeholder_5 in placeholder_2:
-        if placeholder_5 in ascii_lowercase:
-            placeholder_5 = ascii_lowercase[
-                (ascii_lowercase.index(placeholder_5) + placeholder_3) % placeholder_0
-            ]
-        elif placeholder_5 in ascii_uppercase:
-            placeholder_5 = ascii_uppercase[
-                (ascii_uppercase.index(placeholder_5) + placeholder_3) % placeholder_0
-            ]
-        placeholder_4 += placeholder_5
-    return placeholder_4
+## END NORMALIZED TREE ##

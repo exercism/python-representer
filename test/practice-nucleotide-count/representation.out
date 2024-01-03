@@ -1,4 +1,26 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+placeholder_0 = "ATCG"
+
+
+def placeholder_1(placeholder_2, placeholder_3):
+    _validate(placeholder_3)
+    return placeholder_2.placeholder_1(placeholder_3)
+
+
+def placeholder_4(placeholder_2):
+    return {
+        placeholder_5: placeholder_2.placeholder_1(placeholder_5)
+        for placeholder_5 in placeholder_0
+    }
+
+
+def placeholder_6(placeholder_3):
+    if placeholder_3 not in placeholder_0:
+        raise ValueError(f"{placeholder_3} is not a nucleotide.")
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Assign(
@@ -282,8 +304,9 @@ Module(
       end_lineno=18,
       end_col_offset=64)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     Assign(
@@ -567,23 +590,4 @@ Module(
       end_lineno=18,
       end_col_offset=64)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-placeholder_0 = "ATCG"
-
-
-def placeholder_1(placeholder_2, placeholder_3):
-    _validate(placeholder_3)
-    return placeholder_2.placeholder_1(placeholder_3)
-
-
-def placeholder_4(placeholder_2):
-    return {
-        placeholder_5: placeholder_2.placeholder_1(placeholder_5)
-        for placeholder_5 in placeholder_0
-    }
-
-
-def placeholder_6(placeholder_3):
-    if placeholder_3 not in placeholder_0:
-        raise ValueError(f"{placeholder_3} is not a nucleotide.")
+## END NORMALIZED TREE ##

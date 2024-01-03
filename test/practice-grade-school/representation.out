@@ -1,4 +1,47 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+from collections import defaultdict
+
+
+class placeholder_0:
+    def placeholder_1(self):
+        self.placeholder_2 = {}
+        self.placeholder_3 = []
+
+    def placeholder_4(self):
+        placeholder_5 = self.placeholder_3[:]
+        self.placeholder_3 = []
+        return placeholder_5
+
+    def placeholder_6(self, placeholder_7, placeholder_8):
+        if not self.placeholder_2.get(placeholder_7, 0):
+            self.placeholder_2[placeholder_7] = placeholder_8
+            self.placeholder_3.append(True)
+        else:
+            self.placeholder_3.append(False)
+
+    def placeholder_9(self, placeholder_8=0):
+        placeholder_10 = defaultdict(list)
+        for placeholder_11, placeholder_12 in self.placeholder_2.items():
+            placeholder_10[placeholder_12].append(placeholder_11)
+        if placeholder_8:
+            return sorted(placeholder_10[placeholder_8])
+        else:
+            placeholder_13 = (
+                sorted(placeholder_10[placeholder_11])
+                for placeholder_11 in sorted(placeholder_10.keys())
+            )
+            return [
+                placeholder_15
+                for placeholder_14 in placeholder_13
+                for placeholder_15 in placeholder_14
+            ]
+
+    def placeholder_8(self, placeholder_16):
+        return sorted(self.placeholder_9(placeholder_16))
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     ImportFrom(
@@ -845,8 +888,9 @@ Module(
       end_lineno=36,
       end_col_offset=48)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     ImportFrom(
@@ -1693,44 +1737,4 @@ Module(
       end_lineno=36,
       end_col_offset=48)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-from collections import defaultdict
-
-
-class placeholder_0:
-    def placeholder_1(self):
-        self.placeholder_2 = {}
-        self.placeholder_3 = []
-
-    def placeholder_4(self):
-        placeholder_5 = self.placeholder_3[:]
-        self.placeholder_3 = []
-        return placeholder_5
-
-    def placeholder_6(self, placeholder_7, placeholder_8):
-        if not self.placeholder_2.get(placeholder_7, 0):
-            self.placeholder_2[placeholder_7] = placeholder_8
-            self.placeholder_3.append(True)
-        else:
-            self.placeholder_3.append(False)
-
-    def placeholder_9(self, placeholder_8=0):
-        placeholder_10 = defaultdict(list)
-        for placeholder_11, placeholder_12 in self.placeholder_2.items():
-            placeholder_10[placeholder_12].append(placeholder_11)
-        if placeholder_8:
-            return sorted(placeholder_10[placeholder_8])
-        else:
-            placeholder_13 = (
-                sorted(placeholder_10[placeholder_11])
-                for placeholder_11 in sorted(placeholder_10.keys())
-            )
-            return [
-                placeholder_15
-                for placeholder_14 in placeholder_13
-                for placeholder_15 in placeholder_14
-            ]
-
-    def placeholder_8(self, placeholder_16):
-        return sorted(self.placeholder_9(placeholder_16))
+## END NORMALIZED TREE ##

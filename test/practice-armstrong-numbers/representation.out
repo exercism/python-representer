@@ -1,4 +1,18 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1):
+    return (
+        sum(
+            (
+                pow(int(placeholder_2), len(str(placeholder_1)))
+                for placeholder_2 in str(placeholder_1)
+            )
+        )
+        == placeholder_1
+    )
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     FunctionDef(
@@ -163,8 +177,9 @@ Module(
       end_lineno=2,
       end_col_offset=84)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -329,15 +344,4 @@ Module(
       end_lineno=2,
       end_col_offset=84)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1):
-    return (
-        sum(
-            (
-                pow(int(placeholder_2), len(str(placeholder_1)))
-                for placeholder_2 in str(placeholder_1)
-            )
-        )
-        == placeholder_1
-    )
+## END NORMALIZED TREE ##

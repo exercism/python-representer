@@ -1,4 +1,16 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1, placeholder_2=[1]):
+    if placeholder_1 < 0:
+        raise ValueError("number of rows is negative")
+    elif placeholder_1 == 0:
+        return []
+    placeholder_3 = placeholder_2 + [0]
+    placeholder_4 = list(map(sum, zip(placeholder_3, placeholder_3[::-1])))
+    return [placeholder_2] + placeholder_0(placeholder_1 - 1, placeholder_4)
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     FunctionDef(
@@ -337,8 +349,9 @@ Module(
       end_lineno=8,
       end_col_offset=56)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -677,13 +690,4 @@ Module(
       end_lineno=8,
       end_col_offset=56)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1, placeholder_2=[1]):
-    if placeholder_1 < 0:
-        raise ValueError("number of rows is negative")
-    elif placeholder_1 == 0:
-        return []
-    placeholder_3 = placeholder_2 + [0]
-    placeholder_4 = list(map(sum, zip(placeholder_3, placeholder_3[::-1])))
-    return [placeholder_2] + placeholder_0(placeholder_1 - 1, placeholder_4)
+## END NORMALIZED TREE ##

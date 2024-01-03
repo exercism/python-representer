@@ -1,4 +1,20 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+class placeholder_0:
+    def placeholder_1(self, placeholder_2):
+        self.placeholder_2 = placeholder_2
+
+    def placeholder_3(self):
+        return self.placeholder_2[-1]
+
+    def placeholder_4(self):
+        return max(self.placeholder_2)
+
+    def placeholder_5(self):
+        return sorted(self.placeholder_2, placeholder_6=True)[:3]
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     ClassDef(
@@ -257,8 +273,9 @@ Module(
       end_lineno=12,
       end_col_offset=52)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     ClassDef(
@@ -517,17 +534,4 @@ Module(
       end_lineno=12,
       end_col_offset=52)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-class placeholder_0:
-    def placeholder_1(self, placeholder_2):
-        self.placeholder_2 = placeholder_2
-
-    def placeholder_3(self):
-        return self.placeholder_2[-1]
-
-    def placeholder_4(self):
-        return max(self.placeholder_2)
-
-    def placeholder_5(self):
-        return sorted(self.placeholder_2, placeholder_6=True)[:3]
+## END NORMALIZED TREE ##

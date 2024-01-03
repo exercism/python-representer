@@ -1,4 +1,29 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+import math
+
+
+def placeholder_0(placeholder_1):
+    for placeholder_2 in range(2, int(math.sqrt(placeholder_1)) + 1):
+        if placeholder_1 % placeholder_2 == 0:
+            yield index
+            if placeholder_2 * placeholder_2 != placeholder_1:
+                yield (number // index)
+
+
+def placeholder_3(placeholder_1):
+    if placeholder_1 <= 0:
+        raise ValueError("Classification is only possible for positive integers.")
+    placeholder_4 = sum(placeholder_0(placeholder_1)) + (1 if placeholder_1 > 1 else 0)
+    if placeholder_4 < placeholder_1:
+        return "deficient"
+    elif placeholder_4 == placeholder_1:
+        return "perfect"
+    else:
+        return "abundant"
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     Import(
@@ -530,8 +555,9 @@ Module(
       end_lineno=34,
       end_col_offset=25)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     Import(
@@ -1041,26 +1067,4 @@ Module(
       end_lineno=34,
       end_col_offset=25)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-import math
-
-
-def placeholder_0(placeholder_1):
-    for placeholder_2 in range(2, int(math.sqrt(placeholder_1)) + 1):
-        if placeholder_1 % placeholder_2 == 0:
-            yield index
-            if placeholder_2 * placeholder_2 != placeholder_1:
-                yield (number // index)
-
-
-def placeholder_3(placeholder_1):
-    if placeholder_1 <= 0:
-        raise ValueError("Classification is only possible for positive integers.")
-    placeholder_4 = sum(placeholder_0(placeholder_1)) + (1 if placeholder_1 > 1 else 0)
-    if placeholder_4 < placeholder_1:
-        return "deficient"
-    elif placeholder_4 == placeholder_1:
-        return "perfect"
-    else:
-        return "abundant"
+## END NORMALIZED TREE ##

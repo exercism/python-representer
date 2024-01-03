@@ -1,4 +1,13 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1, placeholder_2):
+    placeholder_3 = []
+    for placeholder_4 in placeholder_1:
+        placeholder_3.append(placeholder_2(placeholder_4))
+    return placeholder_3
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     FunctionDef(
@@ -128,8 +137,9 @@ Module(
       end_lineno=8,
       end_col_offset=19)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -259,10 +269,4 @@ Module(
       end_lineno=8,
       end_col_offset=19)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1, placeholder_2):
-    placeholder_3 = []
-    for placeholder_4 in placeholder_1:
-        placeholder_3.append(placeholder_2(placeholder_4))
-    return placeholder_3
+## END NORMALIZED TREE ##

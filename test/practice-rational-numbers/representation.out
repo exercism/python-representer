@@ -1,4 +1,73 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+from math import gcd
+
+
+class placeholder_0:
+    def placeholder_1(self, placeholder_2, placeholder_3):
+        placeholder_4 = abs(gcd(placeholder_2, placeholder_3))
+        self.placeholder_2 = placeholder_2 // placeholder_4
+        self.placeholder_3 = placeholder_3 // placeholder_4
+        if self.placeholder_3 < 0:
+            self.placeholder_2 *= -1
+            self.placeholder_3 *= -1
+
+    def placeholder_5(self, placeholder_6):
+        return (
+            self.placeholder_2 == placeholder_6.placeholder_2
+            and self.placeholder_3 == placeholder_6.placeholder_3
+        )
+
+    def placeholder_7(self):
+        return f"{self.placeholder_2}/{self.placeholder_3}"
+
+    def placeholder_8(self, placeholder_6):
+        placeholder_2 = (
+            self.placeholder_2 * placeholder_6.placeholder_3
+            + placeholder_6.placeholder_2 * self.placeholder_3
+        )
+        return placeholder_0(
+            placeholder_2, placeholder_6.placeholder_3 * self.placeholder_3
+        )
+
+    def placeholder_9(self, placeholder_6):
+        return self + -placeholder_6
+
+    def placeholder_10(self, placeholder_6):
+        return placeholder_0(
+            self.placeholder_2 * placeholder_6.placeholder_2,
+            self.placeholder_3 * placeholder_6.placeholder_3,
+        )
+
+    def placeholder_11(self, placeholder_6):
+        return placeholder_0(
+            self.placeholder_2 * placeholder_6.placeholder_3,
+            self.placeholder_3 * placeholder_6.placeholder_2,
+        )
+
+    def placeholder_12(self):
+        return placeholder_0(abs(self.placeholder_2), self.placeholder_3)
+
+    def placeholder_13(self, placeholder_14):
+        if placeholder_14 < 0:
+            return placeholder_0(
+                pow(self.placeholder_3, -placeholder_14),
+                pow(self.placeholder_2, -placeholder_14),
+            )
+        else:
+            return placeholder_0(
+                pow(self.placeholder_2, placeholder_14),
+                pow(self.placeholder_3, placeholder_14),
+            )
+
+    def placeholder_15(self, placeholder_16):
+        return placeholder_16 ** (self.placeholder_2 / self.placeholder_3)
+
+    def placeholder_17(self):
+        return placeholder_0(self.placeholder_2 * -1, self.placeholder_3)
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     ImportFrom(
@@ -1423,8 +1492,9 @@ Module(
       end_lineno=49,
       end_col_offset=54)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     ImportFrom(
@@ -2849,70 +2919,4 @@ Module(
       end_lineno=49,
       end_col_offset=54)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-from math import gcd
-
-
-class placeholder_0:
-    def placeholder_1(self, placeholder_2, placeholder_3):
-        placeholder_4 = abs(gcd(placeholder_2, placeholder_3))
-        self.placeholder_2 = placeholder_2 // placeholder_4
-        self.placeholder_3 = placeholder_3 // placeholder_4
-        if self.placeholder_3 < 0:
-            self.placeholder_2 *= -1
-            self.placeholder_3 *= -1
-
-    def placeholder_5(self, placeholder_6):
-        return (
-            self.placeholder_2 == placeholder_6.placeholder_2
-            and self.placeholder_3 == placeholder_6.placeholder_3
-        )
-
-    def placeholder_7(self):
-        return f"{self.placeholder_2}/{self.placeholder_3}"
-
-    def placeholder_8(self, placeholder_6):
-        placeholder_2 = (
-            self.placeholder_2 * placeholder_6.placeholder_3
-            + placeholder_6.placeholder_2 * self.placeholder_3
-        )
-        return placeholder_0(
-            placeholder_2, placeholder_6.placeholder_3 * self.placeholder_3
-        )
-
-    def placeholder_9(self, placeholder_6):
-        return self + -placeholder_6
-
-    def placeholder_10(self, placeholder_6):
-        return placeholder_0(
-            self.placeholder_2 * placeholder_6.placeholder_2,
-            self.placeholder_3 * placeholder_6.placeholder_3,
-        )
-
-    def placeholder_11(self, placeholder_6):
-        return placeholder_0(
-            self.placeholder_2 * placeholder_6.placeholder_3,
-            self.placeholder_3 * placeholder_6.placeholder_2,
-        )
-
-    def placeholder_12(self):
-        return placeholder_0(abs(self.placeholder_2), self.placeholder_3)
-
-    def placeholder_13(self, placeholder_14):
-        if placeholder_14 < 0:
-            return placeholder_0(
-                pow(self.placeholder_3, -placeholder_14),
-                pow(self.placeholder_2, -placeholder_14),
-            )
-        else:
-            return placeholder_0(
-                pow(self.placeholder_2, placeholder_14),
-                pow(self.placeholder_3, placeholder_14),
-            )
-
-    def placeholder_15(self, placeholder_16):
-        return placeholder_16 ** (self.placeholder_2 / self.placeholder_3)
-
-    def placeholder_17(self):
-        return placeholder_0(self.placeholder_2 * -1, self.placeholder_3)
+## END NORMALIZED TREE ##

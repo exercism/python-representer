@@ -1,4 +1,19 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+from functools import reduce
+
+
+def placeholder_0(placeholder_1):
+    if set(placeholder_1) - set("012"):
+        return 0
+    return reduce(
+        lambda placeholder_2, placeholder_3: placeholder_2 * 3 + int(placeholder_3),
+        placeholder_1,
+        0,
+    )
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     ImportFrom(
@@ -202,8 +217,9 @@ Module(
       end_lineno=7,
       end_col_offset=65)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     ImportFrom(
@@ -407,16 +423,4 @@ Module(
       end_lineno=7,
       end_col_offset=65)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-from functools import reduce
-
-
-def placeholder_0(placeholder_1):
-    if set(placeholder_1) - set("012"):
-        return 0
-    return reduce(
-        lambda placeholder_2, placeholder_3: placeholder_2 * 3 + int(placeholder_3),
-        placeholder_1,
-        0,
-    )
+## END NORMALIZED TREE ##

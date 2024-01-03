@@ -1,4 +1,20 @@
-# BEGIN TREE BEFORE
+## BEGIN NORMALIZED CODE ##
+def placeholder_0(placeholder_1, placeholder_2):
+    return [
+        placeholder_3 for placeholder_3 in placeholder_1 if placeholder_2(placeholder_3)
+    ]
+
+
+def placeholder_4(placeholder_1, placeholder_2):
+    return [
+        placeholder_3
+        for placeholder_3 in placeholder_1
+        if not placeholder_2(placeholder_3)
+    ]
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
 Module(
   [
     FunctionDef(
@@ -172,8 +188,9 @@ Module(
       end_lineno=5,
       end_col_offset=70)],
   [])
+## END TREE BEFORE ##
 
-# BEGIN TREE AFTER
+## BEGIN NORMALIZED TREE ##
 Module(
   [
     FunctionDef(
@@ -347,17 +364,4 @@ Module(
       end_lineno=5,
       end_col_offset=70)],
   [])
-
-# BEGIN NORMALIZED CODE AFTER
-def placeholder_0(placeholder_1, placeholder_2):
-    return [
-        placeholder_3 for placeholder_3 in placeholder_1 if placeholder_2(placeholder_3)
-    ]
-
-
-def placeholder_4(placeholder_1, placeholder_2):
-    return [
-        placeholder_3
-        for placeholder_3 in placeholder_1
-        if not placeholder_2(placeholder_3)
-    ]
+## END NORMALIZED TREE ##
