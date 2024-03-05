@@ -15,7 +15,7 @@ on:
       - "LICENSE"
       - "**.md"
 jobs:
-  build:
+  test:
     name: Test Representer
     runs-on: ubuntu-22.04
     steps:
