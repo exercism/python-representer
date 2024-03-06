@@ -1,0 +1,9 @@
+{
+    "placeholder_0": "handle_error_by_throwing_exception",
+    "placeholder_1": "handle_error_by_returning_none",
+    "placeholder_2": "input_data",
+    "placeholder_3": "handle_error_by_returning_tuple",
+    "placeholder_4": "filelike_objects_are_closed_on_exception",
+    "placeholder_5": "filelike_object",
+    "placeholder_6": "file_obj"
+}

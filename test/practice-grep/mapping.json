@@ -1,0 +1,19 @@
+{
+    "placeholder_0": "matches",
+    "placeholder_1": "line",
+    "placeholder_2": "pattern",
+    "placeholder_3": "flags",
+    "placeholder_4": "format_files",
+    "placeholder_5": "matched_lines",
+    "placeholder_6": "result",
+    "placeholder_7": "file_name",
+    "placeholder_8": "_",
+    "placeholder_9": "format_lines",
+    "placeholder_10": "files",
+    "placeholder_11": "line_number",
+    "placeholder_12": "line_result",
+    "placeholder_13": "grep",
+    "placeholder_14": "encoding",
+    "placeholder_15": "f",
+    "placeholder_16": "start"
+}

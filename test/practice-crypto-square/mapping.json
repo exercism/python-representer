@@ -1,0 +1,13 @@
+{
+    "placeholder_0": "cipher_text",
+    "placeholder_1": "plain_text",
+    "placeholder_2": "square_size",
+    "placeholder_3": "square",
+    "placeholder_4": "column",
+    "placeholder_5": "fillvalue",
+    "placeholder_6": "_cleanse",
+    "placeholder_7": "text",
+    "placeholder_8": "character",
+    "placeholder_9": "_chunks_of",
+    "placeholder_10": "num"
+}

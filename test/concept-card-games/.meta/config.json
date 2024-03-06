@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "itamargal",
+    "isaacg",
+    "bethanyg"
+  ],
+  "contributors": [
+    "valentin-p",
+    "pranasziaukas"
+  ],
+  "files": {
+    "solution": [
+      "lists.py"
+    ]
+  },
+  "icon": "poker",
+  "blurb": "Learn about lists by tracking hands in card games."
+}

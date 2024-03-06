@@ -1,0 +1,11 @@
+{
+    "placeholder_0": "create_inventory",
+    "placeholder_1": "items",
+    "placeholder_2": "inventory",
+    "placeholder_3": "add_items",
+    "placeholder_4": "item",
+    "placeholder_5": "decrement_items",
+    "placeholder_6": "remove_item",
+    "placeholder_7": "list_inventory",
+    "placeholder_8": "output"
+}

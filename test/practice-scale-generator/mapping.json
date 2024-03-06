@@ -1,0 +1,19 @@
+{
+    "placeholder_0": "Scale",
+    "placeholder_1": "ASCENDING_INTERVALS",
+    "placeholder_2": "CHROMATIC_SCALE",
+    "placeholder_3": "FLAT_CHROMATIC_SCALE",
+    "placeholder_4": "FLAT_KEYS",
+    "placeholder_5": "__init__",
+    "placeholder_6": "tonic",
+    "placeholder_7": "intervals",
+    "placeholder_8": "chromatic_scale",
+    "placeholder_9": "chromatic",
+    "placeholder_10": "interval",
+    "placeholder_11": "last_index",
+    "placeholder_12": "pitches",
+    "placeholder_13": "scale",
+    "placeholder_14": "_",
+    "placeholder_15": "_reorder_chromatic_scale",
+    "placeholder_16": "index"
+}

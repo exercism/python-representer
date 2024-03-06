@@ -1,0 +1,16 @@
+{
+  "authors": [
+    "kimolivia"
+  ],
+  "contributors": [
+    "valentin-p",
+    "BethanyG"
+  ],
+  "files": {
+    "solution": [
+      "string_methods.py"
+    ]
+  },
+  "icon": "anagrams",
+  "blurb": "Learn about string methods while improving your little sister's school essay."
+}

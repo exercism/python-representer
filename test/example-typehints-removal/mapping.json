@@ -1,0 +1,15 @@
+{
+    "placeholder_0": "is_criticality_balanced",
+    "placeholder_1": "temperature",
+    "placeholder_2": "neutrons_emitted",
+    "placeholder_3": "reactor_efficiency",
+    "placeholder_4": "voltage",
+    "placeholder_5": "current",
+    "placeholder_6": "theoretical_max_power",
+    "placeholder_7": "power",
+    "placeholder_8": "efficiency",
+    "placeholder_9": "fail_safe",
+    "placeholder_10": "neutrons_produced_per_second",
+    "placeholder_11": "threshold",
+    "placeholder_12": "criticality"
+}

@@ -1,0 +1,23 @@
+{
+    "placeholder_0": "parse",
+    "placeholder_1": "markdown",
+    "placeholder_2": "lines",
+    "placeholder_3": "html",
+    "placeholder_4": "in_list",
+    "placeholder_5": "in_list_append",
+    "placeholder_6": "line",
+    "placeholder_7": "result",
+    "placeholder_8": "wrap",
+    "placeholder_9": "tag",
+    "placeholder_10": "check_headers",
+    "placeholder_11": "pattern",
+    "placeholder_12": "index",
+    "placeholder_13": "check_bold",
+    "placeholder_14": "bold_pattern",
+    "placeholder_15": "bold_match",
+    "placeholder_16": "check_italic",
+    "placeholder_17": "italic_pattern",
+    "placeholder_18": "italic_match",
+    "placeholder_19": "parse_line",
+    "placeholder_20": "list_match"
+}

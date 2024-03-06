@@ -1,0 +1,16 @@
+{
+    "placeholder_0": "append",
+    "placeholder_1": "list1",
+    "placeholder_2": "list2",
+    "placeholder_3": "concat",
+    "placeholder_4": "lists",
+    "placeholder_5": "element",
+    "placeholder_6": "function",
+    "placeholder_7": "item",
+    "placeholder_8": "length",
+    "placeholder_9": "_",
+    "placeholder_10": "foldl",
+    "placeholder_11": "initial",
+    "placeholder_12": "foldr",
+    "placeholder_13": "reverse"
+}

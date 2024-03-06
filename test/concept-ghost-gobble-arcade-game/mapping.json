@@ -1,0 +1,11 @@
+{
+    "placeholder_0": "eat_ghost",
+    "placeholder_1": "power_pellet_active",
+    "placeholder_2": "touching_ghost",
+    "placeholder_3": "score",
+    "placeholder_4": "touching_power_pellet",
+    "placeholder_5": "touching_dot",
+    "placeholder_6": "lose",
+    "placeholder_7": "win",
+    "placeholder_8": "has_eaten_all_dots"
+}

@@ -1,0 +1,14 @@
+{
+    "placeholder_0": "PhoneNumber",
+    "placeholder_1": "__init__",
+    "placeholder_2": "number",
+    "placeholder_3": "area_code",
+    "placeholder_4": "exchange_code",
+    "placeholder_5": "subscriber_number",
+    "placeholder_6": "pretty",
+    "placeholder_7": "_clean",
+    "placeholder_8": "preprocess",
+    "placeholder_9": "item",
+    "placeholder_10": "_normalize",
+    "placeholder_11": "valid"
+}

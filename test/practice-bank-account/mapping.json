@@ -1,0 +1,12 @@
+{
+    "placeholder_0": "BankAccount",
+    "placeholder_1": "__init__",
+    "placeholder_2": "is_open",
+    "placeholder_3": "balance",
+    "placeholder_4": "lock",
+    "placeholder_5": "get_balance",
+    "placeholder_6": "deposit",
+    "placeholder_7": "amount",
+    "placeholder_8": "withdraw",
+    "placeholder_9": "close"
+}

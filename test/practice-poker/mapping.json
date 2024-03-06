@@ -1,0 +1,21 @@
+{
+    "placeholder_0": "best_hands",
+    "placeholder_1": "hands",
+    "placeholder_2": "key",
+    "placeholder_3": "allmax",
+    "placeholder_4": "iterable",
+    "placeholder_5": "result",
+    "placeholder_6": "maxval",
+    "placeholder_7": "idx",
+    "placeholder_8": "xval",
+    "placeholder_9": "hand_rank",
+    "placeholder_10": "hand",
+    "placeholder_11": "card_ranks",
+    "placeholder_12": "_",
+    "placeholder_13": "groups",
+    "placeholder_14": "reverse",
+    "placeholder_15": "counts",
+    "placeholder_16": "ranks",
+    "placeholder_17": "straight",
+    "placeholder_18": "flush"
+}

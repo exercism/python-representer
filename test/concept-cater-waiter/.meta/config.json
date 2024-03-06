@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "bethanyg"
+  ],
+  "contributors": [
+    "zepam"
+  ],
+  "files": {
+    "solution": [
+      "sets.py"
+    ],
+    "editor": [
+      "sets_test_data.py",
+      "sets_categories_data.py"
+    ]
+  },
+  "icon": "meetup",
+  "blurb": "Learn about sets by managing the menus and ingredients for your catering company's event."
+}

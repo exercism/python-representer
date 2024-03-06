@@ -1,0 +1,18 @@
+{
+    "placeholder_0": "complex_number",
+    "placeholder_1": "complex_number_float",
+    "placeholder_2": "complex_number_sci",
+    "placeholder_3": "complex_number_sci_float",
+    "placeholder_4": "regular_int",
+    "placeholder_5": "regular_float",
+    "placeholder_6": "sci_int",
+    "placeholder_7": "sci_float",
+    "placeholder_8": "sci_float_underscore",
+    "placeholder_9": "sci_float_underscore2",
+    "placeholder_10": "sci_complex_number_float_underscore",
+    "placeholder_11": "underscore_int",
+    "placeholder_12": "underscore_float",
+    "placeholder_13": "underscore_float_underscore",
+    "placeholder_14": "underscore_complex_number",
+    "placeholder_15": "underscore_complex_number_float"
+}

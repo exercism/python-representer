@@ -1,0 +1,9 @@
+{
+    "placeholder_0": "EXPECTED_BAKE_TIME",
+    "placeholder_1": "PREPARATION_TIME",
+    "placeholder_2": "bake_time_remaining",
+    "placeholder_3": "elapsed_bake_time",
+    "placeholder_4": "preparation_time_in_minutes",
+    "placeholder_5": "number_of_layers",
+    "placeholder_6": "elapsed_time_in_minutes"
+}

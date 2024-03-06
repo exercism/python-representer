@@ -1,0 +1,13 @@
+{
+    "placeholder_0": "from_digits",
+    "placeholder_1": "digits",
+    "placeholder_2": "base",
+    "placeholder_3": "idx",
+    "placeholder_4": "number",
+    "placeholder_5": "to_digits",
+    "placeholder_6": "base_to",
+    "placeholder_7": "result",
+    "placeholder_8": "rebase",
+    "placeholder_9": "from_base",
+    "placeholder_10": "to_base"
+}

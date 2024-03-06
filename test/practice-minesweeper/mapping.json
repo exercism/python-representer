@@ -1,0 +1,15 @@
+{
+    "placeholder_0": "annotate",
+    "placeholder_1": "minefield",
+    "placeholder_2": "row_len",
+    "placeholder_3": "col_len",
+    "placeholder_4": "board",
+    "placeholder_5": "row",
+    "placeholder_6": "index1",
+    "placeholder_7": "index2",
+    "placeholder_8": "low",
+    "placeholder_9": "high",
+    "placeholder_10": "counts",
+    "placeholder_11": "verify_board",
+    "placeholder_12": "character_set"
+}

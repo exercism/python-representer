@@ -1,0 +1,23 @@
+{
+    "placeholder_0": "NORTH",
+    "placeholder_1": "EAST",
+    "placeholder_2": "SOUTH",
+    "placeholder_3": "WEST",
+    "placeholder_4": "Compass",
+    "placeholder_5": "compass",
+    "placeholder_6": "__init__",
+    "placeholder_7": "direction",
+    "placeholder_8": "left",
+    "placeholder_9": "right",
+    "placeholder_10": "Robot",
+    "placeholder_11": "x_pos",
+    "placeholder_12": "y_pos",
+    "placeholder_13": "advance",
+    "placeholder_14": "turn_left",
+    "placeholder_15": "turn_right",
+    "placeholder_16": "move",
+    "placeholder_17": "commands",
+    "placeholder_18": "instructions",
+    "placeholder_19": "cmd",
+    "placeholder_20": "coordinates"
+}

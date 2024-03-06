@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "PaulT89",
+    "BethanyG"
+  ],
+  "contributors": [
+    "DjangoFett",
+    "kotp",
+    "IsaacG"
+  ],
+  "files": {
+    "solution": [
+      "classes.py"
+    ]
+  },
+  "icon": "character-study",
+  "blurb": "Learn about classes by creating an Alien for Ellen's game."
+}

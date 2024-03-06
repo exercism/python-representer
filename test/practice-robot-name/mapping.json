@@ -1,0 +1,14 @@
+{
+    "placeholder_0": "ALPHABET",
+    "placeholder_1": "Robot",
+    "placeholder_2": "__init__",
+    "placeholder_3": "_name",
+    "placeholder_4": "_past_names",
+    "placeholder_5": "prefix",
+    "placeholder_6": "_",
+    "placeholder_7": "suffix",
+    "placeholder_8": "get_name",
+    "placeholder_9": "del_name",
+    "placeholder_10": "name",
+    "placeholder_11": "reset"
+}

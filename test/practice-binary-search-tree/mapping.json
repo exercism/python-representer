@@ -1,0 +1,18 @@
+{
+    "placeholder_0": "TreeNode",
+    "placeholder_1": "__init__",
+    "placeholder_2": "data",
+    "placeholder_3": "left",
+    "placeholder_4": "right",
+    "placeholder_5": "__str__",
+    "placeholder_6": "BinarySearchTree",
+    "placeholder_7": "tree_data",
+    "placeholder_8": "root",
+    "placeholder_9": "add",
+    "placeholder_10": "inserted",
+    "placeholder_11": "cur_node",
+    "placeholder_12": "_inorder_traverse",
+    "placeholder_13": "node",
+    "placeholder_14": "elements",
+    "placeholder_15": "sorted_data"
+}

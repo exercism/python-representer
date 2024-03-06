@@ -1,0 +1,22 @@
+{
+    "placeholder_0": "NUM_ROWS",
+    "placeholder_1": "NUM_COLS",
+    "placeholder_2": "split_ocr",
+    "placeholder_3": "ocr",
+    "placeholder_4": "idx",
+    "placeholder_5": "jam",
+    "placeholder_6": "placeholder_4",
+    "placeholder_7": "ALL",
+    "placeholder_8": "OCR_LIST",
+    "placeholder_9": "convert",
+    "placeholder_10": "input_grid",
+    "placeholder_11": "split_indices",
+    "placeholder_12": "lines",
+    "placeholder_13": "start",
+    "placeholder_14": "end",
+    "placeholder_15": "line",
+    "placeholder_16": "convert_one_line",
+    "placeholder_17": "numbers",
+    "placeholder_18": "digits",
+    "placeholder_19": "num"
+}

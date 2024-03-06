@@ -1,6 +1,8 @@
 """
-Representer for Python.
+Representer Utilities for Python track.
 """
+
+
 import ast
 import errno
 import json
@@ -11,12 +13,10 @@ from functools import lru_cache
 from pathlib import Path
 from typing import NewType
 
-import astor
 import black
 
 
 Slug = NewType("Slug", str)
-
 SLUG_RE = re.compile(r"^[a-z]+(-[a-z]+)*$")
 
 
@@ -41,6 +41,7 @@ def directory(string: str) -> Directory:
         err = errno.ENOENT
         msg = os.strerror(err)
         raise FileNotFoundError(err, f"{msg}: {string!r}")
+
     if not os.access(path, os.R_OK | os.W_OK):
         err = errno.EACCES
         msg = os.strerror(err)
@@ -80,19 +81,27 @@ def to_json(data: dict) -> str:
 def parse(source: str) -> ast.AST:
     """
     Wrapper around ast.parse.
+    Preserves type annotations.
     """
-    return ast.parse(source)
+    return ast.parse(source, type_comments=False, feature_version=(3,11))
 
 
 def dump_tree(tree: ast.AST) -> str:
     """
     Dump a formatted string of the AST.
     """
-    return astor.dump_tree(tree, indentation="  ", maxline=88)
+    return ast.dump(tree, annotate_fields=False, include_attributes=True, indent=2)
+
+
+def dump_ast(tree: ast.AST) -> str:
+    """
+    dump an un-formatted string of the AST.
+    """
+    return ast.dump(tree, annotate_fields=False, include_attributes=True)
 
 
 def to_source(tree: ast.AST) -> str:
     """
     Dump the AST to generated source doe.
     """
-    return astor.to_source(tree)
+    return ast.unparse(tree)

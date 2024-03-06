@@ -1,0 +1,22 @@
+{
+    "placeholder_0": "ConnectGame",
+    "placeholder_1": "DIRECTIONS",
+    "placeholder_2": "WHITE",
+    "placeholder_3": "BLACK",
+    "placeholder_4": "__init__",
+    "placeholder_5": "lines",
+    "placeholder_6": "board",
+    "placeholder_7": "width",
+    "placeholder_8": "height",
+    "placeholder_9": "line",
+    "placeholder_10": "valid",
+    "placeholder_11": "make_board",
+    "placeholder_12": "cur_line",
+    "placeholder_13": "player_reach_dest",
+    "placeholder_14": "player",
+    "placeholder_15": "walk_board",
+    "placeholder_16": "visited",
+    "placeholder_17": "vector",
+    "placeholder_18": "check_player_is_winner",
+    "placeholder_19": "get_winner"
+}

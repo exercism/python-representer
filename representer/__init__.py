@@ -1,6 +1,7 @@
 """
 Representer for Python.
 """
+
 import json
 from typing import Dict
 
@@ -17,6 +18,7 @@ class Representer:
     def __init__(self, source: str) -> None:
         self._tree = utils.parse(source)
         self._normalizer = Normalizer()
+        self.metadata = {"version" : 2}
 
     def normalize(self) -> None:
         """
@@ -29,6 +31,12 @@ class Representer:
         Dump the current state of the tree for printing.
         """
         return utils.dump_tree(self._tree)
+
+    def dump_ast(self) -> str:
+        """
+        Dump the current stat of the tree without indents.
+        """
+        return utils.dump_ast(self._tree)
 
     def dump_code(self, reformat=True) -> str:
         """
@@ -51,6 +59,12 @@ class Representer:
         Dump the tree's mapping of placeholders.
         """
         return utils.to_json(self.mapping)
+
+    def dump_metadata(self) -> Dict[str, int]:
+        """
+        Dump the representer metadata.
+        """
+        return utils.to_json(self.metadata)
 
 
 def represent(slug: utils.Slug, input: utils.Directory, output: utils.Directory) -> None:
@@ -80,21 +94,26 @@ def represent(slug: utils.Slug, input: utils.Directory, output: utils.Directory)
     out_dst = output.joinpath("representation.out")
     txt_dst = output.joinpath("representation.txt")
     map_dst = output.joinpath("mapping.json")
+    metadata_dst = output.joinpath("representation.json")
 
 
     # parse the tree from the file contents
     representation = Representer(src.read_text())
 
     # save dump of the initial tree for debug
-    out = ["# BEGIN TREE BEFORE", representation.dump_tree(), ""]
+    out = ['## BEGIN TREE BEFORE ##', representation.dump_tree(), '## END TREE BEFORE ##', '']
 
     # normalize the tree
     representation.normalize()
 
+    # save dump of normalized code for debug (from un-parsing the normalized AST).
+    out[0:0] = ['## BEGIN NORMALIZED CODE ##', representation.dump_code(), "## END NORMALIZED CODE ##", '']
+
     # save dump of the normalized tree for debug
-    out.extend(["# BEGIN TREE AFTER", representation.dump_tree()])
+    out.extend(['## BEGIN NORMALIZED TREE ##', representation.dump_tree(), '## END NORMALIZED TREE ##'])
 
     # dump the representation files
     out_dst.write_text("\n".join(out))
-    txt_dst.write_text(representation.dump_code())
+    txt_dst.write_text(representation.dump_ast())
     map_dst.write_text(representation.dump_map())
+    metadata_dst.write_text(representation.dump_metadata())

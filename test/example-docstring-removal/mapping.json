@@ -1,0 +1,12 @@
+{
+    "placeholder_0": "add_prefix_un",
+    "placeholder_1": "word",
+    "placeholder_2": "make_word_groups",
+    "placeholder_3": "vocab_words",
+    "placeholder_4": "multi_line_string",
+    "placeholder_5": "remove_suffix_ness",
+    "placeholder_6": "MULTI_LINE_CONSTANT",
+    "placeholder_7": "adjective_to_verb",
+    "placeholder_8": "sentence",
+    "placeholder_9": "index"
+}

@@ -1,0 +1,18 @@
+{
+    "placeholder_0": "exchange_money",
+    "placeholder_1": "budget",
+    "placeholder_2": "exchange_rate",
+    "placeholder_3": "get_change",
+    "placeholder_4": "exchanging_value",
+    "placeholder_5": "get_value_of_bills",
+    "placeholder_6": "denomination",
+    "placeholder_7": "number_of_bills",
+    "placeholder_8": "get_number_of_bills",
+    "placeholder_9": "amount",
+    "placeholder_10": "get_leftover_of_bills",
+    "placeholder_11": "exchangeable_value",
+    "placeholder_12": "spread",
+    "placeholder_13": "exchange_fee",
+    "placeholder_14": "exchange_value",
+    "placeholder_15": "value_of_bills"
+}

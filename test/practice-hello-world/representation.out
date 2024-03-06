@@ -1,0 +1,67 @@
+## BEGIN NORMALIZED CODE ##
+def placeholder_0():
+    return "Hello, World!"
+
+## END NORMALIZED CODE ##
+
+## BEGIN TREE BEFORE ##
+Module(
+  [
+    FunctionDef(
+      'hello',
+      arguments(
+        [],
+        [],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      [
+        Return(
+          Constant(
+            'Hello, World!',
+            lineno=2,
+            col_offset=11,
+            end_lineno=2,
+            end_col_offset=26),
+          lineno=2,
+          col_offset=4,
+          end_lineno=2,
+          end_col_offset=26)],
+      [],
+      lineno=1,
+      col_offset=0,
+      end_lineno=2,
+      end_col_offset=26)],
+  [])
+## END TREE BEFORE ##
+
+## BEGIN NORMALIZED TREE ##
+Module(
+  [
+    FunctionDef(
+      'placeholder_0',
+      arguments(
+        [],
+        [],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      [
+        Return(
+          Constant(
+            'Hello, World!',
+            lineno=2,
+            col_offset=11,
+            end_lineno=2,
+            end_col_offset=26),
+          lineno=2,
+          col_offset=4,
+          end_lineno=2,
+          end_col_offset=26)],
+      [],
+      lineno=1,
+      col_offset=0,
+      end_lineno=2,
+      end_col_offset=26)],
+  [])
+## END NORMALIZED TREE ##
