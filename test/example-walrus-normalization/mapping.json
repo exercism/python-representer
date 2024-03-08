@@ -12,5 +12,16 @@
     "placeholder_10": "point",
     "placeholder_11": "nswe_offsets",
     "placeholder_12": "offset",
-    "placeholder_13": "neighbor"
+    "placeholder_13": "neighbor",
+    "placeholder_14": "first_item_greater_than_N",
+    "placeholder_15": "iterable",
+    "placeholder_16": "N",
+    "placeholder_17": "item",
+    "placeholder_18": "x",
+    "placeholder_19": "placeholder_17",
+    "placeholder_20": "generate_codes",
+    "placeholder_21": "seat_numbers",
+    "placeholder_22": "flight_id",
+    "placeholder_23": "seat",
+    "placeholder_24": "base"
 }

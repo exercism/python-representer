@@ -1,14 +1,16 @@
 # Examples of walrus usage in user solutions
 
+
 def slices(series, length):
     """
     Given a string of digits, output all the contiguous substrings of length `n`,
     in that string, in the order that they appear.
     """
     return [
-        sub_str for i, _ in enumerate(series) 
-        if len(sub_str := series[i:i+length]) == length   
-        ]
+        sub_str
+        for i, _ in enumerate(series)
+        if len(sub_str := series[i : i + length]) == length
+    ]
 
 
 def check_height(grid):
@@ -27,3 +29,21 @@ def nswe_points(self, point):
         if self.on_the_board(neighbor := point + offset)
     }
 
+
+def first_item_greater_than_N(iterable, N):
+    if any((item := x) > N for x in iterable):
+        return item
+    return None
+
+
+def generate_codes(seat_numbers, flight_id):
+    """Generate codes for a ticket.
+
+    :param seat_numbers: list[str] - list of seat numbers.
+    :param flight_id: str - string containing the flight identifier.
+    :return: generator - generator that yields 12 character long ticket codes.
+
+    """
+    return (
+        base.ljust(12, "0") for seat in seat_numbers if (base := f"{seat}{flight_id}")
+    )
