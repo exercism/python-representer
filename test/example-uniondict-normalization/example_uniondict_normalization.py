@@ -1,4 +1,3 @@
-
 """
  This exmple comes from ChatGPT
  Prompt: Write a python function that 
@@ -9,12 +8,12 @@
        two sources of settings, the data from 
        the toml file should be used.
 """
-import toml
+import tomlib
 
 def merge_settings(default_settings, toml_file_path):
     # Load settings from TOML file
     with open(toml_file_path, 'r') as f:
-        toml_settings = toml.load(f)
+        toml_settings = tomlib.load(f)
 
     # Merge default settings with settings from TOML file
     merged_settings = default_settings | toml_settings
@@ -93,4 +92,3 @@ def assign(letters, selections, lefty, righty):
         selections = new_selections
         letters = letters[1:]
     return [slc for slc, _ in selections]
-
