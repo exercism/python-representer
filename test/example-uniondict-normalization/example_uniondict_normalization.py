@@ -1,6 +1,19 @@
-""" Examples adapted from Mecha Munch Management"""
+""" Examples adapted from Mecha Munch Management, Alphametrics, and ChatGPT
+
+    ChatGPT Prompt: Write a python function that
+       reads user settings from a toml file and
+       merges them with a dictionary of default
+       settings to create a single dictionary.
+       If there are any conflicts between the
+       two sources of settings, the data from
+       the toml file should be used.
+"""
+
+
 def update_recipes_tuple(ideas, recipe_updates):
-    """Update the recipe ideas dictionary.
+    """Mecha Munch Management Example.
+
+    Update the recipe ideas dictionary.
     :param ideas: dict - The "recipe ideas" dict.
     :param recipe_updates: tuple - tuple with updates for the ideas section.
     :return: dict - updated "recipe ideas" dict.
@@ -14,7 +27,9 @@ def update_recipes_tuple(ideas, recipe_updates):
     
     
 def update_recipes_dict(ideas, recipe_updates):
-    """Update the recipe ideas dictionary.
+    """Second Mecha Munch Management Example.
+
+    Update the recipe ideas dictionary.
     :param ideas: dict - The "recipe ideas" dict.
     :param recipe_updates: dict - dictionary with updates for the ideas section.
     :return: dict - updated "recipe ideas" dict.
@@ -37,9 +52,9 @@ update_recipes_dict(ideas, recipe_update_dict)
    # {'Banana Bread': {'Banana': 4, 'Walnuts': 2, 'Flour': 1, 'Eggs': 3, 'Butter': 1, 'Milk': 2}}
 
 
-
-""" Example from `alphametrics` exercise """
 def assign(letters, selections, lefty, righty):
+    """ Example from `alphametrics` exercise """
+
     while letters:
         new_selections = []
 
@@ -61,19 +76,6 @@ def assign(letters, selections, lefty, righty):
     return [slc for slc, _ in selections]
 
 
-
-
-
-"""
- This exmple comes from ChatGPT
- Prompt: Write a python function that 
-       reads user settings from a toml file and 
-       merges them with a dictionary of default 
-       settings to create a single dictionary. 
-       If there are any conflicts between the 
-       two sources of settings, the data from 
-       the toml file should be used.
-"""
 import tomlib
 
 def merge_settings(default_settings, toml_file_path):
