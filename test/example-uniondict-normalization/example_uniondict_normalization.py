@@ -6,6 +6,7 @@ def update_recipes_tuple(ideas, recipe_updates):
     :return: dict - updated "recipe ideas" dict.
     """
     
+     # recipe_updates here is a tuple.
      # Since this action updates the dict in place, 
      # the dict then needs to be returned separately, otherwise it is a syntax error. 
     ideas |= recipe_updates
