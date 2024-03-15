@@ -8,7 +8,7 @@ def update_recipes_tuple(ideas, recipe_updates):
     
      # Since this action updates the dict in place, 
      # the dict then needs to be returned separately, otherwise it is a syntax error. 
-    ideas |= dict(recipe_updates)
+    ideas |= recipe_updates
     return ideas
     
     
