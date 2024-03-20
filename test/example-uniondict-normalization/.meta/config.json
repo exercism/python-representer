@@ -1,0 +1,10 @@
+{
+  "authors": [
+    "brocla"
+  ],
+  "files": {
+    "solution": [
+      "example_uniondict_normalization.py"
+    ]
+  }
+}
