@@ -15,7 +15,7 @@ def placeholder_0(placeholder_1, placeholder_2):
                 placeholder_8 = placeholder_8 + placeholder_5
                 placeholder_9 = placeholder_9 + placeholder_6
             while placeholder_9 <= placeholder_2:
-                yield [alpha, beta, gamma]
+                yield [placeholder_7, placeholder_8, placeholder_9]
                 placeholder_7 = placeholder_7 + placeholder_4
                 placeholder_8 = placeholder_8 + placeholder_5
                 placeholder_9 = placeholder_9 + placeholder_6
@@ -29,7 +29,7 @@ def placeholder_10(placeholder_3):
             if (placeholder_13 - placeholder_12) % 2 == 1 and gcd(
                 placeholder_13, placeholder_12
             ) == 1:
-                yield (member, idx)
+                yield (placeholder_13, placeholder_12)
 
 
 def placeholder_14(placeholder_3):
@@ -41,7 +41,7 @@ def placeholder_14(placeholder_3):
         placeholder_9 = placeholder_17 + placeholder_18
         if placeholder_7 > placeholder_8:
             placeholder_7, placeholder_8 = (placeholder_8, placeholder_7)
-        yield (alpha, beta, gamma)
+        yield (placeholder_7, placeholder_8, placeholder_9)
 
 
 def placeholder_19(placeholder_20):
@@ -1787,21 +1787,21 @@ Module(
                         List(
                           [
                             Name(
-                              'alpha',
+                              'placeholder_7',
                               Load(),
                               lineno=17,
                               col_offset=23,
                               end_lineno=17,
                               end_col_offset=28),
                             Name(
-                              'beta',
+                              'placeholder_8',
                               Load(),
                               lineno=17,
                               col_offset=30,
                               end_lineno=17,
                               end_col_offset=34),
                             Name(
-                              'gamma',
+                              'placeholder_9',
                               Load(),
                               lineno=17,
                               col_offset=36,
@@ -2235,14 +2235,14 @@ Module(
                         Tuple(
                           [
                             Name(
-                              'member',
+                              'placeholder_13',
                               Load(),
                               lineno=30,
                               col_offset=22,
                               end_lineno=30,
                               end_col_offset=28),
                             Name(
-                              'idx',
+                              'placeholder_12',
                               Load(),
                               lineno=30,
                               col_offset=30,
@@ -2597,21 +2597,21 @@ Module(
                 Tuple(
                   [
                     Name(
-                      'alpha',
+                      'placeholder_7',
                       Load(),
                       lineno=49,
                       col_offset=14,
                       end_lineno=49,
                       end_col_offset=19),
                     Name(
-                      'beta',
+                      'placeholder_8',
                       Load(),
                       lineno=49,
                       col_offset=21,
                       end_lineno=49,
                       end_col_offset=25),
                     Name(
-                      'gamma',
+                      'placeholder_9',
                       Load(),
                       lineno=49,
                       col_offset=27,

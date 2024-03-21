@@ -79,7 +79,7 @@ def placeholder_16(placeholder_2, placeholder_1, placeholder_7=False):
             while placeholder_24 <= placeholder_23:
                 placeholder_9 = placeholder_25(placeholder_24, placeholder_21)
                 if placeholder_17 <= placeholder_9 <= placeholder_18:
-                    yield palindrome
+                    yield placeholder_9
                 elif placeholder_9 > placeholder_18:
                     break
                 placeholder_24 += 1
@@ -87,7 +87,7 @@ def placeholder_16(placeholder_2, placeholder_1, placeholder_7=False):
             while placeholder_24 >= placeholder_22:
                 placeholder_9 = placeholder_25(placeholder_24, placeholder_21)
                 if placeholder_17 <= placeholder_9 <= placeholder_18:
-                    yield palindrome
+                    yield placeholder_9
                 elif placeholder_9 < placeholder_17:
                     break
                 placeholder_24 -= 1
@@ -4129,7 +4129,7 @@ Module(
                         Expr(
                           Yield(
                             Name(
-                              'palindrome',
+                              'placeholder_9',
                               Load(),
                               lineno=82,
                               col_offset=26,
@@ -4307,7 +4307,7 @@ Module(
                         Expr(
                           Yield(
                             Name(
-                              'palindrome',
+                              'placeholder_9',
                               Load(),
                               lineno=93,
                               col_offset=26,

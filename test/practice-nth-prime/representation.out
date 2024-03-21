@@ -29,8 +29,8 @@ def placeholder_9():
     yield 2
     yield 3
     for placeholder_1 in count(6, 6):
-        yield (number - 1)
-        yield (number + 1)
+        yield (placeholder_1 - 1)
+        yield (placeholder_1 + 1)
 
 ## END NORMALIZED CODE ##
 
@@ -1269,7 +1269,7 @@ Module(
               Yield(
                 BinOp(
                   Name(
-                    'number',
+                    'placeholder_1',
                     Load(),
                     lineno=33,
                     col_offset=14,
@@ -1298,7 +1298,7 @@ Module(
               Yield(
                 BinOp(
                   Name(
-                    'number',
+                    'placeholder_1',
                     Load(),
                     lineno=34,
                     col_offset=14,
