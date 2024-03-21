@@ -5,9 +5,9 @@ import math
 def placeholder_0(placeholder_1):
     for placeholder_2 in range(2, int(math.sqrt(placeholder_1)) + 1):
         if placeholder_1 % placeholder_2 == 0:
-            yield index
+            yield placeholder_2
             if placeholder_2 * placeholder_2 != placeholder_1:
-                yield (number // index)
+                yield (placeholder_1 // placeholder_2)
 
 
 def placeholder_3(placeholder_1):
@@ -709,7 +709,7 @@ Module(
                 Expr(
                   Yield(
                     Name(
-                      'index',
+                      'placeholder_2',
                       Load(),
                       lineno=12,
                       col_offset=18,
@@ -764,7 +764,7 @@ Module(
                       Yield(
                         BinOp(
                           Name(
-                            'number',
+                            'placeholder_1',
                             Load(),
                             lineno=14,
                             col_offset=22,
@@ -772,7 +772,7 @@ Module(
                             end_col_offset=28),
                           FloorDiv(),
                           Name(
-                            'index',
+                            'placeholder_2',
                             Load(),
                             lineno=14,
                             col_offset=32,
