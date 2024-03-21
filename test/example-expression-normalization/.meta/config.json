@@ -1,0 +1,10 @@
+{
+  "authors": [
+    "bethanyg","brocla"
+  ],
+  "files": {
+    "solution": [
+      "example_expression_normalization.py"
+    ]
+  }
+}
