@@ -6,7 +6,7 @@ placeholder_0 = ["A", "B", "C", "D"]
 
 def placeholder_1(placeholder_2):
     for placeholder_3 in range(placeholder_2):
-        yield SEATS_IN_ROW[seat % 4]
+        yield placeholder_0[placeholder_3 % 4]
 
 
 def placeholder_4(placeholder_2):
@@ -15,7 +15,7 @@ def placeholder_4(placeholder_2):
     for placeholder_3 in range(placeholder_2):
         placeholder_6 = math.ceil((placeholder_3 + 1) / 4)
         if placeholder_6 != 13:
-            yield f"{str(row_number)}{next(letters)}"
+            yield f"{str(placeholder_6)}{next(placeholder_5)}"
 
 
 def placeholder_7(placeholder_8):
@@ -31,7 +31,7 @@ def placeholder_7(placeholder_8):
 def placeholder_12(placeholder_13, placeholder_14):
     for placeholder_3 in placeholder_13:
         placeholder_15 = f"{placeholder_3}{placeholder_14}"
-        yield (base_string + "0" * (12 - len(base_string)))
+        yield (placeholder_15 + "0" * (12 - len(placeholder_15)))
 
 ## END NORMALIZED CODE ##
 
@@ -1023,7 +1023,7 @@ Module(
               Yield(
                 Subscript(
                   Name(
-                    'SEATS_IN_ROW',
+                    'placeholder_0',
                     Load(),
                     lineno=22,
                     col_offset=14,
@@ -1031,7 +1031,7 @@ Module(
                     end_col_offset=26),
                   BinOp(
                     Name(
-                      'seat',
+                      'placeholder_3',
                       Load(),
                       lineno=22,
                       col_offset=27,
@@ -1318,7 +1318,7 @@ Module(
                               end_col_offset=24),
                             [
                               Name(
-                                'row_number',
+                                'placeholder_6',
                                 Load(),
                                 lineno=47,
                                 col_offset=25,
@@ -1345,7 +1345,7 @@ Module(
                               end_col_offset=42),
                             [
                               Name(
-                                'letters',
+                                'placeholder_5',
                                 Load(),
                                 lineno=47,
                                 col_offset=43,
@@ -1663,7 +1663,7 @@ Module(
               Yield(
                 BinOp(
                   Name(
-                    'base_string',
+                    'placeholder_15',
                     Load(),
                     lineno=80,
                     col_offset=14,
@@ -1696,7 +1696,7 @@ Module(
                           end_col_offset=43),
                         [
                           Name(
-                            'base_string',
+                            'placeholder_15',
                             Load(),
                             lineno=80,
                             col_offset=44,

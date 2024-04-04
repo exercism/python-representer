@@ -10,6 +10,8 @@ from ast import (
     Assign,
     AsyncFunctionDef,
     Attribute,
+    BinOp,
+    BoolOp,
     Call,
     ClassDef,
     Compare,
@@ -22,6 +24,7 @@ from ast import (
     GeneratorExp,
     Global,
     If,
+    Lambda,
     ListComp,
     Load,
     Module,
@@ -31,7 +34,9 @@ from ast import (
     SetComp,
     Str,
     Store,
+    UnaryOp,
     Yield,
+    YieldFrom,
     alias,
     arg,
     get_docstring,
@@ -311,13 +316,8 @@ class Normalizer(NodeTransformer):
             if node.value.func.id == 'print':
                 return None
 
-        # Pass through generator code.
-        if isinstance(node.value, Yield):
-            return node
-
-
-        # Eliminate previously registered docstrings
-        if not isinstance(node.value, Call):
+        if isinstance(node.value, Constant) and not isinstance(node.value, Call):
+            # eliminate registered docstrings
             if utils.md5sum(node.value.value) in self._docstring_cache:
                 return None
 

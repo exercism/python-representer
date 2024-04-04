@@ -25,10 +25,10 @@ class placeholder_0:
         return self.placeholder_4() == placeholder_9.placeholder_4()
 
     def placeholder_11(self):
-        yield self.label
+        yield self.placeholder_2
         for placeholder_12 in self.placeholder_3:
             for placeholder_13 in placeholder_12:
-                yield grandchild
+                yield placeholder_13
 
     def placeholder_14(self):
         return placeholder_0(
@@ -2452,7 +2452,7 @@ Module(
                     col_offset=14,
                     end_lineno=22,
                     end_col_offset=18),
-                  'label',
+                  'placeholder_2',
                   Load(),
                   lineno=22,
                   col_offset=14,
@@ -2508,7 +2508,7 @@ Module(
                     Expr(
                       Yield(
                         Name(
-                          'grandchild',
+                          'placeholder_13',
                           Load(),
                           lineno=25,
                           col_offset=22,
