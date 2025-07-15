@@ -1,0 +1,19 @@
+{
+    "placeholder_0": "SgfTree",
+    "placeholder_1": "properties",
+    "placeholder_2": "default_factory",
+    "placeholder_3": "children",
+    "placeholder_4": "frozen",
+    "placeholder_5": "slots",
+    "placeholder_6": "kw_only",
+    "placeholder_7": "_parse",
+    "placeholder_8": "advance",
+    "placeholder_9": "Node",
+    "placeholder_10": "node_id",
+    "placeholder_11": "BuildTree",
+    "placeholder_12": "records",
+    "placeholder_13": "trees",
+    "placeholder_14": "record",
+    "placeholder_15": "parent",
+    "placeholder_16": "child"
+}
