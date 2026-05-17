@@ -28,3 +28,5 @@ docker run \
     --workdir /opt/representer \
     --entrypoint pytest \
     exercism/python-representer -vv  --disable-warnings
+
+    
